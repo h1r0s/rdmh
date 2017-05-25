@@ -393,7 +393,7 @@ By taking the square root we get the predicted standard deviation:
 
 The significance of the standard deviation is illustrated in Fig. 3.4 .The mean value of the
 distribution is shown as the dashed line, and one value of the standard deviation is shown
-on either side of this mean. Because cr is a typical value for the difference between a given
+on either side of this mean. Because \(\sigma\) is a typical value for the difference between a given
 measurement and the true value of the mean, wide distributions will have large values for
 a and narrow distributions will correspond to small values. The plot illustrates that the
 association of \(\sigma\) with the width of the distribution is not inconsistent with the example
@@ -401,6 +401,30 @@ shown in Fig. 3.4.
 </p>
 
 <h3>B. The Poisson Distribution</h3>
+Many categories of binary processes can be characterized by a constant and small proba-
+bility of success for each individual trial. Included are most nuclear counting experiments 
+in which the number of nuclei in the sample is large and the observation time is short com-
+pared with the half-life of the radioactive species. Similarly, in a particle beam experiment, 
+many particles from an accelerator might strike a target for every recorded reaction prod-
+uct. Under these conditions, the approximation holds that the success probability is small 
+and constant, and the binomial distribution reduces to the Poisson form shown below. For 
+circumstances in which the observation is not short compared with the half-life of the 
+source, the simple Poisson shown below no longer holds and a modified Poisson distribu-
+tion, outlined in Appendix C, will apply.
+<p>
+It can be shown that for a constant and small probability of success, the binomial distribution 
+reduces to the form
+\[
+P(x) = \frac{(pn)^{x}e^{-pn}}{x!} \tag{3.23}
+\]
+
+Because \(pn = \overline{x}\) holds for this distribution as well as for the parent binomial distribution,
+\[
+P(x) = \frac{(\overline{x})^{x}e^{- \overline{x}}}{x!} \tag{3.24}
+\]
+which is now the familiar form of the Poisson distribution.</p>
+
+
 
 
 
