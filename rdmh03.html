@@ -722,7 +722,7 @@ related to the sample variance and the two are related by
 \]
 
 Now if the amount of fluctuation present in the data is closely modeled by the Poisson distribution,
-then \(s^{2 } \equiv \sigma^{2}\). But we know that for the Poisson distribution, \(\sigma^{2} = \overline{x}\). Furthermore,
+then \(s^{2 } \cong \sigma^{2}\). But we know that for the Poisson distribution, \(\sigma^{2} = \overline{x}\). Furthermore,
 we have chosen \(\overline{x}\) to be equal to \(\overline{x}_{e}\).Therefore, the degree to which the ratio \(s^{2}/\overline{x}\) deviates
 from unity is a direct measure of the extent to which the observed sample variance differs
 from the predicted variance. Now referring to Eq. (3.36), the degree to which \(\chi^{2}\) differs
@@ -809,7 +809,7 @@ Gaussian
 
 <tr>
 <td></td>
-<td align="center">\(\equiv x\)</td>
+<td align="center">\(\cong x\)</td>
 <td>
 because \(x\) is our only<br>
 measurement on which<br>
@@ -820,7 +820,7 @@ to base an estimate of \(\overline{x}\)
 
 <i>We therefore conclude that</i>
 \[
-\sqrt{s^{2}} = \sigma = \sqrt{x}
+\sqrt{s^{2}} \cong \sigma = \sqrt{x}
 \]
 
 <i>is our best estimate of the deviation from the true mean that should typify our single measurement x.</i></p>
@@ -1203,7 +1203,7 @@ over the entire period represented by all the independent counts.</p>
 constant (\(N\)). Therefore, Eq. (3.40) applies and the expected standard deviation of this
 mean value is given by
 \[
-\sigma_{\overline{x}} = \frac{\sigma_{\Sigma}}{N} = \frac{\sqrt{\Sigma}}{N} = \frac{\sqrt{N\overline{x}}}/N
+\sigma_{\overline{x}} = \frac{\sigma_{\Sigma}}{N} = \frac{\sqrt{\Sigma}}{N} = \frac{\sqrt{N\overline{x}}}{N}
 \]
 \[
 \sigma_{\overline{x}} = \sqrt{\frac{\overline{x}}{N}} \tag{3.44}
@@ -1215,7 +1215,7 @@ mean value is given by
 \sigma_{x_{i}} = \sqrt{x_{i}}
 \]
 
-Because any typical count will not differ greatly from the mean, \(x_{i} \equiv \overline{x}\), and we therefore
+Because any typical count will not differ greatly from the mean, \(x_{i} \cong \overline{x}\), and we therefore
 conclude that the mean value based on \(N\) independent counts will have an expected error
 that is smaller by a factor \(\sqrt{N}\) compared with any single measurement on which the mean
 is based. A general conclusion is that, if we wish to improve the statistical precision of a
@@ -1326,6 +1326,101 @@ From Eq. (3.51), the expected standard deviation \(\sigma_{\langle x \rangle}\) 
 deviations \(\sigma_{x_{i}}\) associated with each individual measurement.</p>
 
 <h2>V. OPTIMIZATION OF COUNTING EXPERIMENTS</h2>
+The principle of error propagation can be applied in the design of counting experiments to
+minimize the associated statistical uncertainty. To illustrate, consider the simple case of
+measurement of the net counting rate from a long-lived radioactive source in the presence
+of a steady-state background. Define the following:
+\begin{eqnarray}
+S &\equiv& {\rm counting rate due to the source alone without background} \\
+B &\equiv& {\rm counting rate due to background}
+\end{eqnarray}
+
+The measurement of \(S\) is normally carried out by counting the source plus background (at
+an average rate of \(S + B\)) for a time \(T_{S+B}\) and then counting background alone for a time
+\(T_{B}\). The net rate due to the source alone is then
+\[
+S = \frac{N_{1}}{T_{S+B}} - \frac{N_{2}}{T_{B}} \tag{3.52}
+\]
+
+where \(N_{1}\) and \(N_{2}\) are the total counts in each measurement.
+
+<p>Applying the results of error propagation analysis to Eq. (3.52), we obtain
+
+\begin{eqnarray}
+\sigma_{S}
+ &=& \left[ \left( \frac{\sigma_{N_{1}}}{T_{S + B}} \right)^{2} + \left( \frac{\sigma_{N_{2}}}{T_{B}} \right)^{2} \right]^{1/2} \\
+ &=& \left( \frac{N_{1}}{T_{S + B}^{2}} + \frac{N_{2}}{T_{B}^{2}} \right)^{1/2} \\
+ &=& \left( \frac{S + B}{T_{S+B}} + \frac{B}{T_{B}} \right)^{1/2} \tag{3.53}
+\end{eqnarray}
+
+If we now assume that a fixed total time \(T = T_{S+B} + T_{B}\) is available to carry out both
+measurements, the above uncertainty can be minimized by optimally choosing the fraction
+of \(T\) allocated to \(T_{S+B}\), (or \(T_{B}\)). We square Eq. (3.53) and differentiate
+\[
+2\sigma_{S}d\sigma_{S} = - \frac{S + B}{T_{S+B}^{2}}dT_{S+B} - \frac{B}{T_{B}^{2}}dT_{B}
+\]
+
+and set \(d\sigma_{S} = 0\) to find the optimum condition. Also, because \(T\) is a constant,
+\(dT_{S + B} + dT_{B} = O\).The optimum division of time is then obtained by meeting the condition
+\[
+\left. \frac{T_{S + B}}{T_{B}} \right| _{opt} = \sqrt{\frac{S + B}{B}} \tag{3.54}
+\]
+</p>
+
+<p>A figure of merit that can be used to characterize this type of counting experiment is
+the inverse of the total time, or \(1/T\), required to determine \(S\) to within a given statistical
+accuracy. If certain parameters of the experiment (such as detector size and pulse acceptance
+criteria) can be varied, the optimal choice should correspond to maximizing this figure
+of merit.</p>
+
+<p>In the following analysis, we assume that the optimal division of counting times given
+by Eq. (3.54) is chosen. Then we can combine Eqs. (3.53) and (3.54) to obtain an expression
+for the figure of merit in terms of the fractional standard deviation of the source rate,
+defined as \(\epsilon \equiv \sigma_{S}/S\)
+\[
+\frac{1}{T} = \epsilon^{2}\frac{S^{2}}{(\sqrt{S + B} + \sqrt{B})^{2}} \tag{3.55}
+\]
+
+Equation (3.55) is a useful result that can be applied to analyze the large category of radiation
+measurements in which a signal rate \(S\) is to be measured in the presence of a steady-state
+background rate \(B\). For example, it predicts the attainable statistical accuracy (in
+terms of the fractional standard deviation \(\epsilon\)) when a total time \(T\) is available to measure
+the signal plus background and the background alone. The assumption has been made that
+this time is subdivided optimally between the two counts. Note that, in common with simple
+counting measurements, the time required varies as the inverse square of the fractional
+standard deviation desired for the net signal rate precision. Cutting the predicted statistical
+error of a measurement in half requires increasing the available time by a factor of 4.</p>
+
+<p>It is instructive to examine two extreme cases in the application of Eq. (3.55). If the
+source-induced rate is much greater than the background, \(S \gg B\) and Eq. (3.55) reduces to
+\[
+\frac{1}{T} \cong \epsilon^{2}S \tag{3.56}
+\]
+
+In this limit, the statistical influence of background is negligible. The figure of merit \(1 / T\) is 
+maximized simply by choosing all experiment parameters to maximize \(S\), or the rate due to
+the source alone.</p>
+
+<p>The opposite extreme of a small source rate in a much larger background (\(S \ll B\)) is
+typical of low-level radioactivity measurements. In this case, Eq. (3.55) reduces to
+\[
+\frac{1}{T} \cong \epsilon^{2}\frac{S^{2}}{4B} \tag{3.57}
+\]
+
+For such applications, the figure of merit is maximized by choosing experimental conditions
+so that the ratio \(S^{2} / B\) is maximized. As an example of the application of Eq. (3.57), assume
+that changing the detector configuration in a low-level counting experiment increases the
+rate due to the source alone by a factor of 1.5, but also increases the background by a factor
+of 2.0. The ratio \(S^{2} / B\) is then \((1.5)^{2}/2.0 = 1.125\) times its former value. Because this ratio
+exceeds unity, the change will slightly improve the overall statistical accuracy of the net
+source rate determination if the total measurement time is held constant.</p>
+
+
+
+
+
+
+
 
 </body>
 </html>
