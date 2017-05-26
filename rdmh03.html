@@ -133,6 +133,7 @@ to quantify the amount of internal fluctuation in the data set. The first step i
 
 <p>
 <img src="fig3.1.png" width="408" height="574" alt="">
+<br>
 <img src="fig3.2.png" width="536" height="422" alt="">
 </p>
 
@@ -144,7 +145,7 @@ d_{i} \equiv x_{i} - \overline{x}_{e} \tag{3.6}
 \]
 
 To illustrate, the example of the 20 numbers given in Table 3.1 is shown as the bar graph of
-Fig. 3 . 3 ~T.h e individual residuals of these values have been separately plotted in part (b)
+Fig. 3.3a. The individual residuals of these values have been separately plotted in part (b)
 of the figure. There must be an equal contribution of positive and negative residuals, so that
 
 \[
@@ -156,7 +157,7 @@ of the figure. There must be an equal contribution of positive and negative resi
 </p>
 
 If we take the square of each residual, however, a positive number will always result. These
-are plotted for the example in Fig. 3.3~.
+are plotted for the example in Fig. 3.3c.
 
 <p>We next define the <i>deviation</i> of a given data point as the amount by which it differs
 from the true mean value \(\overline{x}\)</p>
@@ -194,7 +195,7 @@ only when the number of measurements \(N\) is small. For large data sets, theref
 the sample variance can be thought of as the mean squared value of either the residuals or
 the deviations.
 
-<p>The sample variance \(s^{2}\) for the example of 20 numbers is shown graphically in Fig. 3.3~.
+<p>The sample variance \(s^{2}\) for the example of 20 numbers is shown graphically in Fig. 3.3c.
 Because it is essentially a measure of the average value of the squared deviations of each
 point, \(s^{2}\) is an effective measure of the amount of fluctuation in the original data. A data
 set with a narrow distribution will have a small typical deviation from the mean, and therefore
@@ -247,7 +248,7 @@ constant for all trials.
 <p>To show how these conditions apply to real situations, Table 3.2 gives three separate
 examples. The third example indicates the basis for applying the theoretical framework
 that follows to the case of counting nuclear radiation events. In this case a trial consists of
-observing a given radioactive nucleus for a period of time <i>t</i>, the number of trials is equivalent
+observing a given radioactive nucleus for a period of time \(t\), the number of trials is equivalent
 to the number of nuclei in the sample under observation, and the measurement consists
 of counting those nuclei that undergo decay. We identify the probability of success of
 any one trial asp. In the case of radioactive decay, that probability is equal to \((1 - e^{- \lambda t})\).
@@ -257,13 +258,13 @@ where \(\lambda\) is the decay constant of the radioactive sample.</p>
 <ol type="1">
 <li>
 <i>The Binomial Distribution</i>. This is the most general model and is widely applicable
-to all constant-<i>p</i> processes. It is, unfortunately, computationally cumbersome in
+to all constant-\(p\) processes. It is, unfortunately, computationally cumbersome in
 radioactive decay, where the number of nuclei is always very large, and is used only
 rarely in nuclear counting applications.
 </li>
 <li>
 <i>The Poisson Distribution</i>. This model is a direct mathematical simplification of the
-binomial distribution under conditions that the success probability <i>p</i> is small and
+binomial distribution under conditions that the success probability \(p\) is small and
 constant. In practical terms, this condition implies that we have chosen an observation
 time that is small compared with the half-life of the source. Then the number of
 radioactive nuclei remains essentially constant during the observation, and the probability
@@ -282,34 +283,36 @@ problems in counting statistics.
 </p>
 
 <p>It should be emphasized that all the above models become identical for processes with
-a small individual success probability <i>p</i> but with a large enough number of trials so that the
+a small individual success probability \(p\) but with a large enough number of trials so that the
 expected mean number of successes is large.</p>
 
 <h3>A. The Binomial Distribution</h3>
-The binomial distribution is the most general of the statistical models discussed. If <i>n</i> is the
+The binomial distribution is the most general of the statistical models discussed. If \(n\) is the
 number of trials for which each trial has a success probability <i>p</i>, then the predicted probability
-of counting exactly <i>x</i> successes can be shown to be
+of counting exactly \(x\) successes can be shown to be
 
 \[
 P(x) = \frac{n!}{(n-x)!x!}p^{x}(1 - p)^{n - p} \tag{3.12}
 \]
 
-<i>P(x)</i> is the predicted probability distribution function, as given by the binomial distribution,
-and is defined only for integer values of <i>n</i> and <i>x</i>.
+\(P(x)\) is the predicted probability distribution function, as given by the binomial distribution,
+and is defined only for integer values of \(n\) and \(x\).
 
 <p>We show one example of an application of the binomial distribution. Imagine that we
 have an honest die so that the numbers 1 through 6 are all equally probable. Let us define
 a successful roll as one in which any of the numbers 3,4,5,o r 6 appear. Because these are
-four of the six possible results, the individual probability of success <i>p</i> is equal to \(\frac{4}{6}\) or 0.667.
+four of the six possible results, the individual probability of success \(p\) is equal to \(\frac{4}{6}\) or 0.667.
 We now roll a die a total of 10 times and record the number of rolls that result in success
 as defined above. The binomial distribution now allows us to calculate the probability that
-exactly <i>x</i> out of the 10 trials will be successful, where <i>x</i> can vary between 0 and 10. Table
+exactly \(x\) out of the 10 trials will be successful, where \(x\) can vary between 0 and 10. Table
 3.3 gives the values of the predicted probability distribution from Eq. (3.12) for the parameters 
-\(p = \frac{2}{3}\) and <i>n</i> = 10. The results are also plotted in Fig. 3.4 .We see that 7 is the most
+\(p = \frac{2}{3}\) and \(n = 10\). The results are also plotted in Fig. 3.4 .We see that 7 is the most
 probable number of successes from 10 rolls of the die, with a probability of occurrence
-slightly greater than one out of four. From the value of <i>P(0)</i> we see that only twice out of
+slightly greater than one out of four. From the value of \(P(0)\) we see that only twice out of
 100,000 tests would we expect to see no successes from 10 rolls of the die.</p>
+
 <img src="tab3.3.png" width="329" height="434" alt="">
+<br>
 <img src="fig3.4.png" width="451" height="440" alt="">
 
 <p>Some properties of the binomial distribution are important. First, the distribution is
@@ -323,7 +326,7 @@ Also, we know that the average or mean value of the distribution is given by
 \overline{x} = \sum_{x = 0}^{n}xP(x) \tag{3.14}
 \]
 
-If we now substitute Eq. (3.12) for <i>P(x)</i> and carry out the summation, a remarkably simple
+If we now substitute Eq. (3.12) for \(P(x)\) and carry out the summation, a remarkably simple
 result is derived:
 \[
 \overline{x} = pn \tag{3.15}
@@ -343,7 +346,7 @@ distribution.</p>
 predicted by a given distribution. We have already defined such a parameter, called
 the sample variance, for a set of experimental data as defined in Eq. (3.10). By analogy we
 now define a <i>predicted variance</i> \(\sigma^{2}\), which is a measure of the scatter about the mean predicted
-by a specific statistical model <i>P(x)</i>:
+by a specific statistical model \(P(x)\):
 \[
 \sigma^{2} = \sum_{x = 0}^{n}(x - \overline{x})^{2}P(x) \tag{3.17}
 \]
@@ -354,7 +357,7 @@ conventional to define the standard deviation as the square root of \(\sigma^{2}
 is in some sense a typical value of the squared deviation from the mean. Therefore, \(\sigma\) 
 represents a typical value for the deviation itself, hence the name "standard deviation."</p>
 
-<p>Now if we carry out the summation indicated in Eq. (3.17) for the specific case of <i>P(x)</i>
+<p>Now if we carry out the summation indicated in Eq. (3.17) for the specific case of \(P(x)\)
 given by the binomial distribution, the following result is obtained:
 \[
 \sigma^{2} = np(1 - p) \tag{3.18}
@@ -370,10 +373,10 @@ Because \(\overline{x} = np\), we can also write
 
 We now have an expression that gives an immediate prediction of the amount of fluctuation
 inherent in a given binomial distribution in terms of the basic parameters of the distribution,
-<i>n</i> and <i>p</i>, where \(\overline{x} = np\).</p>
+\(n\) and \(p\), where \(\overline{x} = np\).</p>
 
 <p>To return to the example of rolling a die, we defined success in such a way that \(p = \frac{2}{3}\).
-We also assumed 10 rolls of the die for each measurement so that <i>n</i> = 10. For this example,
+We also assumed 10 rolls of the die for each measurement so that \(n = 10\). For this example,
 the predicted mean number of successes is 6.67 and we can proceed to calculate the
 predicted variance
 
@@ -420,9 +423,9 @@ P(x) = \frac{(\overline{x})^{x}e^{- \overline{x}}}{x!} \tag{3.24}
 which is now the familiar form of the Poisson distribution.</p>
 
 <p>Recall that the binomial distribution requires values for two parameters: the number of
-trials <i>n</i> and the individual success probability <i>p</i>. We note from Eq. (3.24) that a significant
+trials \(n\) and the individual success probability \(p\). We note from Eq. (3.24) that a significant
 simplification has occurred in deriving the Poisson distribution &mdash; only one parameter is
-required, which is the product of <i>n</i> and <i>p</i>. This is a very useful simplification because now we
+required, which is the product of \(n\) and \(p\). This is a very useful simplification because now we
 need only know the mean value of the distribution in order to reconstruct its amplitude at all
 other values of the argument. That is a great help for processes in which we can in some way
 measure or estimate the mean value, but for which we have no idea of either the individual
@@ -465,24 +468,25 @@ above result in the limit of \(p \ll 1\) already incorporated into the Poisson a
 and define our measurement as counting the number of current birthdays found among
 all members of that group. The measurement then consists of 1000 trials, each of which is a
 success only if a particular individual has his or her birthday today. If we assume a random
-distribution of birthdays, the probability of success p is equal to 1/365. Because <i>p</i> is much
+distribution of birthdays, the probability of success p is equal to 1/365. Because \(p\) is much
 less than one in this example, we can immediately turn to the Poisson distribution to evaluate
 the probability distribution function that will describe the expected results from many
 such samplings of 1000 people. Thus, for our example,
-\[
-p = 1 / 365 = 0.00274 \\
-n = 1000 \\
-\overline{x} = pn = 2.74 \\
-\sigma = \sqrt{\overline{x}} = 1.66 \\
-P(x) = \frac{\overline{x}^{x}e^{-\overline{x}}}{x!} = \frac{(2.74)^xe^{-2.74}}{x!} 
-\]
+<table align="center" cellpadding="10">
+<tr><td align="center">\(p = 1/365 = 0.00274\)</td></tr>
+<tr><td align="center">\(n = 1000\)</td></tr>
+<tr><td align="center">\(\overline{x} = pn = 2.74\)</td></tr>
+<tr><td align="center">\(\sigma = \sqrt{\overline{x}} = 1.66\)</td></tr>
+s<tr><td align="center">\(P(x) = \frac{\overline{x}^{x}e^{-\overline{x}}}{x!} = \frac{(2.74)^xe^{-2.74}}{x!}\)</td></tr>
+</table>
 
 <img src="fig3.5.png" width="407" height="287" alt="">
+<br>
 <img src="noname1.png" width="158" height="282" alt=""></p>
 
-<p>Recall that <i>P(x)</i> gives the predicted probability that exactly <i>x</i> birthdays will be observed
+<p>Recall that \(P(x)\) gives the predicted probability that exactly \(x\) birthdays will be observed
 from a random sampling of 1000 people. The numerical values are plotted in Fig. 3.5 and show
-that <i>x</i> = 2 is the most probable result. The mean value of 2.74 is also shown in the figure,
+that \(x = 2\) is the most probable result. The mean value of 2.74 is also shown in the figure,
 together with one value of the standard deviation of 1.66 on either side of the mean. The distribution
 is roughly centered about the mean value, although considerable asymmetry is evident
 for this low value of the mean. Again the size of the standard deviation gives some indication
@@ -502,7 +506,7 @@ the following properties with the Poisson distribution:
 
 <ol type="1">
 <li>It is normalized: \(\sum_{x = 0}^{\infty}P(x) = 1\).</li>
-<li>The distribution is characterized by a single parameter \(\overline{x}\), which is given by the product <i>np</i>.</li>
+<li>The distribution is characterized by a single parameter \(\overline{x}\), which is given by the product \(np\).</li>
 <li>The predicted variance \(\sigma^{2}\) as defined in Eq. (3.17) is again equal to the mean value \(\overline{x}\).</li>
 </ol>
 
@@ -515,7 +519,7 @@ out of a group of randomly selected individuals, but now consider a much larger 
 distribution \(\overline{x} = np = 27.4\). Because the predicted mean is larger than 20, we can turn to the
 Gaussian distribution for the predicted distribution of the results of many measurements,
 each of which consists of counting the number of birthdays found in a different group of
-10,000 people. The predicted probability of observing a specific count <i>x</i> is then given by
+10,000 people. The predicted probability of observing a specific count \(x\) is then given by
 \[
 P(x) = \frac{1}{\sqrt{2 \pi \cdot 27.4}}\exp \left( - \frac{(x - 27.4)^2}{2 \cdot 27.4} \right) \tag{3.31}
 \]
@@ -529,17 +533,17 @@ The results are shown graphically in Fig. 3.6a.</p>
 <p>Two important observations can be made at this point about the Gaussian distribution:
 <ol type="1">
 <li>
-The distribution is symmetric about the mean value \(\overline{x}\). Therefore, <i>P(x)</i> depends only
-on the absolute value of the deviation of any value <i>x</i> from the mean, defined as 
+The distribution is symmetric about the mean value \(\overline{x}\). Therefore, \(P(x)\) depends only
+on the absolute value of the deviation of any value \(x\) from the mean, defined as 
  \(\epsilon \equiv |x - \overline{x}|\).
 </li>
 <li>
-Because the mean value \(\overline{x}\) is large, values of <i>P(x)</i> for adjacent values of <i>x</i> are not
+Because the mean value \(\overline{x}\) is large, values of \(P(x)\) for adjacent values of \(x\) are not
 greatly different from each other. In other words, the distribution is slowly varying.
 </li>
 </ol>
 These two observations suggest a recasting of the distribution as an explicit function of the
-deviation \(\epsilon\) (rather than of <i>x</i>) and as a continuous function (rather than a pointwise discrete
+deviation \(\epsilon\) (rather than of \(x\)) and as a continuous function (rather than a pointwise discrete
 function). These changes are accomplished by rewriting the Gaussian distribution as
 \[
 G(\epsilon) = \sqrt{\frac{2}{\pi \overline{x}}}e^{- \epsilon^{2}/2 \overline{x}} \tag{3.33}
@@ -547,7 +551,7 @@ G(\epsilon) = \sqrt{\frac{2}{\pi \overline{x}}}e^{- \epsilon^{2}/2 \overline{x}}
 
 where \(G(\epsilon)d \epsilon\) is now defined as the differential probability of observing a deviation in \(d \epsilon\)
 about \(\epsilon\). Comparing Eq. (3.33) with Eq. (3.30), we note a factor of 2 that has entered in \(G(\epsilon)\) 
-because there are two values of <i>x</i> for every value of the deviation \(\epsilon\).</p>
+because there are two values of \(x\) for every value of the deviation \(\epsilon\).</p>
 
 <p>Figure 3.6b shows the continuous form of the Gaussian distribution for the same example
 chosen to illustrate the discrete case. Comparing Fig. 3.6a and 3.6b, the scale factors for
@@ -570,7 +574,7 @@ exponential factor now depends only on the ratio of \(\epsilon\) tp \(\sigma\). 
 t \equiv \frac{\epsilon}{\sigma}
 \]
 
-the Gaussian distribution can be rewritten in terms of this new variable <i>t</i>:
+the Gaussian distribution can be rewritten in terms of this new variable \(t\):
 \[
 G(t) = G(\epsilon)\frac{d \epsilon}{dt} = G(\epsilon)\sigma
 \]
@@ -579,14 +583,15 @@ G(t) = \sqrt{\frac{2}{\pi}}e^{-t^{2}/2} \tag{3.34}
 \]
 
 where \(0 \leq t \leq \infty\). We now have a universal form of the Gaussian distribution, shown in
-Fig. 3.8, that is valid for all values of the mean \(\overline{x}\). Recall that <i>t</i> is just the observed deviation
+Fig. 3.8, that is valid for all values of the mean \(\overline{x}\). Recall that \(t\) is just the observed deviation
 \(\epsilon \equiv |x - \overline{x}|\) normalized in units of the standard deviation \(\sigma\).</p>
 
 <img src="fig3.7.png" width="574" height="353" alt="">
+<br>
 <img src="fig3.8.png" width="322" height="369" alt="">
 
 <p>From the definitions illustrated in Fig. 3.7, the probability that a typical normalized
-deviation <i>t</i> predicted by a Gaussian distribution will be less than a specific value \(t_{0}\) is given
+deviation \(t\) predicted by a Gaussian distribution will be less than a specific value \(t_{0}\) is given
 by the integral
 \[
 \int_{0}^{t_{0}}G(t)dt \equiv f(t_{0})
@@ -600,16 +605,575 @@ than the assumed value to. For example, we can conclude that about 68% of all sa
 deviate from the true mean by less than one value of the standard deviation.
 
 <h2>III. APPLICATIONS OF STATISTICAL MODELS</h2>
+The first two sections of this chapter dealt with independent topics: the organization of
+experimental data in Section I, and the structure of certain statistical models in Section 11.
+The practical uses of statistical analysis are now illustrated by bringing together these two
+separate topics.
 
+<p>There are two major applications of counting statistics in nuclear measurements.The first
+of these, "Application A," involves the use of statistical analysis to determine whether a set
+of multiple measurements of the same physical quantity shows an amount of internal fluctuation
+that is consistent with statistical predictions. This application usually is used to determine
+whether a particular counting system is functioning normally. Although this is a useful
+application, a far more valuable contribution of counting statistics arises in situations in
+which we have only a single experimental measurement. In "Application B" we examine the
+methods available to make a prediction about the uncertainty one should associate with that
+single measurement to account for the unavoidable effects of statistical fluctuations.</p>
 
+<h3>Application A: Checkout of the Counting System to See if Observed Fluctuations
+Are Consistent with Expected Statistical Fluctuation</h3>
 
+A common quality control procedure in many counting laboratories is to periodically (perhaps
+once a month) record a series of 20-50 successive counts from the detector system
+while keeping all experimental conditions as constant as possible. By applying the analytical
+procedures to be described here, it can be determined whether the internal fluctuation
+shown by these multiple measurements is consistent with the amount of fluctuation expected
+if statistical fluctuations were the only origin. In this way abnormal amounts of fluctuation
+can be detected which could indicate malfunctioning of some portion of the counting
+system.
 
+<p>Fig. 3.9 shows the chain of events that characterizes this application of counting statistics.
+Properties of the experimental data are confined to the left half of the figure, whereas
+on the right side are listed properties of an appropriate statistical model. We start in the
+upper-left corner with the collection of \(N\) independent measurements of the same physical
+quantity. These might be, for example, successive 1 min counts from a detector. Using the
+methods outlined in Section I, we can characterize the data in several ways. The data distribution
+function \(F(x)\) as defined in Eq. (3.3) can be compiled. From this distribution, the
+mean value \(\overline{x}_{e}\) and the sample variance \(s^{2}\) can be computed by the formulas given in
+Eqs. (3.5) and (3.9). Recall that the mean value \(\overline{x}_{e}\) gives the value about which the distribution
+is centered, whereas the sample variance \(s^{2}\) is a quantitative measure of the amount
+of fluctuation present in the collection of data.</p>
 
+<img src="fig3.9.png" width="480" height="377" alt="">
 
+<p>We now are faced with the task of matching these experimental data with an appropriate
+statistical model. Almost universally we will want to match to either a Poisson or
+Gaussian distribution (depending on how large the mean value is), either of which is fully
+specified by its own mean value \(\overline{x}\). What should we choose for \(\overline{x}\)? We would be rather foolish
+if we chose any value other than \(\overline{x}_{e}\), which is our only estimate of the mean value for the
+distribution from which the data have been drawn. Setting \(\overline{x} = \overline{x}_{e}\) then provides the bridge
+from left to right in the figure, so that we now have a fully specified statistical model. If we
+let \(P(x)\) represent the Poisson or Gaussian distribution with \(\overline{x} = \overline{x}_{e}\) then the measured
+data distribution function \(F(x)\) should be an approximation to \(P(x)\) provided the statistical
+model accurately describes the distribution from which the data have arisen. One method
+of carrying out a comparison at this level is simply to make a superimposed plot of \(F(x)\)
+and \(P(x)\) and then to compare the shape and amplitude of the two distributions.</p>
 
+<p>But such a comparison of two functions is, as yet, only qualitative. It is desirable to
+extract a single parameter from each distribution so that they can be compared quantitatively.
+The most fundamental parameter is the mean value, but these have already been
+matched and are the same by definition. A second parameter of each distribution is the
+variance, and we can carry out the desired quantitative comparison by noting the predicted
+variance \(\sigma^{2}\) of the statistical model and comparing with the measured sample variance
+\(s^{2}\) of the collection of data. If the data are actually characterized by the statistical model
+and show a degree of internal fluctuation that is consistent with statistical prediction, these
+two variance values should be about the same.</p>
 
+<p>To illustrate the direct comparison of the data distribution function with the predicted
+probability distribution function, we return to the example of data given in Table 3.1. In
+Fig. 3.10 data distribution function has been replotted as the solid vertical bars. The mean
+value for these data was calculated to be \(\overline{x}_{e} = 8.8\) so the transition to the appropriate statistical
+model is made by assuming its mean value to be \(\overline{x} = 8.8\). Because the mean value is
+not large, we are prohibited from using the Gaussian distribution and we therefore use the
+Poisson as the assumed statistical model. The points on Fig. 3.10 are the values of the predicted
+distribution function of the Poisson distribution for a mean value of 8.8. Because the
+Poisson is defined only for discrete values of \(x\), the continuous curve is drawn only to connect
+the points for visual reference.</p>
 
+<p>At this point a comparison of the two distributions is difficult. Because relatively few
+data points were obtained (20 measurements) the value of \(F(x)\) at each point is subject to
+rather large fluctuations. One would expect that, if more data were gathered, the fluctuations
+would diminish and the data distribution function \(F(x)\) would adhere more and more
+closely to the predicted probability distribution function \(P(x)\), provided the data are indeed
+a true sample from the predicted statistical model. From Fig. 3.10 we can only say that the
+experimental data are not grossly at variance with the prediction.</p>
 
+<img src="fig3.10.png" width="491" height="392" alt="">
+
+<p>To take the comparison one step further, we would now like to compare the value of
+the sample variance and the predicted variance from the statistical model. The sample variance
+calculated from Eq. (3.8) for the same set of data is found to be
+\[
+s^{2} = 8.8
+\]
+
+Because the assumed statistical model is the Poisson distribution, the predicted variance is
+given by
+\[
+\sigma^{2} = \overline{x} = 8.80
+\]
+
+These two results show that there is less fluctuation in the data than would be predicted if
+the data were a perfect sample from a Poisson distribution of the same mean. With a limited
+sample size, however, one would not expect these two parameters to be precisely the
+same and a more quantitative test is required to determine whether the observed difference
+is really significant. This function is provided by the "chi-squared test."</p>
+
+<p>Chi-squared is simply another parameter of the experimental data distribution and is
+defined as
+\[
+\chi^{2} = \frac{1}{\overline{x}_{e}}\sum_{i = 1}^{N}(x_{i} - \overline{x}_{e})^{2} \tag{3.35}
+\]
+
+where the summation is taken over each individual data point \(x_{i}\). Chi-squared is closely
+related to the sample variance and the two are related by
+\[
+\chi^{2} = \frac{(N - 1)s^{2}}{\overline{x}_{e}} \tag{3.36}
+\]
+
+Now if the amount of fluctuation present in the data is closely modeled by the Poisson distribution,
+then \(s^{2 } \equiv \sigma^{2}\). But we know that for the Poisson distribution, \(\sigma^{2} = \overline{x}\). Furthermore,
+we have chosen \(\overline{x}\) to be equal to \(\overline{x}_{e}\).Therefore, the degree to which the ratio \(s^{2}/\overline{x}\) deviates
+from unity is a direct measure of the extent to which the observed sample variance differs
+from the predicted variance. Now referring to Eq. (3.36), the degree to which \(\chi^{2}\) differs
+from \(N - 1\) is a corresponding measure of the departure of the data from predictions of the
+Poisson distribution. Chi-squared distribution tables may be found (e.g. Ref. 3) that are
+generally cast in the form shown in Table 3.5. The column on the left indicates the number
+of statistical degrees of freedom in the system. (This is one less than the number of independent
+measurements used to derive the value of \(\chi^{2}\) because \(\overline{x}_{e}\), has been calculated from
+the same set of data.) Each column in the table is headed by a specific value of \(p\), defined
+as the probability that a random sample from a true Poisson distribution would have a larger
+value of \(\chi^{2}\) than the specific value shown in the table. Very low probabilities (say less
+than 0.02) indicate abnormally large fluctuations in the data, whereas very high probabilities
+(greater than 0.98) indicate abnormally small fluctuations. A perfect fit to the Poisson
+distribution for large samples would yield a probability of 0.50, whereas the somewhat arbitrary
+limits listed above indicate situations in which the counting system may be displaying
+either abnormally large fluctuations (which is the usual type of malfunction) or data that
+are too regular and show abnormally small fluctuations. Figure 3.11 gives a plot of the \(\chi^{2}\)
+distribution for a wider range of the parameters involved.</p>
+
+<img src="tab3.5.png" width="653" height="162" alt="">
+<br>
+<img src="fig3.11.png" width="586" height="503" alt="">
+
+<p>For the illustrative example given above, we calculate a \(\chi^{2}\) value of 15.89. From Table 3.5
+for \(N = 20\) we find (by interpolation) a value of \(p = 0.66\). Because that probability is neither
+very large nor very small, we would conclude that the equipment used to generate the set
+of numbers originally shown does not give rise to abnormal fluctuations.</p>
+
+<img src="fig3.12.png" width="511" height="352" alt="">
+
+<h3>Application B: Estimation of the Precision of a Single Measurement</h3>
+A more valuable application of counting statistics applies to the case in which we have only
+a single measurement of a particular quantity and wish to associate a given degree of
+uncertainty with that measurement. To state the objective in another way, we would like to
+have some estimate of the sample variance to be expected if we were to repeat the measurement
+many times. The square root of the sample variance should be a measure of the
+typical deviation of any one measurement from the true mean value and thus will serve as
+a single index of the degree of precision one should associate with a typical measurement
+from that set. Because we have only a single measurement, however, the sample variance
+cannot be calculated directly but must be estimated by analogy with an appropriate statistical
+model.
+
+<p>The process is illustrated in Fig. 3.12. Again, the left half of the figure deals only with
+experimental data, whereas the right half deals only with the statistical model. We start in
+the upper-left corner with a single measurement, \(x\). If we make the assumption that the
+measurement has been drawn from a population whose theoretical distribution function is
+predicted by either a Poisson or Gaussian distribution, then we must match an appropriate
+theoretical distribution to the available data. For either model we must start with a value
+for the mean \(\overline{x}\) of the distribution. Because the value of our single measurement \(x\) is the
+only information we have about the theoretical distribution from which it has been drawn,
+we have no real choice other than to assume that the mean of the distribution is equal to
+the single measurement, or \(\overline{x} = x\). Having now obtained an assumed value for \(\overline{x}\), the entire
+predicted probability distribution function \(P(x)\) is defined for all values of \(x\). We can also
+immediately find a value for the predicted variance \(\sigma^{2}\) of that distribution. We can then use
+the association that, if the data are drawn from the same distribution, an estimate of the
+sample variance \(s^{2}\) of a collection of such data should be given by \(\sigma^{2}\). Through this process
+we have therefore obtained an estimate for the sample variance of a repeated set of measurements
+that do not exist but that represent the expected results if the single measurement
+were to be repeated many times.</p>
+
+<p>The conclusion we reach can then be stated as follows:
+
+<table align="center" cellpadding="10">
+<tr>
+<td>The expected<br>sample variance</td>
+<td align="center">\(s^{2} \equiv \sigma^{2}\)</td>
+<td>
+of the statistical<br>
+model from which we<br>
+think the measurement<br>
+\(x\) is drawn
+</td>
+</tr>
+
+<tr>
+<td>
+<td align="center">\(= \overline{x}\)</td>
+<td>
+provided the model is<br>
+either Poisson or<br>
+Gaussian
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td align="center">\(\equiv x\)</td>
+<td>
+because \(x\) is our only<br>
+measurement on which<br>
+to base an estimate of \(\overline{x}\)
+</td>
+</tr>
+</table>
+
+<i>We therefore conclude that</i>
+\[
+\sqrt{s^{2}} = \sigma = \sqrt{x}
+\]
+
+<i>is our best estimate of the deviation from the true mean that should typify our single measurement x.</i></p>
+
+<p>This conclusion can be stated somewhat more quantitatively provided the assumed
+probability distribution function is a Gaussian (\(x\) is large). Then the range of values \(x \pm \sigma\)
+or \(x \pm \sqrt{x}\) will contain the true mean \(\overline{x}\) with 68% probability.This conclusion follows directly
+from earlier statements about the shape of the Gaussian curve.? It is conventional to
+quote the uncertainty or "error" of a single measurement as simply one value of the standard
+deviation \(\sigma\). If we quote a larger uncertainty, then the probability of including the true
+mean within the quoted interval is increased, and vice versa.</p>
+
+<p>To illustrate, assume we have a single measurement \(x = 100\). Then
+\[
+\sigma = \sqrt{x} = \sqrt{100} = 10
+\]
+
+Because our best estimate of the mean value of the distribution from which this measurement
+was drawn (the measurement itself) is large, we can assume that the parent distribution
+is a Gaussian. From the shape of the Gaussian curve (see Table 3.4) we can then construct
+Table 3.6 for the specific example. The table gives various options available in quoting
+the uncertainty to be associated with our single measurement. The conventional choice is to
+quote the measurement plus or minus one value of the standard deviation \(\sigma\), or \(100 \pm 10\).
+This interval is expected to contain the true mean value \(\overline{x}\) with a probability of 68%. If we
+wish to increase the probability that the true mean is included, we can do so only by
+expanding the interval or error associated with the measurement. For example, to achieve
+a 99% probability that the true mean is included, the interval must be expanded to \(2.58 \sigma\),
+or the range \(100 \pm 25.8\) for our example. Unless otherwise stated, the errors quoted with a
+particular nuclear measurement normally represent one standard deviation.</p>
+
+<img src="tab3.6.png" width="500" height="196" alt="">
+
+<p>The <i>fractional standard deviation</i>, defined as \(\sigma/x\), of a simple counting measurement is
+given by \(\sqrt{x}/x\), or \(1/\sqrt(x)\). Thus, the total number of recorded counts \(x\) completely determines
+the fractional error to be associated with that measurement. If 100 counts are recorded, the
+fractional standard deviation is 10%, whereas it can be reduced to 1% only by increasing
+the total counts recorded to 10,000. For events occurring at a constant rate, this relation
+implies that the time required to achieve a given fractional error will increase as the inverse
+square of the desired statistical precision.</p>
+
+<p>When a set of measurements is presented graphically, the estimated errors associated
+with each measurement are often displayed on the same graph. Figure 3.13 gives a hypothetical
+set of measurements of a quantity \(x\) as a function of some other variable or parameter
+z. The measured data are presented as points, whereas the uncertainty associated with
+each point is indicated by the length of the "error bar" drawn around each point. It is conventional
+to show the length of the error bar equal to one value of a on either side of the
+point or the total length of the error bar equal to \(2\sigma\). Under these conditions, if one were
+to attempt a fit of an assumed functional behavior \(x = f(z)\), the fitted function should at
+best pass through 68% (or roughly two-thirds) of all the error bars associated with the data.</p>
+
+<img src="fig3.13.png" width="535" height="305" alt="">
+
+<h3>Caution</h3>
+All the conclusions we have drawn apply <i>only</i> to a measurement of a number of successes
+(number of heads in coin tossing, number of birthdays, etc.) In radioactive decay or nuclear
+counting, we may directly apply \(\sigma = \sqrt{x}\) only if \(x\) represents a counted number of successes,
+that is, a number of events over a given observation time recorded from a detector. The vast
+majority of mistakes made in the use of counting statistics results from the misapplication
+of the above relation.
+
+<p>One <i>cannot</i> associate the standard deviation \(\sigma\) with the square root of any quantity
+that is not a directly measured number of counts. For example, the association does <i>not</i>
+apply to
+
+<ol type="1">
+<li>Counting <i>rates</i>.</li>
+<li><i>Sums</i> or <i>differences</i> of counts.</li>
+<li><i>Averages</i> of independent counts.</li>
+<li>Any <i>derived</i> quantity.</li>
+</ol>
+
+In all these cases the quantity is calculated as a function of the number of counts recorded
+in a given experiment. The error to be associated with that quantity must then be calculated
+according to the methods outlined in the next section.</p>
+
+<h2>IV. ERROR PROPAGATION</h2>
+The distributions we have treated so far represent the direct results of counting experiments.
+In typical applications, one is seldom interested in the unprocessed data consisting
+of the number of counts over a particular time interval. More often the data are processed
+through multiplication, addition, or other functional manipulation to arrive at a derived
+number of more immediate interest. The values that are produced by these processing
+steps will be distributed in a way that is dependent on both the original distribution and the
+types of operations carried out.
+
+<p>To illustrate, assume that measurements are made under conditions in which it is expected
+that the "raw" counts should follow the Gaussian distribution of Eq. (3.30). Only one
+parameter, the mean value, is needed to fully specify the distribution, and the standard deviation
+is just the square root of the mean. Now assume that these counts were recorded using a
+background-free detector system that records only half of the quanta emitted by the source of
+the radiation, or, as will be formally introduced in Chapter 4, the system has an absolute <i>detection
+efficiency</i> of 50%. We would then multiply the number of counts by a factor of 2 to obtain
+a value for of the number of quanta emitted by the source. If identical measurements were
+then repeated many times, the multiplication process will produce a distribution of calculated
+emission numbers that will follow a new distribution. Clearly its mean will be twice that of the
+average number of counts, but what will be its shape and standard deviation?</p>
+
+<p>The answer to this question is that a multiplication by a constant as in this example will
+produce a new distribution that also has the <i>shape</i> of a Gaussian, but for which the standard
+deviation \(\sigma\) is no longer given by the square root of the mean value. Now it is necessary to
+represent the distribution with <i>two</i> parameters, its mean and standard deviation. This form
+of the continuous Gaussian distribution analogous to Eq. (3.30) is conventionally written as
+\[
+G(x)dx = \frac{1}{\sigma}\frac{1}{\sqrt{2\pi}}\exp \left( - \frac{(x - \overline{x})^{2}}{2\sigma^{2}} \right)dx
+\]
+
+where \(G(x)dx\) is the probability of observing a value between \(x\) and \(x + dx\). The shape of
+the distribution is still described by Eq. (3.34):
+\[
+G(t)dt = \sqrt{\frac{2}{\pi}}e^{-t^{2}/2}dt
+\]
+
+where
+\[
+t \equiv \frac{|x - \overline{x}|}{\sigma}
+\]
+
+and the properties of the distribution listed in Table 3.4 remain valid.</p>
+
+<p>It turns out that many of the common manipulations when carried out on counting
+data that were originally Gaussian distributed will produce derived values that also follow
+a Gaussian shape. Such operations include multiplying or dividing the data by a constant,
+combining two Gaussian-distributed variables through addition, subtraction, or multiplication,
+or calculating the average of a series of independent measurements. While the mean
+value of the derived distribution is simply predicted from the means of the original distributions,
+the standard deviation values are not so obvious. This section describes the process
+that can be used to predict these standard deviations. In the examples shown, the derived
+distribution will be of Gaussian shape provided the distribution of the original data is also
+Gaussian. It can be shown that if the errors are individually small and symmetric about
+zero, a general result can be obtained for the expected error to be associated with any
+quantity that is calculated as a function of any number of independent variables. If \(x, y, z, ...\) 
+are directly measured counts or related variables for which we know \(\sigma_{x}, \sigma_{y}, \sigma_{z}, ...\) then
+the standard deviation for any quantity \(u\) derived from these counts can be calculated from
+\[
+\sigma_{u}^{2} = 
+\left( \frac{\partial u}{\partial x} \right)^{2} \sigma_{x}^{2} + 
+\left( \frac{\partial u}{\partial y} \right)^{2} \sigma_{y}^{2} + 
+\left( \frac{\partial u}{\partial z} \right)^{2} \sigma_{z}^{2} + ... \tag{3.37}
+\]
+
+where \(u = u(x, y, z, ...)\) represents the derived quantity. Equation (3.37) is generally known
+as the error propagation formula and is applicable to almost all situations in nuclear measurements.
+The variables \(x, y, z, ...\), however, must be chosen so that they are truly independent
+in order to avoid the effects of correlation. The same specific count should not
+contribute to the value of more than one such variable. The use of Eq. (3.37) can be illustrated
+by application to some simple cases.</p>
+
+<h3><i>Case 1. Sums or Differences of Counts</i></h3>
+If we define
+<table align="center" cellpadding="10">
+<tr>
+<td align="center">\(u = x + y\)</td>
+<td align="center">or</td>
+<td align="center">\(u = x - y\)</td>
+</tr>
+</table>
+
+then
+<table align="center" cellpadding="10">
+<tr>
+<td align="center">\(\frac{\partial u}{\partial x} = 1\)</td>
+<td align="center">and</td>
+<td align="center">\(\frac{\partial u}{\partial y} = \pm 1\)</td>
+</table>
+
+Application of Eq. (3.37) yields
+\[
+\sigma_{u}^{2} = (1)^{2}\sigma_{x}^{2} + (\pm 1)^{2}\sigma_{y}^{2}
+\]
+
+or
+\[
+\sigma_{u} = \sqrt{\sigma_{x}^{2} + \sigma_{y}^{2}} \tag{3.38}
+\]
+
+In words, combining the standard distributions in this manner is frequently called "combining
+in quadrature" or taking their "quadrature sum."
+
+<p>A common application of this case arises when counts resulting from a radioactive
+source must be corrected by subtracting an appropriate background count. If we assume
+equal counting times, then
+\[
+\rm net counts = total counts - background counts
+\]
+
+or
+\[
+u = x - y
+\]
+
+Because both \(x\) and \(y\) are directly measured numbers of counts (or successes), the expected
+standard deviation of each is known to be its own square root. The object is to deduce the
+expected standard deviation of the net counts, a derived number. Because a simple difference
+is involved, the answer will be given by Eq. (3.38).</p>
+
+<p>To illustrate by example, suppose we have recorded the following data for equal counting
+times
+<table align="center" cellpadding="10">
+<tr><td align="center">\({\rm total \, counts} = x = 1071\)</td></tr>
+<tr><td align="center">\({\rm background \, counts} = 521\)</td></tr>
+</table>
+
+then
+\[
+{\rm net \, counts} = u = 550
+\]
+
+We know a priori
+<table align="center" cellpadding="10">
+<tr><td align="center">\(\sigma_{x} = \sqrt{x} = \sqrt{1071}\)</td></tr>
+<tr><td align="center">\(\sigma_{y} = \sqrt{y} = \sqrt{521}\)</td></tr>
+</table>
+
+Thus
+<table align="center" cellpadding="10">
+<tr><td align="center">\(\sigma_{u} = \sqrt{\sigma_{x}^{2} + \sigma_{y}^{2}} = \sqrt{x + y} = \sqrt{1592} = 39.9\)</td></tr>
+</table>
+
+We would then quote the result plus or minus one standard deviation as
+<table align="center" cellpadding="10">
+<tr><td align="center">\({\rm net \, counts} = 550 \pm 39.9 \)</td></tr>
+</table>
+</p>
+
+<h3><i>Case 2. Multiplication or Division by a Constant</i></h3>
+If we define
+\[
+u = Ax
+\]
+
+where \(A\) is a constant (no associated uncertainty), then
+\[
+\frac{\partial u}{\partial x} = A
+\]
+
+and application of Eq. (3.37) gives
+\[
+\sigma_{u} = A \sigma_{x} \tag{3.39}
+\]
+
+Similarly, if
+\[
+\mu = \frac{x}{B}
+\]
+
+where \(B\) is also a constant, then
+\[
+\sigma_{u} = \frac{\sigma_{\mu}}{B} \tag{3.40}
+\]
+
+Note that, in either case, the final "fractional error" (\(\sigma_{u}/u\) or \(\sigma_{\mu}/\mu\)) is the same as the original
+fractional error (\(\sigma_{x}/x\)). As we would expect intuitively, multiplying or dividing a value
+by a constant does not change its relative error.
+
+<p>A familiar example of the above case is the calculation of a counting rate. If \(x\) counts
+are recorded over a time \(t\), then
+\[
+{\rm counting \, rate} \equiv r = \frac{x}{t}
+\]
+
+The usual assumption is that the time is measured with very small uncertainty, so that \(t\) can
+be considered a constant. Then Eq. (3.40) can be used to calculate the expected standard
+deviation in \(r\) corresponding to the known standard deviation in the number of counts \(x\).</p>
+
+<p>
+<table align="center" cellpadding="10">
+<tr>
+<td align="center">\(x = 1120 \, {\rm counts}\)</td>
+<td align="center">and</td>
+<td align="center">\(t = 5s\)</td>
+</tr>
+</table>
+
+Then
+\[
+r = \frac{1120}{5s} = 224s^{-1}
+\]
+
+The associated standard deviation is
+\[
+\sigma_{r} = \frac{\sigma_{x}}{t} = \frac{\sqrt{1120}}{5s} = 6.7s^{-1}
+\]
+
+Therefore, the counting rate is
+\[
+r = 224 \pm 6.7 \, {\rm counts/s}
+\]
+
+</p>
+
+<h3><i>Case 3. Multiplication or Division of Counts</i></h3>
+For the case
+\[
+u = xy,\quad \frac{\partial u}{\partial x} = y,\quad \frac{\partial u}{\partial y} = x
+\]
+\[
+\sigma_{u}^{2} = y^{2}\sigma_{x}^{2} + x^{2}\sigma_{y}^{2}
+\]
+
+Dividing both sides by \(u^{2} = x^{2}y^{2}\)
+\[
+\left( \frac{\sigma_{u}}{u} \right)^{2} = \left( \frac{\sigma_{x}}{x} \right)^{2} + \left( \frac{\sigma_{y}}{y} \right)^{2} \tag{3.41}
+\]
+
+Similarly, if
+\[
+u = xy,\quad \frac{\partial u}{\partial x} = \frac{1}{y},\quad \frac{\partial u}{\partial y} = \frac{x}{y^{2}}
+\]
+\[
+\sigma_{u}^{2} = \left( \frac{1}{y} \right)^{2}\sigma_{x}^{2} + \left( \frac{x}{y^{2}} \right)^{2}\sigma_{y}^{2}
+\]
+
+Again, dividing both sides by \(u^{2} = x^{2}/y^{2}\)
+\[
+\left( \frac{\sigma_{u}}{u} \right)^{2} = \left( \frac{\sigma_{x}}{x} \right)^{2} + \left( \frac{\sigma_{y}}{y} \right)^{2} \tag{3.41'}
+\]
+
+Thus, for either \(u = xy\) or \(u = x/y\), the <i>fractional errors</i> in \(x\) and \(y\) (\(\sigma_{x}/x\) and \(\sigma_{y}/y\)) combine
+in quadrature sum to give the <i>fractional error</i> in \(u\).
+
+<p>As an example, suppose we wish to calculate the ratio of two source activities from
+independent counts taken for equal counting times (background is neglected). Assume
+\[
+{\rm counts \, from \, source \, 1} \equiv N_{1} = 16265
+\]
+\[
+{\rm counts \, from \, source \, 2} \equiv N_{2} = 8192
+\]
+\[
+{\rm activity \, ratio}: \quad R \equiv \frac{N_{1}}{N_{2}} = \frac{16265}{8192} = 1.985
+\]
+
+From Eq. (3.41')
+\[
+\left( \frac{\sigma_{R}}{R} \right)^{2} = 
+\left( \frac{\sigma_{N_{1}}}{N_{1}} \right)^{2} + \left( \frac{\sigma_{N_{2}}}{N_{2}} \right)^{2} = 
+\frac{N_{1}}{N_{1}^{2}} + \frac{N_{2}}{N_{2}^{2}} = 1.835 \times 10^{-4}
+\]
+\[
+\frac{\sigma_{R}}{R} = \sqrt{1.835 \times 10^{-4}} = 0.0135
+\]
+
+and multiplying by the value of \(R\)
+\[
+\sigma_{R} = 0.027
+\]
+
+Therefore, the reported result would be
+\[
+R = 1.985 \pm 0.027
+\]
+</p>
+
+<h3><i>Case 4. Mean Value of Multiple Independent Counts</i></h3>
 
 
 </body>
