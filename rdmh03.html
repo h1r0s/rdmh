@@ -1002,7 +1002,7 @@ in quadrature" or taking their "quadrature sum."
 source must be corrected by subtracting an appropriate background count. If we assume
 equal counting times, then
 \[
-\rm net counts = total counts - background counts
+\rm net \, counts = total \, counts - background \, counts
 \]
 
 or
@@ -1174,7 +1174,158 @@ R = 1.985 \pm 0.027
 </p>
 
 <h3><i>Case 4. Mean Value of Multiple Independent Counts</i></h3>
+Suppose we have recorded N repeated counts from the same source for equal counting
+times. Let the results of these multiple counts be designated \(x_{1}, x_{2}, ..., x_{n}\) and their sum
+be \(\sum\). Then
+\[
+\Sigma = x_{1} + x_{2} + ... + x_{N}
+\]
 
+If we formally apply the error propagation formula [Eq. (3.37)] to find the expected error
+in \(\Sigma\), we find \(\partial\sum/\partial x_{i} = 1\) for all independent counts \(x_{i}\), and therefore
+\[
+\sigma_{\Sigma}^{2} = \sigma_{x_{1}}^{2} + \sigma_{x_{2}}^{2} + \sigma_{x_{N}}^{2}
+\]
+
+But because \(\sigma_{x_{i}} = \sqrt{x_{i}}\) for each independent count,
+\[
+\sigma_{\Sigma}^{2} = x_{1} + x_{2} + ... + x_{n} = \Sigma
+\]
+\[
+\sigma_{\Sigma} = \sqrt{\Sigma} \tag{3.42}
+\]
+
+<p>This result shows that the standard deviation expected for the sum of all the counts is
+the same as if the measurement had been carried out by performing a single count, extending
+over the entire period represented by all the independent counts.</p>
+
+<p>Equation (3.43) is an example of dividing an error-associated quantity (\(\Sigma\)) by a
+constant (\(N\)). Therefore, Eq. (3.40) applies and the expected standard deviation of this
+mean value is given by
+\[
+\sigma_{\overline{x}} = \frac{\sigma_{\Sigma}}{N} = \frac{\sqrt{\Sigma}}{N} = \frac{\sqrt{N\overline{x}}}/N
+\]
+\[
+\sigma_{\overline{x}} = \sqrt{\frac{\overline{x}}{N}} \tag{3.44}
+\]
+</p>
+
+<p>Note that the expected standard deviation of any single measurement \(x_{i}\) is
+\[
+\sigma_{x_{i}} = \sqrt{x_{i}}
+\]
+
+Because any typical count will not differ greatly from the mean, \(x_{i} \equiv \overline{x}\), and we therefore
+conclude that the mean value based on \(N\) independent counts will have an expected error
+that is smaller by a factor \(\sqrt{N}\) compared with any single measurement on which the mean
+is based. A general conclusion is that, if we wish to improve the statistical precision of a
+given measurement by a factor of 2, we must invest four times the initial counting time.</p>
+
+<h3><i>Case 5. Combination of Independent Measurements with Unequal Errors</i></h3>
+If \(N\) independent measurements of the same quantity have been carried out and they do
+not all have nearly the same associated precision, then a simple average (as discussed in
+Case 4) no longer is the optimal way to calculate a single "best value." We instead want to
+give more weight to those measurements with small values for \(\sigma_{x_{i}}\) (the standard deviation
+associated with \(x_{i}\)) and less weight to measurements for which this estimated error is large.
+
+<p>Let each individual measurement \(x_{i}\) be given a weighting factor \(a_{i}\) and the best value
+\(\langle x \rangle\) computed from the linear combination
+\[
+\langle x \rangle = \frac{\sum_{i = 1}^{N}a_{i}x_{i}}{\sum_{i = 1}^{N}a_{i}} \tag{3.45}
+\]
+
+We now seek a criterion by which the weighting factors ai should be chosen in order to minimize
+the expected error in \(\langle x \rangle\).</p>
+
+<p>For brevity, we write
+\[
+\alpha = \sum_{i = 1}^{N}a_{i}
+\]
+
+so that
+\[
+\langle x \rangle = \frac{1}{\alpha}\sum_{i = 1}^{N}a_{i}x_{i}
+\]
+
+Now apply the error propagation formula [Eq. (3.37)]t o this case:
+
+\begin{eqnarray}
+\sigma_{\langle x \rangle}^{2} &=& \sum_{i = 1}^{N}\left( \frac{\partial(x)}{\partial x_{i}} \right)^{2}\sigma_{x_{i}}^{2} \\
+&=& \sum_{i = 1}^{N}\left( \frac{a_{i}}{\alpha} \right)^{2}\sigma_{x_{i}}^{2} \\
+&=& \frac{1}{\alpha^{2}}\sum_{i = 1}^{N}a_{i}^{2}\sigma_{x_{i}}^{2}
+\end{eqnarray}
+\[
+\sigma_{\langle x \rangle}^{2} = \frac{\beta}{\alpha^{2}} \tag{3.46}
+\]
+
+where
+\[
+\beta = \sum_{i = 1}^{N}a_{i}^{2}\sigma_{x_{i}}^{2}
+\]
+
+In order to minimize \(\sigma_{\langle x \rangle}\), we must minimize \(\sigma_{\langle x \rangle}^{2}\) from Eq. (3.46) with respect to a typical
+weighting factor \(a_{j}\);
+\[
+0 = \frac{\partial \sigma_{\langle x \rangle}^{2}}{\partial a_{j}}
+ = \frac{\alpha^{2}\frac{\partial \beta}{\partial a_{j}} -2\alpha\beta\frac{\partial \alpha}{\partial a_{j}}}{\alpha^{4}} \tag{3.47}
+\]
+
+Note that
+\[
+\frac{\partial\alpha}{\partial a_{j}} = 1, \quad \frac{\partial\beta}{\partial a_{j}} = 2a_{j}\sigma_{x_{j}}^{2}
+\]
+
+Putting these results into Eq. (3.47)w, e obtain
+\[
+\frac{1}{\alpha^{4}}(2\alpha^{2}a_{j}\sigma_{x_{j}}^{2} - 2\alpha\beta) = 0
+\]
+
+and solving for \(a_{j}\), we find
+\[
+a_{j} = \frac{\beta}{\alpha}\cdot\frac{1}{\sigma_{x_{j}}^{2}} \tag{3.48}
+\]
+
+If we choose to normalize the weighting coefficients,
+\[
+\sum_{i = 1}^{N} \equiv \alpha = 1
+\]
+\[
+a_{j} = \frac{\beta}{\sigma_{x_{j}}^{2}}
+\]
+
+Putting this into the definition of \(\beta\), we obtain
+\[
+\beta = \sum_{i = 1}^{N}a_{i}^{2}\sigma_{x_{i}}^{2}
+ = \sum_{i = 1}^{N}\left( \frac{\beta}{\sigma_{x_{i}}^{2}} \right)^{2}\sigma_{x_{i}}^{2}
+\]
+or
+\[
+\beta = \left( \sum_{i = 1}^{N}\frac{1}{\sigma_{x_{i}}^{2}} \right)^{-1} \tag{3.49}
+\]
+
+Therefore, the proper choice for the normalized weighting coefficient for \(x_{j}\), is
+\[
+a_{j} = \frac{1}{\sigma_{x_{j}}^{2}}\left( \sum_{i = 1}^{N}\frac{1}{\sigma_{x_{i}}^{2}} \right)^{-1} \tag{3.50}
+\]
+
+We therefore see that <i>each data point should be weighted inversely as the square of its own
+error</i>.</p>
+
+<p>Assuming that this optimal weighting is followed, what will be the resultant (minimum)
+error in \(\langle x \rangle\)? Because we have chosen \(\alpha = 1\) for normalization, Eq. (3.46) becomes
+\[
+\sigma_{\langle x \rangle} = \beta
+\]
+
+In the case of optimal weighting, \(\beta\) is given by Eq. (3.49). Therefore,
+\[
+\frac{1}{\sigma_{\langle x \rangle}^{2}} = \sum_{i = 1}^{N}\frac{1}{\sigma_{x_{i}}^{2}} \tag{3.51}
+\]
+
+From Eq. (3.51), the expected standard deviation \(\sigma_{\langle x \rangle}\) can be calculated from the standard
+deviations \(\sigma_{x_{i}}\) associated with each individual measurement.</p>
+
+<h2>V. OPTIMIZATION OF COUNTING EXPERIMENTS</h2>
 
 </body>
 </html>
