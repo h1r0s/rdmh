@@ -1460,7 +1460,7 @@ and whose standard deviation can be predicted using Eq. (3.38):
 </p>
 
 <h3><i>Case 1. No Real Activity Is Present</i></h3>
-If there is no actual activity present in the sample, then the true mean values of \(N_{T}\) and \{N_{B}\)
+If there is no actual activity present in the sample, then the true mean values of \(N_{T}\) and \(N_{B}\)
 are the same, and the mean value of \(N_{S}\) is zero. The expected distribution of \(N_{S}\) values is
 shown in Fig. 3.14a. Since under these conditions \(\sigma_{NT} = \sigma_{NB}\) ,the standard deviation of the
 Gaussian distribution for \(N_{S}\), from Eq. (3.59) is just
@@ -1479,7 +1479,7 @@ with positive deviations from the mean (negative values of \(N_{S}\) are always 
 as no source being present), there is a 95% probability that a random sample will lie below the
 mean plus \(1.645\sigma\). Thus setting
 \[
-L_{C} = 1.645\sigma_{N_{S}} = 1.645\sqrt{2}\sigma_{N_{B}} = 2.326\sigma{N_{B}} \tag{3.61}
+L_{C} = 1.645\sigma_{N_{S}} = 1.645\sqrt{2}\sigma_{N_{B}} = 2.326\sigma_{N_{B}} \tag{3.61}
 \]
 
 ensures that a false-positive probability will be no larger than 5%. This choice has become
@@ -1552,7 +1552,7 @@ Using the values for \(\sigma_{N_{D}}\) specified by Eq. (3.66) and \(L_{C}\) fr
 N_{D} = 2.326\sigma_{N_{B}} + 1.645(\sqrt{2}\sigma_{N_{B}} + 1.645) = 4.653\sigma_{N_{B}} + 2.706 \tag{3.67}
 \]
 
-This is the frequently-quoted "Currie Equation"</p>
+This is the frequently-quoted "Currie Equation".</p>
 
 <p>\(N_{D}\) as defined above can now be interpreted as the minimum number of counts needed
 from the source to ensure a false-negative rate no larger than 5% when the system is
@@ -1568,6 +1568,133 @@ must be taken into account:
 \]
 
 where \(T\) is the counting time per sample.</p>
+
+<h2>VII. DISTRIBUTION OF TIME INTERVALS</h2>
+The time intervals separating random events are often of practical interest in radiation
+measurements. We present some results that apply to any random process characterized by
+a constant probability of occurrence per unit time. In statistical language, any such series
+of events is called a <i>Poisson random process</i>. One of the characteristics of such a process is
+that the system has no memory and the probability per unit time remains constant regardless
+of past behavior. Neglecting "dead time" (see Chapter 4), this model will usually be
+adequate to describe the behavior of a radiation detector undergoing irradiation at a reasonable
+distance from a steady-state or long-lived source of radiation. (The distance stipulation
+minimizes possible perturbations caused by any parent-daughter correlated events
+originating from the same nucleus.) No known measurements have ever been substantiated
+that contradict the fundamental assumption that nuclear decay is a Poisson random
+process. By definition, the differential probability \(dp\) of occurrence of an event within a
+differential time interval \(dt\) is given by \(rdt\), where \(r\) is the average rate of occurrence. For a
+finite time interval \(T\), the average number of events occurring will simply be \(rT\).
+
+<h3>A. Intervals between Successive Events</h3>
+In order to derive a distribution function to describe the time intervals between adjacent
+random events, first assume that an event has occurred at time \(t = 0\). What is the differential
+probability that the next event will take place within a differential time \(dt\) after a time
+interval of length \(t\)? Two independent processes must take place: No events may occur
+within the time interval from \(0\) to \(t\), but an event must take place in the next differential
+time increment \(dt\). The overall probability will then be given by the product of the probabilities
+characterizing the two processes, or
+<table align="center" cellpadding="10">
+<tr>
+<td align="center">probability of next<br>event taking place in<br>\(dt\) after delay of \(t\)</td>
+<td align="center">\(=\)</td>
+<td align="center">probability of<br><i>no</i> events during<br>time from \(0\) to \(t\)</td>
+<td align="center">\(\times\)</td>
+<td align="center">probability<br>of an event<br>during \(dt\)</td>
+</tr>
+
+<tr>
+<td align="center">\(I_{1}(t)dt\)</td>
+<td align="center">\(=\)</td>
+<td align="center">\(P(0)\)</td>
+<td align="center">\(\times\)</td>
+<td align="center">\(rdt\)</td>
+</tr>
+</table>\[\tag{3.69}\]
+
+The first factor on the right side follows directly from the earlier discussion of the Poisson
+distribution. We seek the probability that no events will be recorded over an interval of
+length \(t\) for which the average number of recorded events should be \(rt\). From Eq. (3.24)
+\begin{eqnarray}
+P(0)
+ &=& \frac{(rt)^{0}e^{-rt}}{0!} \\
+ &=& e^{-rt} \tag{3.70}
+\end{eqnarray}
+
+Substituting Eq. (3.70) into Eq. (3.69) leads to
+\[
+I_{1}(t)dt = re^{-rt}dt \tag{3.71}
+\]
+
+\(I_{1}(t)\) is now the distribution function for intervals between adjacent random events. The
+plot below shows the simple exponential shape of this distribution.
+
+<p><img src="noname2.png" width="263" height="180" alt=""></p>
+
+Note that the most probable interval is zero. The average interval length is calculated by
+\[
+\overline{t} = \frac{\int_{0}^{\infty}tI_{1}(t)dt}{\int_{0}^{\infty}I_{1}(t)dt} = \frac{\int_{0}^{\infty}tre^{-rt}dt}{1} = \frac{1}{r} \tag{3.72}
+\]
+
+which is the expected result.
+
+<p>In some radiation applications, the counting rate is low enough so that each individual
+count can be visually observed as the data are being collected. Experienced observers soon
+learn what a true exponential interval distribution looks like and occasionally can spot a
+malfunctioning detector by noting a deviation from an expected random input signal.</p>
+
+<h3>B. Time-to-Next-Event</h3>
+In the above derivation of the exponential distribution of intervals, we started with the statement:
+"first assume that an event has occurred at time \(t = 0\)." Thus the result applies to time
+intervals that begin and end with true events. But we could have started with the alternative
+initial assumption: "select a random point in time," and the logic of Eq. (3.69) would not
+change. Therefore the time from a random start to the next true event will follow the same
+exponential distribution as in Eq. (3.71) and will have the same average value of \(1/r\). This fact
+is exploited in the "time-to-next-event" method of measuring \(r\) described on p. 214.
+
+<p>At first glance, the equivalence of these two time interval distributions appears puzling.
+A random point in time must always fall somewhere within an interval between true
+events that has already begun, and it is tempting to think that therefore the average length
+of time to the next true event must be shorter than the average length of intervals that both
+begin and end with true events. Intuitively, this difference might be expected to be a factor
+of 2, since a randomly selected starting time would tend to fall, on the average, near the
+midpoint of the interval between two events. This erroneous conclusion might be further
+defended by correctly noting that the average time from the previous true event for the
+same random point in time is also \(1/r\), since the logic of Eq. (3.69) also applies to this case.</p>
+
+<p>The answer to this apparent dilemma is to note that selecting a random point in time
+is <i>not</i> equivalent to randomly selecting an interval from the distribution of Eq. (3.71). A
+randomly selected time will more likely fall within a long interval than a short one, so there
+is a bias toward the selection of longer intervals. The distribution describing these selected
+intervals can be obtained by noting that the intervals described by Eq. (3.71) are chosen
+with a weighting factor that is proportional to their length, and given by \(t / \overline{t) = rt\). Thus the
+selected interval distribution \(I_{s}(t)\) is given by:
+\[
+I_{s}(t) = rtI_{1}(t) = r^{2}te^{-rt} \tag{3.73}
+\]
+
+Its average value is given by the first moment of this distribution:
+\[
+\overline{t}_{s} = \frac{\int_{0}^{\infty}tI_{s}(t)dt}{\int_{0}^{\infty}I_{s}(t)dt} = \frac{2}{r} \tag{3.74}
+\]
+
+Thus the average selected interval is twice as long as the average random interval, and the
+apparent dilemma is resolved.
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
