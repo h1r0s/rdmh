@@ -1375,7 +1375,7 @@ of merit.</p>
 
 <p>In the following analysis, we assume that the optimal division of counting times given
 by Eq. (3.54) is chosen. Then we can combine Eqs. (3.53) and (3.54) to obtain an expression
-for the figure of merit in terms of the fractional standard deviation of the source rate,
+for the <i>figure of merit</i> in terms of the fractional standard deviation of the source rate,
 defined as \(\epsilon \equiv \sigma_{S}/S\)
 \[
 \frac{1}{T} = \epsilon^{2}\frac{S^{2}}{(\sqrt{S + B} + \sqrt{B})^{2}} \tag{3.55}
@@ -1415,6 +1415,79 @@ of 2.0. The ratio \(S^{2} / B\) is then \((1.5)^{2}/2.0 = 1.125\) times its form
 exceeds unity, the change will slightly improve the overall statistical accuracy of the net
 source rate determination if the total measurement time is held constant.</p>
 
+<h2>VI. LIMITS OF DETECTABILITY</h2>
+There are some circumstances under which it is convenient to estimate the smallest signal
+that can be detected reliably in order to set a "detection limit" for the counting system.
+Some regulatory agencies require that a certain <i>minimum detectable amount (MDA)</i> of
+activity be measurable while monitoring for the possible presence of radioactive contaminants.
+One of the most widely used definitions of MDA was first introduced by Currie. It 
+is based on a binary (yes or no) decision whether a given sample contains activity.
+
+<p>In the simplest case, a counting system is set up to detect the radiation of interest and
+the total number of counts recorded for equal periods of time as different samples are put
+in place. Let \(N_{T}\) be the number of counts recorded with an unknown sample and \(N_{B}\) be the
+number of recorded counts when a blank sample is substituted to determine the background
+level. (In the analysis of the previous section, it was shown that equal allocation of
+time to the sample and background is the proper choice to minimize the uncertainty in the
+net counts when the source is weak compared with background.) The net counts resulting
+from the unknown are then calculated as
+\[
+N_{S} = N_{T} - N_{B} \tag{3.58}
+\]
+</p>
+
+<p>To make a decision whether the sample contains activity, \(N_{S}\) is then compared with a
+critical level \(L_{C}\) that will be determined in the analysis that follows. A simple protocol is followed:
+If \(N_{S}\) is less than \(L_{C}\) it is concluded that the sample does not contain activity, whereas
+if \(N_{S}\) exceeds \(L_{C}\), it is assumed that some real activity is present.</p>
+
+<p>In the absence of statistical fluctuations and other instrumental variations, \(L_{C}\) could be
+set at zero, and any net positive counts could be interpreted as evidence of real activity.
+With the statistical fluctuations that are inevitable in any counting measurement, however,
+there will be many instances of positive \(N_{S}\) that will be observed even for samples with no
+activity, One would therefore like to choose a value of \(L_{C}\) that is high enough to minimize
+the likelihood of such false positives, while keeping it low to reduce the possibility of missing
+real activity when some is actually present (<i>false negatives</i>).</p>
+
+<p>If we assume that the counting time is long enough so that the total number of counts
+recorded in each of these measurements is large (say > 30), then both \(N_{T}\) and \(N_{B}\) should
+follow Gaussian distributions. When these two variables are subtracted to determine \(N_{S}\),
+the net counts should also follow a Gaussian whose mean is the true net number of counts,
+and whose standard deviation can be predicted using Eq. (3.38):
+\[
+\sigma_{N_{S}}^{2} = \sigma_{N_{T}}^{2} + \sigma_{N_{B}}^{2} \tag{3.59}
+\]
+</p>
+
+<h3><i>Case 1. No Real Activity Is Present</i></h3>
+If there is no actual activity present in the sample, then the true mean values of \(N_{T}\) and \{N_{B}\)
+are the same, and the mean value of \(N_{S}\) is zero. The expected distribution of \(N_{S}\) values is
+shown in Fig. 3.14a. Since under these conditions \(\sigma_{NT} = \sigma_{NB}\) ,the standard deviation of the
+Gaussian distribution for \(N_{S}\), from Eq. (3.59) is just
+\[
+\sigma_{N_{S}} = \sqrt{2\sigma_{N_{B}}^{2}} = \sqrt{2}\sigma_{N_{B}}^{2} \tag{3.60}
+\]
+
+If the only significant fluctuations entering the measurement are from counting statistics,
+then \(\sigma_{N_{B}} = \sqrt{N_{B}}\) and \(\sigma_{N_{S}} = \sqrt{2N_{B}}\).
+ Since no true activity is present, any positive indication
+will be a false positive. We therefore want to set \(L_{C}\) high enough to ensure that, under these
+conditions, the probability that a particular measurement of \(N_{S}\) exceeds \(L_{C}\) is acceptably
+small. From Table 3.4, we note that the probability that a random sample from a Gaussian distribution
+having a value within the interval of the mean \(\pm 1.645\sigma\) is 90%. Since we are only concerned
+with positive deviations from the mean (negative values of \(N_{S}\) are always interpreted
+as no source being present), there is a 95% probability that a random sample will lie below the
+mean plus \(1.645\sigma\). Thus setting
+\[
+L_{C} = 1.645\sigma_{N_{S}} = 1.645\sqrt{2}\sigma_{N_{B}} = 2.326\sigma{N_{B}} \tag{3.61}
+\]
+
+ensures that a false-positive probability will be no larger than 5%. This choice has become
+a common basis for setting \(L_{C}\).
+
+<p>
+<img src="fig3.14.png" width="517" height="337" alt="">
+</p>
 
 
 
