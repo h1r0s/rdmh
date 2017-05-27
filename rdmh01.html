@@ -15,6 +15,674 @@ MathJax.Hub.Config({
 </head>
 
 <body>
+<h1>Radiation Sources</h1>
+The radiations of primary concern in this text originate in atomic or nuclear processes.
+They are conveniently categorized into four general types as follows:
+<table cellpadding="10">
+<tr>
+<td>\({\rm Charged \, particulate \, radiation}\)</td>
+<td>
+\(
+	\left\{
+		\begin{array}{c}
+			{
+				{\rm Fast \, electrons} \\
+				{\rm Heavy \, charged \, particles}
+			}
+		\end{array}
+	\right.
+\)
+</td>
+</tr>
+
+<tr>
+<td>\({\rm Uncharged \, radiation}\)</td>
+<td>
+\(
+	\left\{
+		\begin{array}{c}
+			{
+				{\rm Electromagnetic \, radiation} \\
+				{\rm Neutrons}
+			}
+		\end{array}
+	\right.
+\)
+</td>
+</tr>
+
+</table>
+
+<i>Fast electrons</i> include beta particles (positive or negative) emitted in nuclear decay, as well
+as energetic electrons produced by any other process. <i>Heavy charged particles</i> denote a category
+that encompasses all energetic ions with mass of one atomic mass unit or greater,
+such as alpha particles, protons, fission products, or the products of many nuclear reactions.
+The <i>electromagnetic radiation</i> of interest includes X-rays emitted in the rearrangement of
+electron shells of atoms, and gamma rays that originate from transitions within the nucleus
+itself. <i>Neutrons</i> generated in various nuclear processes constitute the final major category,
+which is often further divided into <i>slow neutron</i> and <i>fast neutron</i> subcategories (see
+Chapter 14).
+
+<p>The energy range of interest spans over six decades, ranging from about \(10 eV\) to
+\(20 MeV\). (Slow neutrons are technically an exception but are included because of their
+technological importance.) The lower energy bound is set by the minimum energy required
+to produce ionization in typical materials by the radiation or the secondary products of its
+interaction. Radiations with energy greater than this minimum are classified as ionizing
+radiations. The upper bound is chosen to limit the topics in this coverage to those of primary
+concern in nuclear science and technology.</p>
+
+<p>The main emphasis in this chapter will be the laboratory-scale sources of these radiations,
+which are likely to be of interest either in the calibration and testing of radiation
+detectors described in the following chapters, or as objects of the measurements themselves.
+Natural background radiation is an important additional source and is discussed
+separately in Chapter 20.</p>
+
+<p>The radiations of interest differ in their "hardness" or ability to penetrate thicknesses
+of material. Although this property is discussed in greater detail in Chapter 2, it is also of
+considerable concern in determining the physical form of radiation sources. Soft radiations,
+such as alpha particles or low-energy X-rays, penetrate only small thicknesses of material.
+Radioisotope sources must therefore be deposited in very thin layers if a large fraction of
+these radiations is to escape from the source itself. Sources that are physically thicker are
+subject to "self-absorption," which is likely to affect both the number and the energy spectrum
+of the radiations that emerge from its surface.Typical thicknesses for such sources are
+therefore measured in micrometers. Beta particles are generally more penetrating, and
+sources up to a few tenths of a millimeter in thickness can usually be tolerated. Harder
+radiations, such as gamma rays or neutrons, are much less affected by self-absorption and
+sources can be millimeters or centimeters in dimension without seriously affecting the radiation
+properties.</p>
+
+<h2>I. UNITS AND DEFINITIONS</h2>
+<h3>A. Radioactivity</h3>
+The <i>activity</i> of a radioisotope source is defined as its rate of decay and is given by the fundamental
+law of radioactive decay
+\[
+\left. \frac{dN}{dt} \right|_{\rm decay} = - \lambda N \tag{1.1}
+\]
+
+where \(N\) is the number of radioactive nuclei and \(\lambda\) is defined as the <i>decay constant</i>. The
+historical unit of activity has been the <i>curie</i> (\(Ci\)), defined as exactly \(3.7 \times 10^{10} disintegrations/
+second\), which owes its definition to its origin as the best available estimate of the
+activity of 1 gram of pure \(^{226}Ra\). Its submultiples, the millicurie (\(mCi\)) or microcurie (\(\mu Ci\)),
+generally are more suitable units for laboratory-scale radioisotope sources.
+
+<p>Although still widely used in the literature, the curie is destined to be replaced gradually
+by its SI equivalent, the becquerel (\(Bq\)). At its 1975 meeting, the General Conference
+of Weights and Measures (GCPM) adopted a resolution declaring that the becquerel.
+defined as one disintegration per second, has become the standard unit of activity. Thus
+\[
+1 Bq = 2.703 \times 10^{-11} Ci
+\]
+
+Radioactive sources of convenient size in the laboratory are most reasonably measured in
+kilobecquerels (\(kBq\)) or megabecquerels (\(MBq\)).</p>
+
+<p>It should be emphasized that activity measures the source disintegration rate, which is
+not synonymous with the emission rate of radiation produced in its decay. Frequently, a
+given radiation will be emitted in only a fraction of all the decays, so a knowledge of the
+decay scheme of the particular isotope is necessary to infer a radiation emission rate from
+its activity. Also, the decay of a given radioisotope may lead to a daughter product whose
+activity also contributes to the radiation yield from the source. A complete listing of
+radioisotope decay schemes is tabulated in Ref. 1.</p>
+
+<p>The <i>specific activity</i> of a radioactive source is defined as the activity per unit mass of
+the radioisotope sample. If a pure or "carrier-free" sample is obtained that is unmixed with
+any other nuclear species, its specific activity can be calculated from
+\[
+{\rm specific \, activity} = {\rm \frac{activity}{mass}} = \frac{\lambda N}{NM / A_{\nu}} = \frac{\lambda N}{M} \tag{1.2}
+\]
+
+where
+\begin{eqnarray}
+M &=& {\rm molecular \, weight \, of \, sample} \\
+A_{\nu} &=& {\rm Avogadro's \, number (= 6.02 \times 10^{23} nuclei/mole)} \\
+\lambda &=& {\rm radioisotope \, decay \, constant (= \ln 2/half\text{-}life)}
+\end{eqnarray}
+
+Radioisotopes are seldom obtained in carrier-free form, however, and are usually diluted
+in a much larger concentration of stable nuclei of the same element. Also, if not prepared
+in pure elemental form, additional stable nuclei may be included from other elements that
+are chemically combined with those of the source. For sources in which self-absorption is a
+problem, there is a premium on obtaining a sample with high specific activity to maximize
+the number of radioactive nuclei within a given thickness. From Eq. (1.2), high specific
+activity is most readily obtained using radionuclides with large \(\lambda\) (or small half-life).</p>
+
+<h3>B. Energy</h3>
+The traditional unit for measurement of radiation energy is the <i>electron volt</i> or \(eV\), defined
+as the kinetic energy gained by an electron by its acceleration through a potential difference
+of 1 volt. The multiples of kiloelectron volt (\(keV\)) and megaelectron volt (\(MeV\)) are
+more common in the measurement of energies for ionizing radiation. The electron volt is a
+convenient unit when dealing with particulate radiation because the energy gained from an
+electric field can easily be obtained by multiplying the potential difference by the number
+of electronic charges carried by the particle. For example, an alpha particle that carries an
+electron charge of \(+2\) will gain an energy of \(2 keV\) when accelerated by a potential difference
+of 1000 volts.
+
+<p>The SI unit of energy is the joule (\(J\)). When dealing with radiation energies, the submultiple
+femtojoule (\(fJ\)) is more convenient and is related to the electron volt by the
+conversion
+\[
+1eV = 1.602 \times 10^{-19} J
+\]
+
+or
+\[
+1fj = 1 \times 10^{-15}J = 6.241 \times 10^{3}eV
+\]
+
+It is not clear to what extent the electron volt will be phased out in future usage because
+its physical basis and universal use in the literature are strong arguments for its continued
+application to radiation measurements.</p>
+
+<p>The energy of an X- or gamma-ray photon is related to the radiation frequency by
+\[
+E = h \nu \tag{1.3}
+\]
+
+where
+\begin{eqnarray}
+h &=& {\rm Planck's \, constant (6.626 \times 10^{-34}J \cdot s, or 4.135 \times 10^{-15} eV \cdot s)} \\
+\nu &=& frequency
+\end{eqnarray}
+
+The wavelength \(\lambda\) is related to the photon energy by
+\[
+\lambda = \frac{1.240 \times 10^{-6}}{E}
+\]
+
+where \(\lambda\) is in meters and \(E\) in \(eV\).</p>
+
+<h2>11. FAST ELECTRON SOURCES</h2>
+<h3>A. Beta Decay</h3>
+The most common source of fast electrons in radiation measurements is a radioisotope that
+decays by beta-minus emission. The process is written schematically
+\[
+^{A}_{Z}X \rightarrow ^{A}_{Z + 1}Y + \beta^{-} + \overline{\nu} \tag{1.4}
+\]
+
+where \(X\) and \(Y\) are the initial and final nuclear species, and \(\overline{\nu}\) is the antineutrino. Because
+neutrinos and antineutrinos have an extremely small interaction probability with matter,
+they are undetectable for all practical purposes. The recoil nucleus \(Y\) appears with a very
+small recoil energy, which is ordinarily below the ionization threshold, and therefore it cannot
+be detected by conventional means. Thus, the only significant ionizing radiation produced
+by beta decay is the fast electron or beta particle itself.
+
+<p>Because most radionuclides produced by neutron bombardment of stable materials are
+beta-active, a large assortment of beta emitters are readily available through production in
+a reactor flux. Species with many different half-lives can be obtained, ranging from thousands
+of years down to as short a half-life as is practical in the application. Most beta decays
+populate an excited state of the product nucleus, so that the subsequent de-excitation
+gamma rays are emitted together with beta particles in many common beta sources. Some
+examples of nuclides that decay directly to the ground state of the product and are therefore
+"pure beta emitters" are shown in Table 1.1.</p>
+
+<p><img src="tab1.1.png" width="475" height="417" alt=""></p>
+
+<p>Each specific beta decay transition is characterized by a fixed decay energy or \(Q\)-value.
+Because the energy of the recoil nucleus is virtually zero, this energy is shared between the
+beta particle and the "invisible" neutrino. The beta particle thus appears with an energy
+that varies from decay to decay and can range from zero to the "beta endpoint energy,"
+which is numerically equal to the \(Q\)-value. A representative beta energy spectrum is illustrated
+in Fig. 1.1. The \(Q\)-value for a given decay is normally quoted assuming that the
+transition takes place between the ground states of both the parent and daughter nuclei. If
+the transition involves an excited state of either the parent or daughter, the endpoint energy
+of the corresponding beta spectrum will be changed by the difference in excitation energies.
+Since several excited states can be populated in some decay schemes, the measured beta particle
+spectrum may then consist of several components with different endpoint energies.</p>
+
+<p><img src="fig1.1.png" width="575" height="236" alt=""></p>
+
+<h3>B. Internal Conversion</h3>
+The continuum of energies produced by any beta source is inappropriate for some applications.
+For example, if an energy calibration is to be carried out for an electron detector,
+it is much more convenient to use a source of monoenergetic electrons. The nuclear process
+of <i>internal conversion</i> can be the source of conversion electrons, which are, under some circumstances,
+nearly monoenergetic.
+
+<p>The internal conversion process begins with an excited nuclear state, which may be
+formed by a preceding process ー often beta decay of a parent species. The common method
+of de-excitation is through emission of a gamma ray-photon. For some excited states,
+gamma emission may be somewhat inhibited and the alternative of internal conversion can
+become significant. Here the nuclear excitation energy \(E_{ex}\) is transferred directly to one of
+the orbital electrons of the atom. This electron then appears with an energy given by
+\[
+E_{e} = E_{ex} - E_{b} \tag{1.5}
+\]
+
+where \(E_{b}\) is its binding energy in the original electron shell.</p>
+
+<p>An example of a conversion electron spectrum is shown in Fig. 1.2. Because the conversion
+electron can originate from any one of a number of different electron shells within
+the atom, a single nuclear excitation level generally leads to several groups of electrons
+with different energies. The spectrum may be further complicated in those cases in which
+more than one excited state within the nucleus is converted. Furthermore, the electron
+energy spectrum may also be superimposed on a continuum consisting of the beta spectrum
+of the parent nucleus that leads to the excited state. Despite these shortcomings, conversion
+electrons are the only practical laboratory-scale source of monoenergetic electron
+groups in the high \(keV\) to \(MeV\) energy range. Several useful radioisotope sources of conversion
+electrons are compiled in Table 1.2.</p>
+
+<p><img src="fig1.2.png" width="649" height="348" alt=""></p>
+<p><img src="tab1.2.png" width="652" height="387" alt=""></p>
+
+<h3>C. Auger Electrons</h3>
+<i>Auger electrons</i> are roughly the analogue of internal conversion electrons when the excitation
+energy originates in the atom rather than in the nucleus. A preceding process (such
+as electron capture) may leave the atom with a vacancy in a normally complete electron
+shell. This vacancy is often filled by an electron from one of the outer shells of the atom
+with the emission of a characteristic X-ray photon. Alternatively, the excitation energy of
+the atom may be transferred directly to one of the outer electrons, causing it to be ejected
+from the atom. This electron is called an Auger electron and appears with an energy given
+by the difference between the original atomic excitation energy and the binding energy of
+the shell from which the electron was ejected. Auger electrons therefore produce a discrete
+energy spectrum, with different groups corresponding to different initial and final states. In
+all cases, their energy is relatively low compared with beta particles or conversion electrons,
+particularly because Auger electron emission is favored only in low-\(Z\) elements for
+which electron binding energies are small. Typical Auger electrons with a few \(keV\) initial
+energy are subject to pronounced self-absorption within the source and are easily stopped
+by very thin source covers or detector entrance windows.
+
+<h2>III. HEAVY CHARGED PARTICLE SOURCES</h2>
+<h3>A. Alpha Decay</h3>
+Heavy nuclei are energetically unstable against the spontaneous emission of an alpha particle
+(or \(^{4}He\) nucleus). The probability of decay is governed by the <i>barrier penetration</i>
+mechanism described in most texts on nuclear physics, and the half-life of useful sources
+varies from days to many thousands of years. The decay process is written schematically as
+\[
+^{A}_{Z}X \rightarrow ^{A - 4}_{Z - 2}Y + ^{4}_{2}\alpha
+\]
+
+where \(X\) and \(Y\) are the initial and final nuclear species. A representative alpha decay
+scheme is shown in Fig. 1.3, together with the expected energy spectrum of the corresponding
+alpha particles emitted in the decay.
+
+<p><img src="fig1.3.png" width="485" height="616" alt=""></p>
+
+<p>The alpha particles appear in one or more energy groups that are, for all practical purposes,
+monoenergetic. For each distinct transition between initial and final nucleus (e.g.,
+between ground state and ground state), a fixed energy difference or \(Q\)-value characterizes
+the decay. This energy is shared between the alpha particle and the recoil nucleus in a
+unique way, so that each alpha particle appears with the same energy given by \(Q(A - 4)/A\).
+There are many practical instances in which only one such transition is involved and for
+which the alpha particles are therefore emitted with a unique single energy. Other examples
+such as that shown in Fig. 1.3, may involve more than one transition energy so that the
+alpha particles appear in groups with differing relative intensities.</p>
+
+<p>Table 1.3 lists some properties of the more common radioisotope sources of alpha particles.
+It is no accident that most alpha particle energies are limited to between about \(4\) and
+\(6 MeV\). There is a very strong correlation between alpha particle energy and half-life of the
+parent isotope, and those with the highest energies are those with the shortest half-life.
+Beyond about \(6.5 MeV\), the half-life can be expected to be less than a few days, and therefore
+the source is of very limited utility. On the other hand, if the energy drops below
+\(4 MeV\), the barrier penetration probability becomes very small and the half-life of the isotope
+is very large. If the half-life is exceedingly long, the specific activity attainable in a
+practical sample of the material becomes very small and the source is of no interest
+because its intensity is too low. Probably the most common calibration source for alpha
+particles is \(^{241}Am\), and an example of its application to the calibration of silicon solid-state
+detectors is shown in Fig. 11.15.</p>
+
+<p><img src="tab1.3.png" width="546" height="837" alt=""></p>
+
+<p>Because alpha particles lose energy rapidly in materials, alpha particle sources that are
+to be nearly monoenergetic must be prepared in very thin layers. In order to contain the
+radioactive material, typical sources are covered with a metallic foil or other material that
+must also be kept very thin if the original energy and monoenergetic nature of the alpha
+emission are to be preserved.</p>
+
+<h3>B. Spontaneous Fission</h3>
+The fission process is the only spontaneous source of energetic heavy charged particles
+with mass greater than that of the alpha particle. Fission fragments are therefore widely
+used in the calibration and testing of detectors intended for general application to heavy
+ion measurements.
+
+<p>All heavy nuclei are, in principle, unstable against spontaneous fission into two lighter
+fragments. For all but the extremely heavy nuclei, however, the process is inhibited by the
+large potential barrier that must be overcome in the distortion of the nucleus from its original
+near-spherical shape. Spontaneous fission is therefore not a significant process except
+for some transuranic isotopes of very large mass number. The most widely used example is
+\(^{252}Cf\), which undergoes spontaneous fission with a half-life (if it were the only decay
+process) of 85 years. However, most transuranic elements also undergo alpha decay, and in
+\(^{252}Cf\) the probability for alpha emission is considerably higher than that for spontaneous
+fission. Therefore, the actual half-life for this isotope is 2.65 years, and a sample of 1 microgram
+of \(^{252}Cf\) will emit \(1.92 \times 10^{7}\) alpha particles and undergo \(6.14 \times 10^{5}\) spontaneous fissions
+per second.</p>
+
+<p>Each fission gives rise to two fission fragments, which, by the conservation of momentum,
+are emitted in opposite directions. Because the normal physical form for a spontaneous
+fission source is a thin deposit on a flat backing, only one fragment per fission can
+escape from the surface, whereas the other is lost by absorption within the backing. As
+described later in this chapter, each spontaneous fission in \(^{252}Cf\) also liberates a number of
+fast neutrons.</p>
+
+<p>The fission fragments are medium-weight positive ions with a mass distribution illustrated
+in Fig. 1.4a The fission is predominantly asymmetric so that the fragments are clustered
+into a "light group" and "heavy group," with average mass numbers of 108 and 143.
+The fragments appear initially as positive ions for which the net charge approaches the
+atomic number of the fragment. As the fragment slows down by interacting with the matter
+through which it passes, additional electrons are picked up by the ion, reducing its effective
+charge.</p>
+
+<p><img src="fig1.4a.png" width="649" height="461" alt=""></p>
+
+<p>The energy shared by the two fragments averages about \(185 MeV\). The distribution of
+this energy is also asymmetric with the light fragment receiving the greater fraction. A plot
+of their initial energy distribution is shown in Fig. 1.4b. Because they also lose energy readily
+in solid materials, self-absorption and energy loss of the fragments are important considerations
+unless the source is prepared in a very thin layer. The type of degradation of a
+fission fragment energy spectrum observed from thicker sources (for the case of neutron-induced
+\(^{235}U\) fission) is illustrated in Fig. 14.7</p>
+
+<p><img src="fig1.4b.png" width="649" height="551" alt=""></p>
+
+<h2>IV. SOURCES OF ELECTROMAGNETIC RADIATION</h2>
+<h3>A. Gamma Rays Following Beta Decay</h3>
+Gamma radiation is emitted by excited nuclei in their transition to lower-lying nuclear levels.
+In most practical laboratory sources, the excited nuclear states are created in the decay
+of a parent radionuclide. Four common examples widely used as gamma-ray calibration
+sources are illustrated in the decay schemes in Fig. 1.5. In each case, a form of beta decay
+leads to the population of the excited state in the daughter nucleus. For the examples
+shown, the beta decay is a relatively slow process characterized by a half-life of hundreds
+of days or greater, whereas the excited states in the daughter nucleus have a much shorter
+average lifetime (typically of the order of picoseconds or less). De-excitation takes place
+through the emission of a gamma-ray photon whose energy is essentially equal to the difference
+in energy between the initial and final nuclear states. The gamma rays therefore
+appear with a half-life characteristic of the parent beta decay but with an energy that
+reflects the energy level structure of the daughter nucleus. For example, although "\(^{60}Co\)
+ gamma rays" decrease in intensity with the 5.26-year half-life characteristic of \(^{60}Co\), they
+actually arise from transitions in the \(^{60}Ni\) nucleus. Decay schemes of the type shown in
+Fig. 1.5 are compiled for all radioactive nuclei in Ref. 1. From the probabilities of various
+de-excitation transitions (or "branching ratios") given in these decay schemes, the number
+of gamma-ray photons per disintegration of the parent nucleus can be deduced. Some
+specific radionuclide gamma-ray sources useful in the precise energy calibration and efficiency
+calibration of gamma-ray detectors are listed in Tables 12.1 and 12.2.
+
+<p><img src="fig1.5.png" width="650" height="594" alt=""></p>
+
+<p>Because nuclear states have very well-defined energies, the energies of gamma rays
+emitted in state-to-state transitions are also very specific. The gamma rays from any one
+transition are nearly monoenergetic, and the inherent line width of the photon energy distribution
+is nearly always small compared with the energy resolution of any of the detectors
+described later in this text. A measurement of the detector response is therefore
+indicative of its own limiting resolution rather than any variation in the incident gammaray
+energy.</p>
+
+<p>The common gamma-ray sources based on beta decay are generally limited to energies
+below about \(2.8 MeV\). One nuclide that can be useful as a potential source for gamma rays
+of higher energy is \(^{56}Co\). The decay scheme of this isotope, which includes both electron
+capture and pf decay, gives rise to a complex spectrum of gamma rays whose energies
+extend to as high as \(3.55 MeV\). The short half-life of \(^{56}Co\) (77 days), however, largely limits
+its use to facilities with access to accelerators necessary to carry out its production through
+the \(^{56}Fe(p,n)\) reaction. Another possible radioisotope for high-energy calibrations is \(^{16}N\),
+with gamma rays of \(6.13\) and \(7.11 MeV\) emitted through its \(\beta^{-}\) decay to \(^{16}O\). gain, the very
+short half-life of just over 7 seconds requires the local production of this isotope in reactors
+or accelerators, which can be employed with a continuous circulation loop to provide
+a steady-state source of this radionuclide.</p>
+
+<p>Gamma-ray reference sources are an essential accessory in any radiation measurements
+laboratory in which gamma-ray measurements are carried out. They normally consist of samples
+of radioisotopes of a few microcuries (around \(10^{5} Bq\)) encased in plastic disks or rods.
+The thickness of the encapsulation is generally large enough to stop any particulate radiation
+from the decay of the parent nucleus, and the only primary radiation emerging from the surface
+is the gamma radiation produced in the daughter decay. However, secondary radiations
+such as annihilation photons or bremsstrahlung can be significant at times (see below).
+Although the radiation hazard of such sources is minimal, the gamma-ray emission rate is
+sufficiently high to permit ready energy calibration of most types of gamma-ray detectors.</p>
+
+<p>If the sources are to be used to carry out accurate efficiency calibration, their absolute
+activity must also be known. In these cases, the radioisotope deposits are generally prepared
+on much thinner backings with a minimum of overlying cover to reduce gamma-ray attenuation
+and scattering within the source structure. External absorbers must then be used to
+eliminate any particulate emission if its presence will interfere with the application.</p>
+
+<h3>B. Annihilation Radiation</h3>
+When the parent nucleus undergoes \(\beta^{+}\) decay, additional electromagnetic radiation is generated.
+The origin lies in the fate of the positrons emitted in the primary decay process.
+Because they generally travel only a few millimeters before losing their kinetic energy (see
+Chapter 2), the inherent encapsulation around the source is often sufficiently thick to fully
+stop the positrons. When their energy is very low, near the end of their range, they combine
+with normal negative electrons in the absorbing materials in the process of <i>annihilation</i>.
+The original positron and electron disappear and are replaced by two oppositely directed
+\(0.511 MeV\) electromagnetic photons known as <i>annihilation radiation</i>. This radiation is then
+superimposed on whatever gamma radiation may be emitted in the subsequent decay of
+the daughter product. For example, in the decay of \(^{22}Na\), shown in Fig. 1.5, photons of both
+\(0.511\) and \(1.274 MeV\) energy are emitted from encapsulated sources.
+
+<h3>C. Gamma Rays Following Nuclear Reactions</h3>
+If gamma rays with energies higher than those available from beta-active isotopes are
+needed, some other process must lead to the population of higher-lying nuclear states. One
+possibility is the nuclear reaction
+\[
+^{4}_{2}\alpha + ^{9}_{4}Be \rightarrow ^{12}_{6}C* + ^{1}_{0}n
+\]
+
+where the product nucleus \(^{12}C\) is left in an excited state. Its decay gives rise to a gamma-ray
+photon of \(4.44 MeV\) energy. Unfortunately, the average lifetime of this state is so short
+(\(61 fs\)) that the recoil carbon atom does not have time to come to rest before the gamma
+ray is emitted. The resulting photon energies are therefore broadened by Doppler effects,
+depending on the relative orientation of the recoil atom velocity and the photon direction,
+and there is an inherent spread of about 1% in the gamma-ray energies. This line width is
+adequate for many calibration purposes, but it is too large for detectors with very good
+energy resolution (such as the germanium detectors of Chapter 12). Neutrons are also
+emitted in this reaction, and the number of \(4.44 MeV\) gamma rays per neutron has been
+measured to be about 0.59 for typical sources based on radioisotope alpha particle emitters
+mixed with beryllium.
+
+<p>Another possibility is the reaction
+\[
+^{4}_{2}\alpha + ^{13}_{6}C \rightarrow ^{16}_{8}O* + ^{1}_{0}n
+\]
+
+Here the product nucleus \(^{16}O\) can be formed in an excited state at \(6.130 MeV\) above the
+ground state and with a lifetime of about \(2 \times 10^{-11} s\). This lifetime is sufficiently long to
+eliminate almost all Doppler effects, and the resulting \(6.130 MeV\) gamma-ray photons are
+essentially monoenergetic.</p>
+
+<p>Both the above reactions can be exploited by combining a radioisotope that decays by
+alpha emission with the appropriate target material (either \(^{9}Be\) or \(^{13}C\)). Because sources of
+this type are more commonly used to produce neutrons, further discussion of the choice of
+alpha emitter and other aspects of the source design will be postponed until the following
+section on neutron sources. Because most alpha particles do not lead to a reaction before
+losing their energy in the target material, large activities of the alpha emitter must be used
+to produce a gamma-ray source of practical intensity. For example, a typical source fabricated
+from \(6 \times 10^{9} Bq\) of \(^{238}PuO_{2}\) and \(200 mg\) of isotopically separated \(^{13}C\) produces a
+\(6.130 MeV\) gamma-ray yield of \(770 \, photons/s\).</p>
+
+<p>Gamma rays are also commonly emitted following the absorption of thermal neutrons
+by typical nuclei. Sources of thermal neutrons used in the production of gamma rays can
+be intense beams from nuclear reactors or accelerator facilities, or weaker fluxes from
+moderated radioisotope sources of neutrons. These "neutron-capture gamma rays"
+typically have energy ranging as high as \(9 MeV\), and data on the probabilities of emission
+per neutron capture that can be useful for detector calibrations are available from various
+sources (e.g., Ref. 13).</p>
+
+<h3>D. Bremsstrahlung</h3>
+When fast electrons interact in matter, part of their energy is converted into electromagnetic
+radiation in the form of bremsstrahlung. (This process is discussed in somewhat more
+detail in Chapter 2.) The fraction of the electron energy converted into bremsstrahlung
+increases with increasing electron energy and is largest for absorbing materials of high
+atomic number. The process is important in the production of X-rays from conventional
+X-ray tubes.
+
+<p>For monoenergetic electrons that slow down and stop in a given material, the
+bremsstrahlung energy spectrum is a continuum with photon energies that extend as high as
+the electron energy itself. The shape of a typical spectrum produced by monoenergetic electrons
+is shown in Fig. 1.6. The emission of low-energy photons predominates, and the average
+photon energy is a small fraction of the incident electron energy. Because these spectra are
+continua, they cannot be applied directly to the energy calibration of radiation detectors.</p>
+
+<p><img src="fig1.6.png" width="646" height="499" alt=""></p>
+
+<p>The shape of the energy spectrum from an X-ray tube can be beneficially altered by
+filtration or passage through appropriate absorber materials. Through the use of absorbers
+that preferentially remove the lower-energy photons, a peaked spectrum can be produced
+that, although far from monoenergetic, can be useful in the energy calibration of detectors
+whose response changes only gradually with energy. Some examples of filtered spectra
+from X-ray tubes are plotted in Fig. 1.7. At lower energies, the abrupt change in filter
+transmission at its \(K\)-absorption edge (see Chapter 2) can produce a prominent peak at the
+corresponding energy in the filtered spectrum.</p>
+
+<p><img src="fig1.7.png" width="605" height="708" alt=""></p>
+
+<p>Bremsstrahlung is also produced by other sources of fast electrons, including beta particles.
+Therefore, some bremsstrahlung photons are generated by any beta-active isotope
+encapsulated to stop the beta particles. Some examples of bremsstrahlung spectra from
+specific isotopes are plotted in Fig. 10.5.</p>
+
+<p>In addition to bremsstrahlung, characteristic X-rays (see following section) are also
+produced when fast electrons pass through an absorber. Therefore, the spectra from X-ray
+tubes or other bremsstrahlung sources also show characteristic X-ray emission lines superimposed
+on the continuous bremsstrahlung spectrum.</p>
+
+<h3>E. Characteristic X-Rays</h3>
+If the orbital electrons in an atom are disrupted from their normal configuration by some
+excitation process, the atom may exist in an excited state for a short period of time. There is
+a natural tendency for the electrons to rearrange themselves to return the atom to its lowest
+energy or ground state within a time that is characteristically a nanosecond or less in a solid
+material.The energy liberated in the transition from the excited to the ground state takes the
+form of a <i>characteristic X-ray</i> photon whose energy is given by the energy difference between
+the initial and final states. For example, if the vacancy is temporarily created in the \(K\) shell of
+an atom, then a characteristic <i>K X-ray</i> is liberated when that vacancy is subsequently filled.
+If that electron comes from the \(L\) shell, then a \(K_{\alpha}\) photon is produced whose energy is equal
+to the difference in binding energies between the \(K\) and \(L\) shells. If the filling electron
+originated in the \(M\) shell instead, then a \(K_{\beta}\) photon is produced with slightly larger energy,
+and so on. The maximum \(K\)-series photon is produced when the vacancy is filled by a free or
+unbound electron, and the corresponding photon energy is then simply given by the \(K\) shell
+binding energy. Vacancies created in outer shells by the filling of a K shell vacancy are subsequently
+filled with the emission of \(L\text{-}\), \(M\text{-}\), . . . series characteristic X-rays.
+
+<p>Because their energy is greatest, the \(K\)-series X-rays are generally of most practical
+significance. Their energy increases regularly with atomic number of the element and is, for
+example, about \(1 keV\) for sodium with \(Z = 11\), \(10 keV\) for gallium with \(Z = 31\), and
+\(100 keV\) for radium with \(Z = 88\). The L series X-rays do not reach \(1 keV\) until \(Z = 28\) and
+\(10 keV\) at \(Z = 74\). Extensive tables of precise characteristic X-rays can be found in Ref. 1.
+Because the energy of the characteristic X-ray is unique to each individual element, they
+are often used in the elemental analysis of unknown samples (see Fig. 13.17).</p>
+
+<p>For an atom in an excited state, the ejection of an Auger electron is a competitive
+process to the emission of characteristic X-rays. The <i>fluorescent yield</i> is defined as the fraction
+of all cases in which the excited atom emits a characteristic X-ray photon in its
+de-excitation. Values for the fluorescent yield are often tabulated as part of spectroscopic data.</p>
+
+<p>A large number of different physical processes can lead to the population of excited
+atomic states from which characteristic X-rays originate. In general, the relative yields of
+the \(K\), \(L\), and subsequent series will depend on the excitation method, but the energy of the
+characteristic photons is fixed by the basic atomic binding energies. We list below those
+excitation mechanisms that are of most practical importance for compact laboratory
+sources of characteristic X-rays.</p>
+
+<h4>1. EXCITATION BY RADIOACTIVE DECAY</h4>
+In the nuclear decay process of electron capture, the nuclear charge is decreased by one
+unit by the capture of an orbital electron, most often a \(K\)-electron. The resulting atom still
+has the right number of orbital electrons, but the capture process has created a vacancy in
+one of the inner shells. When this vacancy is subsequently filled, X-rays are generated that
+are characteristic of the product element. The decay may populate either the ground state
+or an excited state in the product nucleus, so that the characteristic X-rays may also be
+accompanied by gamma rays from subsequent nuclear de-excitation.
+
+<p>Internal conversion is another nuclear process that can lead to characteristic X-rays.
+As defined earlier in this chapter, internal conversion results in the ejection of an orbital
+electron from the atom leaving behind a vacancy. Again, it is the \(K\)-electrons that are most
+readily converted, and therefore the \(K\)-series characteristic X-rays are the most prominent.
+Because gamma-ray de-excitation of the nuclear state is always a competing process to
+internal conversion, radioisotope sources of this type usually emit gamma rays in addition
+to the characteristic X-rays. The conversion electrons may also lead to a measurable
+bremsstrahlung continuum, particularly when their energy is high.</p>
+
+<p>In Table 13.2, some examples are given of radioisotopes that involve either electron
+capture or internal conversion and are possible sources of characteristic X-rays. In all these
+examples, the yield of high-energy gamma rays from a nuclear transition is large compared
+with that of the characteristic X-rays. If a pure X-ray source free of gamma-ray contamination
+is required, a radioisotope that decays by electron capture leading directly to the
+ground nuclear state of the daughter must be chosen.Table 1.4 gives some examples for the
+lower energy range. Of these, \(^{55}Fe\) is most widely used because of its convenient half-life
+and high available specific activity. It is very nearly a pure source of manganese \(K\)-series
+X-rays at about \(5.9 keV\), and the inner bremsstrahlung associated with the electron capture
+process is very weak.</p>
+
+<p><img src="tab1.4.png" width="653" height="278" alt=""></p>
+
+<p>Self-absorption is a significant technical problem in the preparation of radioisotope
+X-ray sources. As the thickness of the radioisotope deposit is increased, the X-ray flux
+emerging from its surface approaches a limiting value because only those atoms near the
+surface can contribute photons that escape. The number of emitting atoms within a given
+distance of the deposit surface is maximized by increasing the specific activity of the
+radioisotope, and carrier-free samples will exhibit the maximum attainable source intensity
+per unit area.</p>
+
+<h4>2. EXCITATION BY EXTERNAL RADIATION</h4>
+The general scheme sketched in Fig. 1.8 may also be used to generate characteristic
+X-rays. Here an external source of radiation (X-rays, electrons, alpha particles, etc.) is
+caused to strike a target, creating excited or ionized atoms in the target through the
+processes detailed in Chapter 2. Because many excited atoms or ions in the target subsequently
+de-excite to the ground state through the emission of characteristic X-rays, the target
+can serve as a localized source of these X-rays.
+
+<p><img src="fig1.8.png" width="650" height="190" alt=""></p>
+
+<p>The energy of the X-rays emitted depends on the choice of target material. Targets
+with low atomic number result in soft characteristic X-rays, and high-\(Z\) targets produce
+harder or higher energy X-rays. The incident radiation must have a higher energy than the
+maximum photon energy expected from the target, because the excited states leading to
+the corresponding atomic transition must be populated by the incident radiation.</p>
+
+<p>As one example, the incident radiation may consist of X-rays generated in a conventional
+X-ray tube. These X-rays may then interact in the target through photoelectric
+absorption, and the subsequent de-excitation of the target ions creates their characteristic
+X-ray spectrum. In this case, the process is called X-ray fluorescence. Although the characteristic
+X-ray spectrum can be contaminated by scattered photons from the incident X-ray
+beam, this component can be kept below about 10 or 20% of the total photon yield with
+proper choice of target and geometry.</p>
+
+<p>As an alternative to bulky X-ray tubes, radioisotopes that emit low-energy photons
+may also be used as the source of the excitation. An example is \(^{241}Am\), in which gamma
+rays of \(60 keV\) energy are emitted in 36% of the decays. Characteristic X-ray sources using
+this isotope for excitation of targets in the geometry shown in Fig. 1.9 are currently available
+using up to \(10 mCi\) of \(^{241}Am\) activity.</p>
+
+<p><img src="fig1.9.png" width="651" height="281" alt=""></p>
+
+<p>Another method of exciting the target is through the use of an external electron beam.
+For targets of low atomic number, acceleration potentials of only a few thousand volts are
+required so that relatively compact electron sources can be devised. In the case of electron
+excitation, the characteristic X-ray spectrum from the target will be contaminated by the
+continuous bremsstrahlung spectrum also generated by interactions of the incident electrons
+in the target. For thin targets, however, the bremsstrahlung photons are preferentially
+emitted in the forward direction, whereas the characteristic X-rays are emitted isotropically.
+ Placing the exit window at a large angle (\(120-180^{\circ}\)) with respect to the incident
+electron direction will therefore minimize the bremsstrahlung contamination.</p>
+
+<p>The incident radiation in Fig. 1.8 can also consist of heavy charged particles. Again, the
+interactions of these particles in the target will give rise to the excited atoms necessary for
+the emission of characteristic X-rays. For compact and portable sources, alpha particles
+emitted by radioisotope sources are the most convenient source of the incident particles.
+Of the various potential alpha emitters, the most useful are \(^{210}Po\) and \(^{244}Cm\) because of their
+(see Table 1.5). Alpha particle excitation avoids the complication of bremsstrahlung associated
+convenient half-lives and relative freedom from contaminant electromagnetic radiation
+with electron excitation and is therefore capable of generating a relatively "clean"
+characteristic X-ray spectrum. A cross-sectional diagram of a typical source of this type is
+shown in Fig. 1.9. The X-ray yields into one steradian solid angle per \(mC\)i (\(37 MBq\)) of
+\(^{244}Cm\) ranges from \(1.7 \times 10^{5} \, photons/s\) for a beryllium target to about \(10^{4} \, photons/
+second\) for targets of higher \(Z\) (Ref. 17).</p>
+
+<p><img src="tab1.5.png" width="652" height="322" alt=""></p>
+
+<h3>E Synchrotron Radiation</h3>
+Another form of radiation is produced when a beam of energetic electrons is bent into a circular
+orbit. From electromagnetic theory, a small fraction of the beam energy is radiated
+away during each cycle of the beam. Originally considered to be something of a nuisance by
+high-energy accelerator designers, this synchrotron radiation has turned out over the past
+several decades to be a very useful form of electromagnetic radiation. When extracted from
+the accelerator in a tangential direction to the beam orbit, the radiation appears as an intense
+and highly directional beam of photons with energy that can span the range from visible light
+(a few \(eV\)) through X-ray energies (\( \sim 10^{4} eV\)). Monochromators can be used to produce
+nearly monoenergetic photon beams with a very high intensity. A number of high-energy
+accelerators (typically producing electrons with energy of \(500 MeV\) or more) have since been
+built that are dedicated to the production of synchrotron radiation. Although limited to
+large-scale centralized user facilities, this unique form of electromagnetic radiation has
+proven to be very useful because of the high intensity and tunable energy of the available
+source.
+
+
+
 
 </body>
 
