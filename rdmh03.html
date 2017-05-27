@@ -1331,8 +1331,8 @@ minimize the associated statistical uncertainty. To illustrate, consider the sim
 measurement of the net counting rate from a long-lived radioactive source in the presence
 of a steady-state background. Define the following:
 \begin{eqnarray}
-S &\equiv& {\rm counting rate due to the source alone without background} \\
-B &\equiv& {\rm counting rate due to background}
+S &\equiv& {\rm counting \, rate \, due \, to \, the \, source \, alone \, without \, background} \\
+B &\equiv& {\rm counting \, rate \, due \, to \, background}
 \end{eqnarray}
 
 The measurement of \(S\) is normally carried out by counting the source plus background (at
@@ -1488,6 +1488,87 @@ a common basis for setting \(L_{C}\).
 <p>
 <img src="fig3.14.png" width="517" height="337" alt="">
 </p>
+
+<h3><i>Case 2. Real Activity Is Present</i></h3>
+We now presume that the true mean value of \(N_{S}\) is a positive value, as shown in Fig. 3.14b.
+Any conclusions that no activity is present are now false negatives. The question we
+address is: How large must this mean value be so that false negatives are highly unlikely?
+Clearly, for mean values of \(N_{S}\) equal to \(L_{C}\), the false-negative rate will be 50% because the
+Gaussian distribution is symmetric about its mean. We will define the MDA of activity to
+be the source strength necessary to produce a mean value of \(N_{S}\) that is high enough to
+reduce the false-negative rate to an acceptable level. Again, a 5% false-negative probability
+is commonly chosen as the basis.
+
+<p>Let \(N_{D}\) represent the minimum net value of \(N_{S}\) that meets this criterion. \(N_{D}\) will therefore
+become a numerical estimate of the mean number of net counts that correspond to the
+MDA.To ensure that 95% of the area under the \(N_{S}\) distribution lies above \(L_{C}\), we require that
+\[
+N_{D} = L_{C} + 1.645\sigma_{N_{D}} \tag{3.62}
+\]
+</p>
+
+<p>As a first approximation, we assume that all signals are small compared with background,
+and therefore \(N_{D} \ll N_{B}\). Then \(\sigma_{N_{D}} \cong \sqrt{2}\sigma_{N_{B}}\) and
+\[
+N_{D} = L_{C} + 1.645\sqrt{2}\sigma_{N_{B}} = L_{C} + 2.326\sigma_{N_{B}} \tag{3.63}
+\]
+
+Using Eq. (3.61) for \(L_{C}\)
+\[
+N_{D} = 2.326\sigma_{N_{B}} + 2.326\sigma_{N_{B}} = 4.653\sigma_{N_{B}} \tag{3.64}
+\]
+
+Again, if only statistical fluctuations are considered, \(\sigma_{N_{B}}= \sqrt{N_{B}}\). The value of \(N_{D}\) given by
+Eq. (3.64) now can serve as a first approximation to the net counts associated with the
+MDA, assuming that a level \(L_{C}\) has been set as the criteria on net counts for declaring the
+presence or absence of activity.</p>
+
+<p>Implicit in the above derivation is the assumption that the width of the net distribution
+of \(N_{S}\) with activity is the same as the width of the net distribution without activity. Because
+of the small real signal, these widths are not exactly the same, and a more rigorous derivation
+is \(\sigma_{N_{D}} = \sqrt{2N_{B} + N_{D}}\). Expanding for \(N_{D} \ll N_{B}\):
+\[
+\sigma_{N_{D}} \cong \sqrt{2N_{B}}\left( 1 + \frac{N_{D}}{4N_{B}} \right)
+\]
+
+Using the previous approximation of Eq. (3.64) that \(N_{D} \cong 4.653 \sigma_{N_{B}}\)
+\[
+\sigma_{N_{D}} \cong \sqrt{2N_{B}}\left( 1 + \frac{4.653 \sigma_{N_{B}}}{4N_{B}} \right) \tag{3.65}
+\]
+
+Assuming all variances are from counting statistics, we can put \(\sigma_{N_{D}} = \sqrt{N_{B}}\) into Eq. (3.65)
+to get
+\[
+\sigma_{N_{D}} = \sqrt{2}\sigma_{N_{B}} + 1.645 \tag{3.66}
+\]
+
+From Eq. (3.62), we require that
+\[
+N_{D} = L_{C} + 1.645\sigma_{N_{D}}
+\]
+
+Using the values for \(\sigma_{N_{D}}\) specified by Eq. (3.66) and \(L_{C}\) from Eq. (3.61)
+\[
+N_{D} = 2.326\sigma_{N_{B}} + 1.645(\sqrt{2}\sigma_{N_{B}} + 1.645) = 4.653\sigma_{N_{B}} + 2.706 \tag{3.67}
+\]
+
+This is the frequently-quoted "Currie Equation"</p>
+
+<p>\(N_{D}\) as defined above can now be interpreted as the minimum number of counts needed
+from the source to ensure a false-negative rate no larger than 5% when the system is
+operated with a critical level (or "trigger point") of \(L_{C}\) that, in turn, ensures a false-positive
+rate of no greater than 5%. The critical level was previously chosen from Eq. (3.61) to
+be \(L_{C} = 2.326 \sigma_{N_{B}}\).</p>
+
+<p>To convert \(N_{D}\) in counts to minimum detectable activity \(\alpha\), the additional factors of
+radiation yield per disintegration (\(f\)) and absolute detection efficiency (\(\epsilon\)) from Chapter 4
+must be taken into account:
+\[
+\alpha = \frac{N_{D}}{f\epsilon T} \tag{3.68}
+\]
+
+where \(T\) is the counting time per sample.</p>
+
 
 
 
