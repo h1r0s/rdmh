@@ -186,6 +186,141 @@ and becomes a neutral atom.</p>
 
 <h2>C. Energy Loss Characteristics</h2>
 <h3>1. THE BRAGG CURVE</h3>
+A plot of the specific energy loss along the track of a charged particle such as that shown in
+Fig. 2.2 is known as a <i>Bragg curve</i>. The example is shown for an alpha particle of several
+\(MeV\) initial energy. For most of the track, the charge on the alpha particle is two electronic
+charges, and the specific energy loss increases roughly as \(1/E\) as predicted by Eq. (2.2). Near
+the end of the track, the charge is reduced through electron pickup and the curve falls off.
+Plots are shown both for a single alpha particle track and for the average behavior of a
+parallel beam of alpha particles of the same initial energy. The two curves differ somewhat
+due to the effects of straggling, to be discussed below.
+
+<p><img src="fig2.2.png" width="372" height="174" alt=""></p>
+
+<p>Related plots showing \(-dE/dx\) versus particle energy for a number of different heavy
+charged particles are given in Fig. 2.3. These examples illustrate the energy at which charge
+pickup by the ion becomes significant. Charged particles with the greatest number of
+nuclear charges begin to pick up electrons early in their slowing-down process. Note that
+in an aluminum absorber, singly charged hydrogen ions (protons) show strong effects of
+charge pickup below about \(100 keV\), but doubly charged \(^{3}He\) ions show equivalent effects
+at about \(400 keV\).</p>
+
+<p><img src="fig2.3.png" width="447" height="481" alt=""></p>
+
+<h3>2. ENERGY STRAGGLING</h3>
+Because the details of the microscopic interactions undergone by any specific particle vary
+somewhat randomly, its energy loss is a statistical or stochastic process. Therefore, a spread
+in energies always results after a beam of monoenergetic charged particles has passed
+through a given thickness of absorber. The width of this energy distribution is a measure
+of energy straggling, which varies with the distance along the particle track.
+
+<p>Figure 2.4 shows a schematic presentation of the energy distribution of a beam of
+initially monoenergetic particles at various points along its range. Over the first portion,
+the distribution becomes wider (and more skewed) with penetration distance, showing the
+increasing importance of energy straggling. Near the end of the range, the distribution narrows
+again because the mean particle energy has greatly been reduced.</p>
+
+<p><img src="fig2.4.png" width="470" height="343" alt=""></p>
+
+<h3>D. Particle Range</h3>
+In order to quantify the definition of particle range, we refer to the conceptual experiment
+sketched in Fig. 2.5. Here a collimated source of monoenergetic alpha particles is counted
+by a detector after passing through an absorber of variable thickness. (We later contrast the
+behavior of other types of radiation when observed under similar conditions.) For alpha
+particles, the results are also plotted in Fig. 2.5. For small values of the absorber thickness,
+the only effect is to cause an energy loss of the alpha particles in the absorber as they pass
+through. Because the tracks through the absorber are quite straight, the total number that
+reach the detector remains the same. No attenuation in the number of alpha particles takes
+place until the absorber thickness approaches the length of the shortest track in the absorbing
+material. Increasing the thickness then stops more and more of the alpha particles, and
+the intensity of the detected beam drops rapidly to zero.
+
+<p><img src="fig2.5.png" width="472" height="240" alt=""></p>
+
+<p>The range of the alpha particles in the absorber material can be determined from this
+curve in several ways. The mean range is defined as the absorber thickness that reduces the
+alpha particle count to exactly one-half of its value in the absence of the absorber.
+This definition is most commonly used in tables of numerical range values. Another version
+that appears in the literature is the extrapolated range, which is obtained by extrapolating
+the linear portion of the end of the transmission curve to zero.</p>
+
+<p>The range of charged particles of a given energy is thus a fairly unique quantity in a
+specific absorber material. In the early days of radiation measurement, experiments of the
+type sketched in Fig. 2.5 were widely used to measure the energy of alpha particles indirectly
+by determining the absorber thickness equivalent to their mean range. With the
+availability of detectors that provide an output signal directly related to the alpha particle
+energy, such indirect measurements are no longer necessary.</p>
+
+<p>Some graphs of the mean range of various charged particles in materials of interest in
+detectors are given in Figs. 2.6 through 2.8. As one obvious application of these curves, any
+detector that is to measure the full incident energy of a charged particle must have an
+active thickness that is greater than the range of that particle in the detector material.</p>
+
+<p><img src="fig2.6.png" width="459" height="623" alt=""></p>
+<p><img src="fig2.7.png" width="445" height="668" alt=""></p>
+<p><img src="fig2.8.png" width="508" height="646" alt=""></p>
+
+<h3>2. RANGE STRAGGLING</h3>
+Charged particles are also subject to range straggling, defined as the fluctuation in path
+length for individual particles of the same initial energy. The same stochastic factors that
+lead to energy straggling at a given penetration distance also result in slightly different
+total path lengths for each particle. For heavy charged particles such as protons or alphas,
+the straggling amounts to a few percent of the mean range. The degree of straggling is evidenced
+by the sharpness of the cutoff at the end of the average transmission curve plotted
+in Fig. 2.2. Differentiating this curve leads to a peak whose width is often taken as a quantitative
+measure of the importance of range straggling for the particles and absorber used
+in the measurement.
+
+<h3>3. STOPPING TIME</h3>
+The time required to stop a charged particle in an absorber can be deduced from its range
+and average velocity. For nonrelativistic particles of mass m and kinetic energy \(E\), the
+velocity is
+\[
+v
+ = \sqrt{\frac{2E}{m}} 
+ = c \sqrt{\frac{2E}{mc^{2}}} 
+ = \left( 3.00 \times 10^{8}\frac{m}{s} \right)\sqrt{\frac{2E}{(931 MeV/amu)m_{A}}}
+\]
+
+where \(m_{A}\) is the particle mass in atomic mass units and \(E\) is the particle energy in \(MeV\). If
+we assume that the average particle velocity as it slows down is \(\langle v \rangle = Kv\), where \(v\) is evaluated
+at the initial energy, then the stopping time \(T\) can be calculated from the range \(R\) as
+\[
+T
+ = \frac{R}{\langle v \rangle}
+ = \frac{R}{Kc}\sqrt{\frac{mc^{2}}{2E}} 
+ = \frac{R}{K(3.00 \times 10^{8} m/s)}\sqrt{\frac{931 MeV/amu}{2}}\sqrt{\frac{m_{A}}{E}}
+\]
+
+If the particle were uniformly decelerated, then \(\langle v \rangle\) would be given by \(v/2\) and \(K\) would be \(0.5\).
+However, charged particles generally lose energy at a greater rate near the end of their
+range, and \(K\) should be a somewhat higher fraction. By assuming \(K = 0.60\), the stopping
+time can be estimated as
+\[
+T \cong 1.2 \times 10^{-7}R\sqrt{\frac{m_{A}}{E}} \tag{2.3}
+\]
+
+where \(T\) is in seconds, \(R\) in meters, \(m_{A}\) in \(amu\), and \(E\) in \(MeV\). This approximation is
+expected to be reasonably accurate for light charged particles (protons, alpha particles,
+etc.) over much of the energy range of interest here. It is not, however, to be used for
+relativistic particles such as fast electrons.
+
+<p>Using typical range values, stopping times calculated from Eq. (2.3) for charged particles
+are a few picoseconds in solids or liquids and a few nanoseconds in gases. These times
+are generally small enough to be neglected for all but the fastest-responding radiation
+detectors.</p>
+
+<h3>E. Energy Loss in Thin Absorbers</h3>
+
+
+
+
+
+
+
+
+
+
 
 
 
