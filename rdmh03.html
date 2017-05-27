@@ -1666,7 +1666,7 @@ is <i>not</i> equivalent to randomly selecting an interval from the distribution
 randomly selected time will more likely fall within a long interval than a short one, so there
 is a bias toward the selection of longer intervals. The distribution describing these selected
 intervals can be obtained by noting that the intervals described by Eq. (3.71) are chosen
-with a weighting factor that is proportional to their length, and given by \(t / \overline{t) = rt\). Thus the
+with a weighting factor that is proportional to their length, and given by \(t / \overline{t} = rt\). Thus the
 selected interval distribution \(I_{s}(t)\) is given by:
 \[
 I_{s}(t) = rtI_{1}(t) = r^{2}te^{-rt} \tag{3.73}
@@ -1678,30 +1678,49 @@ Its average value is given by the first moment of this distribution:
 \]
 
 Thus the average selected interval is twice as long as the average random interval, and the
-apparent dilemma is resolved.
+apparent dilemma is resolved.</p>
 
+<h3>C. Intervals Between Scaled Events</h3>
+There are some occasions in which a digital "scaler" may be employed to reduce the rate
+at which data are recorded from a detector system. A scaler functions as a data buffer by
+producing an output pulse only when \(N\) input pulses have been accumulated.
+
+<p>A general form for the distribution that describes scaled intervals can be derived using
+arguments parallel to those given earlier for unscaled intervals. Again, two independent
+processes must occur: A time interval of length \(t\) must be observed over which exactly
+\(N - 1\) events are presented to the scaler, and an additional event must occur in the increment
+\(dt\) following this time interval. Under these conditions, a scaled interval of length
+within \(dt\) about \(t\) will take place. The parallel expression to Eq. (3.69) then becomes
+\[
+I_{N}(t)dt = P(N - 1)rdt \tag{3.75}
+\]
+
+Again using the Poisson form for \(P(N - I)\), Eq. (3.75) becomes
+\[
+I_{N}(t)dt = \frac{(rt)^{N - 1}e^{-rt}}{(N - 1)!}rdt \tag{3.76}
+\]
 </p>
 
+<p>\(I_{N}(t)\) is the interval distribution for \(N\)-scaled intervals. A plot is given in Fig. 3.15 for
+various scaling factors and shows the more uniform intervals that accompany larger values
+of \(N\). The average interval is
+\[
+\overline{t} = \frac{\int_{0}^{\infty}tI_{N}(t)dt}{\int_{0}^{\infty}I_{N}(t)dt} = \frac{N}{r} \tag{3.77}
+\]
 
+whereas the most probable interval is evaluated by setting
+\[
+\frac{dI_{n}(t)}{dt} = 0
+\]
 
+and leads to
+\[
+t \left|_{\rm most \, probable} = \frac{N - 1}{r}\right. \tag{3.78}
+\]
 
+as the most probable length of an N-scaled interval.</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img src="fig3.15.png" width="563" height="402" alt="">
 
 </body>
 </html>
