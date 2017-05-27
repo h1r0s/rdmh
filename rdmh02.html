@@ -15,6 +15,191 @@ MathJax.Hub.Config({
 </head>
 
 <body>
+<h1>Radiation Interactions</h1>
+The operation of any radiation detector basically depends on the manner in which the
+radiation to be detected interacts with the material of the detector itself. An understanding
+of the response of a specific type of detector must therefore be based on a familiarity with
+the fundamental mechanisms by which radiations interact and lose their energy in matter.
+Many general reference works are available concerning this broad topic; the classic text by
+Evans, to mention only one, has served as a standard reference for several decades.
+
+<p>To organize the discussions that follow, it is convenient to arrange the four major categories
+of radiations introduced in Chapter 1 into the following matrix:</p>
+
+<table align="center" cellpadding="10">
+<tr><th>Charged Particulate Radiations</th><th></th><th>Uncharged Radiations</th></tr>
+<tr>
+<td align="center">Heavy charged particles<br>(characteristic distance \(\cong 10^{-5} m\))</td>
+<td align="center">\(\Leftarrow\)</td>
+<td align="center">Neutrons<br>(characteristic length \(\cong 10^{-1} m\))</td>
+</tr>
+<tr>
+<td align="center">Fast electrons<br>(characteristic distance \(\cong 10^{-3} m\))</td>
+<td align="center">\(\Leftarrow\)</td>
+<td align="center">X-rays and gamma rays<br>(characteristic length \(\cong 10^{-1} m\))</td>
+</tr>
+</table>
+
+<p>The entries in the left column represent the charged particulate radiations that,
+because of the electric charge carried by the particle, continuously interact through the
+coulomb force with the electrons present in any medium through which they pass. The radiations
+in the right column are uncharged and therefore are not subject to the coulomb
+force. Instead, these radiations must first undergo a "catastrophic" interaction (often
+involving the nucleus of constituent atoms) that radically alters the properties of the incident
+radiation in a single encounter. In all cases of practical interest, the interaction results
+in the full or partial transfer of energy of the incident radiation to electrons or nuclei of the
+constituent atoms, or to charged particle products of nuclear reactions. If the interaction
+does not occur within the detector, these uncharged radiations (e.g., neutrons or gamma
+rays) can pass completely through the detector volume without revealing the slightest hint
+that they were ever there.</p>
+
+<p>The horizontal arrows shown in the diagram illustrate the results of such catastrophic
+interactions. An \(X\text{-}\) or gamma ray, through the processes described in this chapter, can
+transfer all or part of its energy to electrons within the medium. The resulting <i>secondary
+electrons</i> bear a close similarity to the fast electron radiations (such as the beta particle)
+discussed in Chapter 1. Devices designed to detect gamma rays are tailored to promote
+such interactions and to fully stop the resulting secondary electrons so that their entire
+energy may contribute to the output signal. In contrast, neutrons may interact in such a way
+as to produce secondary heavy charged particles, which then serve as the basis of the detector
+signal.</p>
+
+<p>Also listed in the diagram are order-of-magnitude numbers for the characteristic distance
+of penetration or average path length (range or mean free path) in solids for typical
+energy radiations in each category.</p>
+
+<h2>I. INTERACTION OF HEAVY CHARGED PARTICLES</h2>
+<h3>A. Nature of the Interaction</h3>
+Heavy charged particles, such as the alpha particle, interact with matter primarily through
+coulomb forces between their positive charge and the negative charge of the orbital electrons
+within the absorber atoms. Although interactions of the particle with nuclei (as in
+Rutherford scattering or alpha-particle-induced reactions) are also possible, such encounters
+occur only rarely and they are not normally significant in the response of radiation
+detectors. Instead, charged particle detectors must rely on the results of interactions with
+electrons for their response.
+
+<p>Upon entering any absorbing medium, the charged particle immediately interacts
+simultaneously with many electrons. In any one such encounter, the electron feels an
+impulse from the attractive coulomb force as the particle passes its vicinity. Depending on
+the proximity of the encounter, this impulse may be sufficient either to raise the electron
+to a higher-lying shell within the absorber atom (excitation) or to remove completely the
+electron from the atom (ionization). The energy that is transferred to the electron must
+come at the expense of the charged particle, and its velocity is therefore decreased as a
+result of the encounter. The maximum energy that can be transferred from a charged particle
+of mass rn with kinetic energy \(E\) to an electron of mass \(m_{0}\) in a single collision is
+\(4Em_{0}/m\), or about \(1/500\) of the particle energy per nucleon. Because this is a small fraction
+of the total energy, the primary particle must lose its energy in many such interactions during
+its passage through an absorber. At any given time, the particle is interacting with many
+electrons, so the net effect is to decrease its velocity continuously until the particle is
+stopped.</p>
+
+<p>Representative paths taken by heavy charged particles in their slowing down process
+are schematically represented in the sketch below. Except at their very end, the tracks tend
+to be quite straight because the particle is not greatly deflected by any one encounter, and
+interactions occur in all directions simultaneously. Charged particles are therefore characterized
+by a definite range in a given absorber material. The range, to be defined more precisely
+below, represents a distance beyond which no particles will penetrate.</p>
+
+<p><img src="noname2.1.png" width="315" height="201" alt=""></p>
+
+<p>The products of these encounters in the absorber are either excited atoms or <i>ion pairs</i>.
+Each ion pair is made up of a free electron and the corresponding positive ion of an
+absorber atom from which an electron has been totally removed. The ion pairs have a natural
+tendency to recombine to form neutral atoms, but in some types of detectors, this
+recombination is suppressed so that the ion pairs may be used as the basis of the detector
+response.</p>
+
+<p>In particularly close encounters, an electron may undergo a large enough impulse that
+after having left its parent atom, it still may have sufficient kinetic energy to create further
+ions. These energetic electrons are sometimes called <i>delta rays</i> and represent an indirect
+means by which the charged particle energy is transferred to the absorbing medium. Under
+typical conditions, the majority of the energy loss of the charged particle occurs via these
+delta rays. The range of the delta rays is always small compared with the range of the incident
+energetic particle, so the ionization is still formed close to the primary track. On a
+microscopic scale, one effect of this process is that the ion pairs normally do not appear as
+randomly spaced single ionizations, but there is a tendency to form many "clusters" of multiple
+ion pairs distributed along the track of the particle.</p>
+
+<h3>B. Stopping Power</h3>
+The <i>linear stopping power</i> \(S\) for charged particles in a given absorber is simply defined as
+the differential energy loss for that particle within the material divided by the corresponding
+differential path length:
+\[
+S = - \frac{dE}{dx} \tag{2.1}
+\]
+
+The value of \(- dE/dx\) along a particle track is also called its <i>specific energy loss</i> or, more
+casually, its "rate" of energy loss.
+
+<p>For particles with a given charge state, \(S\) increases as the particle velocity is decreased.
+The classical expression that describes the specific energy loss is known as the <i>Bethe
+formula</i> and is written</p>
+\[
+ - \frac{dE}{dx} = \frac{4\pi e^{4}z^{2}}{m_{0}v^{2}}NB \tag{2.2}
+\]
+
+where
+\[
+B \equiv Z \left[ \ln\frac{2m_{0}v^{2}}{I} - \ln \left(  1 - \frac{v^{2}}{c^{2}} - \frac{v^{2}}{c^{2}} \right) \right]
+\]
+
+In these expressions, \(v\) and \(ze\) are the velocity and charge of the primary particle, \(N\) and \(Z\)
+are the number density and atomic number of the absorber atoms, \(m_{0}\) is the <i>electron rest
+mass</i>, and \(e\) is the electronic charge. The parameter \(I\) represents the average excitation and
+ionization potential of the absorber and is normally treated as an experimentally determined
+parameter for each element. For nonrelativistic charged particles (\(v \ll c\)), only the
+first term in \(B\) is significant. Equation (2.2) is generally valid for different types of charged
+particles provided their velocity remains large compared with the velocities of the orbital
+electrons in the absorbing atoms.
+
+<p>The expression for \(B\) in Eq. (2.2) varies slowly with particle energy. Thus, the general
+behavior of \(dE/dx\) can be inferred from the behavior of the multiplicative factor. For a given
+nonrelativistic particle, \(dE/dx\) therefore varies as \(1/v^{2}\), or inversely with particle energy. This
+behavior can be heuristically explained by noting that because the charged particle spends a
+greater time in the vicinity of any given electron when its velocity is low, the impulse felt by
+the electron, and hence the energy transfer, is largest. When comparing different charged particles
+of the same velocity, the only factor that may change outside the logarithmic term in
+Eq. (2.2) is \(z^{2}\), which occurs in the numerator of the expression. Therefore, particles with the
+greatest charge will have the largest specific energy loss. Alpha particles, for example, will
+lose energy at a rate that is greater than protons of the same velocity but less than that of
+more highly charged ions. In comparing different materials as absorbers, \(dE/dx\) depends primarily
+on the product \(NZ\), which is outside the logarithmic term. This product \(NZ\) represents
+the electron density of the absorber. High atomic number, high-density materials will consequently
+result in the greatest linear stopping power.</p>
+
+<p>The variation of the specific energy loss for a number of different charged particles is
+shown in Fig. 2.1 over a wide energy range. This figure shows that the value of \(dE/dx\) for
+many different types of charged particles approaches a near-constant broad minimum
+value at energies above several hundred \(MeV\), where their velocity approaches the velocity
+of light. This specific energy loss corresponds to about \(2 MeV\) per \(g/cm^{2}\) in light materials.
+Because of their similar energy loss behavior, such relativistic particles are sometimes
+referred to as "minimum ionizing particles." Fast electrons also fall into this category at
+energies as low as about \(1 MeV\) because their much lower mass results in relativistic velocities
+even at such modest energy</p>
+
+<p><img src="fig2.1.png" width="391" height="445" alt=""></p>
+
+<p>The Bethe formula begins to fail at low particle energies where charge exchange
+between the particle and absorber becomes important. The positively charged particle will
+then tend to pick up electrons from the absorber, which effectively reduce its charge and
+consequent linear energy loss. At the end of its track, the particle has accumulated \(z\) electrons
+and becomes a neutral atom.</p>
+
+<h2>C. Energy Loss Characteristics</h2>
+<h3>1. THE BRAGG CURVE</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 
