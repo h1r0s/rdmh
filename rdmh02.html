@@ -650,15 +650,273 @@ are very penetrating compared with the range of the positron, they can lead to t
 of energy far from the original positron track.</p>
 
 <h2>III. INTERACTION OF GAMMA RAYS</h2>
+Although a large number of possible interaction mechanisms are known for gamma rays
+in matter, only three major types play an important role in radiation measurements: <i>photoelectric
+absorption</i>, <i>Compton scattering</i>, and <i>pair production</i>. All these processes lead to the
+partial or complete transfer of the gamma-ray photon energy to electron energy. They
+result in sudden and abrupt changes in the gamma-ray photon history, in that the photon
+either disappears entirely or is scattered through a significant angle. This behavior is in
+marked contrast to the charged particles discussed earlier in this chapter, which slow down
+gradually through continuous, simultaneous interactions with many absorber atoms. The
+fundamentals of the gamma-ray interaction mechanisms are introduced here but are again
+reviewed at the beginning of Chapter 10 in the context of their influence on the response
+of gamma-ray detectors.
 
+<h3>A. Interaction Mechanisms</h3>
+<h4>1. PHOTOELECTRIC ABSORPTION</h4>
+In the photoelectric absorption process, a photon undergoes an interaction with an
+absorber atom in which the photon completely disappears. In its place, an energetic <i>photoelectron</i>
+is ejected by the atom from one of its bound shells.The interaction is with the atom
+as a whole and cannot take place with free electrons. For gamma rays of sufficient energy,
+the most probable origin of the photoelectron is the most tightly bound or \(K\) shell of the
+atom. The photoelectron appears with an energy given by
+\[
+E_{e} = h\nu - E_{b} \tag{2.15}
+\]
 
+where \(E_{b}\) represents the binding energy of the photoelectron in its original shell. For
+gamma-ray energies of more than a few hundred \(keV\), the photoelectron carries off the
+majority of the original photon energy.
 
+<p>In addition to the photoelectron, the interaction also creates an ionized absorber atom
+with a vacancy in one of its bound shells. This vacancy is quickly filled through capture of
+a free electron from the medium and/or rearrangement of electrons from other shells of
+the atom. Therefore, one or more characteristic X-ray photons may also be generated.
+Although in most cases these X-rays are reabsorbed close to the original site through
+photoelectric absorption involving less tightly bound shells, their migration and possible
+escape from radiation detectors can influence their response (see Chapter 10). In some
+fraction of the cases, the emission of an Auger electron may substitute for the characteristic
+X-ray in carrying away the atomic excitation energy.</p>
 
+<p>As an example of the complexity of these interactions, consider incident photons with
+energy above \(30 keV\) that undergo photoelectric absorption in xenon. About 86% interact
+through \(K\)-shell absorptions in the xenon atom. Of these, 87.5% result in \(K\)-shell characteristic
+(or "fluorescent") X-rays (a mixture of \(K\text{-}\alpha\) and \(K\text{-}\beta\)) and 12.5% de-excite through the
+emission of Auger electrons. The remaining 14% of the incident photons that do not undergo
+\(K\)-shell interactions are absorbed through photoelectric interaction with the \(L\) or \(M\) shells.
+These result in much lower energy characteristic X-rays or Auger electrons that are very short
+range and, to first approximation, are reabsorbed very near the site of the original interaction.
+Another example of such a "cascade sequence" is shown in Chapter 10 as Fig. 10.20.</p>
 
+<p>The photoelectric process is the predominant mode of interaction for gamma rays (or
+X-rays) of relatively low energy. The process is also enhanced for absorber materials of
+high atomic number \(Z\). No single analytic expression is valid for the probability of photoelectric
+absorption per atom over all ranges of \(E_{\gamma}\) and \(Z\), but a rough approximation is
+\[
+\tau \cong {\rm constant} \times \frac{Z^{n}}{E_{\gamma}^{3.5}} \tag{2.16}
+\]
 
+where the exponent \(n\) varies between 4 and 5 over the gamma-ray energy region of interest.
+This severe dependence of the photoelectric absorption probability on the atomic number
+of the absorber is a primary reason for the preponderance of high-\(Z\) materials (such as
+lead) in gamma-ray shields. As further detailed in Chapter 10, many detectors used for
+gamma-ray spectroscopy are chosen from high-\(Z\) constituents for the same reason.</p>
 
+<p>A plot of the photoelectric absorption cross section for a popular gamma-ray detection
+material, sodium iodide, is shown in Fig. 2.18. In the low-energy region, discontinuities in
+the curve or "absorption edges" appear at gamma-ray energies that correspond to the binding
+energies of electrons in the various shells of the absorber atom. The edge lying highest
+in energy therefore corresponds to the binding energy of the \(K\)-shell electron. For gamma-ray
+energies slightly above the edge, the photon energy is just sufficient to undergo a
+photoelectric interaction in which a \(K\)-electron is ejected from the atom. For gamma-ray
+energies slightly below the edge, this process is no longer energetically possible and therefore
+the interaction probability drops abruptly. Similar absorption edges occur at lower
+energies for the \(L\), \(M\), ... electron shells of the atom.</p>
 
+<p><img src="fig2.18.png" width="504" height="720" alt=""></p>
 
+<h4>2. COMPTON SCATTERING</h4>
+The interaction process of Compton scattering takes place between the incident gamma-ray
+photon and an electron in the absorbing material. It is most often the predominant
+interaction mechanism for gamma-ray energies typical of radioisotope sources.
+
+<p>In Compton scattering, the incoming gamma-ray photon is deflected through an angle
+\(\theta\) with respect to its original direction. The photon transfers a portion of its energy to the
+electron (assumed to be initially at rest), which is then known as a <i>recoil electron</i>. Because
+all angles of scattering are possible, the energy transferred to the electron can vary from
+zero to a large fraction of the gamma-ray energy.</p>
+
+<p>The expression that relates the energy transfer and the scattering angle for any given
+interaction can simply be derived by writing simultaneous equations for the conservation
+of energy and momentum. Using the symbols defined in the sketch below</p>
+
+<p><img src="noname2.4.png" width="367" height="160" alt=""></p>
+
+we can show that
+\[
+h\nu' = \frac{h\nu}{1 + \frac{h\nu}{m_{0}c^{2}}(1 - \cos\theta)} \tag{2.17}
+\]
+
+where \(m_{0}c^{2}\) is the rest-mass energy of the electron (\(0.511 MeV\)). For small scattering
+angles \(\theta\), very little energy is transferred. Some of the original energy is always retained by
+the incident photon, even in the extreme of \(\theta = \pi\). Equations (10.3) through (10.6) describe
+some properties of the energy transfer for limiting cases. A plot of the scattered photon
+energy predicted from Eq. (2.17) is also shown in Fig. 10.7.
+
+<p>The probability of Compton scattering per atom of the absorber depends on the number
+of electrons available as scattering targets and therefore increases linearly with \(Z\). The
+dependence on gamma-ray energy is illustrated in Fig. 2.18 for the case of sodium iodide
+and generally falls off gradually with increasing energy.</p>
+
+<p>The angular distribution of scattered gamma rays is predicted by the <i>Klein-Nishina
+formula</i> for the differential scattering cross section \(d\sigma/d\Omega\):
+\[
+\frac{d\sigma}{d\Omega} =
+	Zr_{0}^{2}
+	\left(\frac{1}{1 + \alpha(1 - \cos\theta)}\right)^{2}
+	\left(\frac{1 + \cos^{2}\theta}{2}\right)
+	\left(1 + \frac{\alpha^{2}(1 - \cos\theta)^{2}}{(1 + \cos^{2}\theta)[1 + \alpha(1 - \cos\theta)]}\right) \tag{2.18}
+\]
+
+where \(\alpha = h\nu/m_{0}c^{2}\) and \(r_{0}\) is the classical electron radius. The distribution is shown graphically
+in Fig. 2.19 and illustrates the strong tendency for forward scattering at high values
+of the gamma-ray energy.</p>
+
+<p><img src="fig2.19.png" width="516" height="365" alt=""></p>
+
+<h4>3. PAIR PRODUCTION</h4>
+If the gamma-ray energy exceeds twice the rest-mass energy of an electron (\(1.02 MeV\)), the
+process of pair production is energetically possible. As a practical matter, the probability of
+this interaction remains very low until the gamma-ray energy approaches several \(MeV\) and
+therefore pair production is predominantly confined to high-energy gamma rays. In the
+interaction (which must take place in the coulomb field of a nucleus), the gamma-ray photon
+disappears and is replaced by an electron-positron pair. All the excess energy carried
+in by the photon above the \(1.02 MeV\) required to create the pair goes into kinetic energy
+shared by the positron and the electron. Because the positron will subsequently annihilate
+after slowing down in the absorbing medium, two annihilation photons are normally
+produced as secondary products of the interaction. The subsequent fate of this annihilation
+radiation has an important effect on the response of gamma-ray detectors, as described in
+Chapter 10.
+
+<p>No simple expression exists for the probability of pair production per nucleus, but its
+magnitude varies approximately as the square of the absorber atomic number. The importance
+of pair production rises sharply with energy, as indicated in Fig. 2.18.</p>
+
+<p>The relative importance of the three processes described above for different absorber
+materials and gamma-ray energies is conveniently illustrated in Fig. 2.20.The line at the left
+represents the energy at which photoelectric absorption and Compton scattering are
+equally probable as a function of the absorber atomic number. The line at the right represents
+the energy at which Compton scattering and pair production are equally probable.
+Three areas are thus defined on the plot within which photoelectric absorption, Compton
+scattering, and pair production each predominate.</p>
+
+<p><img src="fig2.20.png" width="542" height="334" alt=""></p>
+
+<h4>4. COHERENT SCATTERING</h4>
+In addition to Compton scattering, another type of scattering can occur in which the gamma-ray
+photon interacts coherently with all the electrons of an absorber atom. This <i>coherent scattering</i>
+or <i>Rayleigh scattering</i> process neither excites nor ionizes the atom, and the gammaray
+photon retains its original energy after the scattering event. Because virtually no energy
+is transferred, this process is often neglected in basic discussions of gamma-ray interactions,
+and we will also ignore it in the discussions that follow. However, the direction of the photon
+is changed in coherent scattering, and complete models of gamma-ray transport must take it
+into account. The probability of coherent scattering is significant only for low photon energies
+(typically below a few hundred \(keV\) for common materials) and is most prominent in
+high-\(Z\) absorbers. The average deflection angle decreases with increasing energy, further
+restricting the practical importance of coherent scattering to low energies.
+
+<h3>B. Gamma-Ray Attenuation</h3>
+<h4>1. ATTENUATION COEFFICIENTS</h4>
+<p><img src="fig2.21.png" width="513" height="247" alt=""></p>
+
+If we again picture a transmission experiment as in Fig. 2.21, where monoenergetic gamma
+rays are collimated into a narrow beam and allowed to strike a detector after passing
+through an absorber of variable thickness, the result should be simple exponential attenuation
+of the gamma rays as also shown in Fig. 2.21. Each of the interaction processes
+removes the gamma-ray photon from the beam either by absorption or by scattering away
+from the detector direction and can be characterized by a fixed probability of occurrence
+per unit path length in the absorber. The sum of these probabilities is simply the probability
+per unit path length that the gamma-ray photon is removed from the beam:
+\[
+\mu = \tau({\rm photoelectric}) + \sigma({\rm Compton}) + \kappa({\rm pair}) \tag{2.19}
+\]
+
+and is called the <i>linear attenuation coefficient</i>. The number of transmitted photons \(I\) is then
+given in terms of the number without an absorber \(I_{0}\) as
+\[
+\frac{I}{I_{0}} = e^{-\mu t} \tag{2.20}
+\]
+
+The gamma-ray photons can also be characterized by their mean free path A, defined as the
+average distance traveled in the absorber before an interaction takes place. Its value can
+be obtained from
+\[
+\lambda = \frac{\int_{0}^{\infty}xe^{-\mu x}dx}{\int_{0}^{\infty}e^{-\mu x}dx} = \frac{1}{\mu} \tag{2.21}
+\]
+
+and is simply the reciprocal of the linear attenuation coefficient. Typical values of \(\lambda\) range
+from a few \(mm\) to tens of \(cm\) in solids for common gamma-ray energies.
+
+<p>Use of the linear attenuation coefficient is limited by the fact that it varies with the
+density of the absorber, even though the absorber material is the same. Therefore, the <i>mass
+attenuation coefficient</i> is much more widely used and is defined as
+\[
+{\rm mass \, attenuation \, coefficient \,} = \frac{\mu}{\rho} \tag{2.22}
+\]
+
+where \(\rho\) represents the density of the medium. For a given gamma-ray energy, the mass
+attenuation coefficient does not change with the physical state of a given absorber. For
+example, it is the same for water whether present in liquid or vapor form. The mass attenuation
+coefficient of a compound or mixture of elements can be calculated from
+\[
+\left(\frac{\mu}{\rho}\right)_{c} = \sum_{i}w_{i}\left(\frac{\mu}{\rho}\right)_{i} \tag{2.23}
+\]
+
+where the \(w_{i}\) factors represent the weight fraction of element \(i\) in the compound or mixture.</p>
+
+<h4>2. ABSORBER MASS THICKNESS</h4>
+In terms of the mass attenuation coefficient, the attenuation law for gamma rays now takes
+the form
+\[
+\frac{I}{I_{0}} = e^{-(\mu/\rho)\rho t} \tag{2.24}
+\]
+
+The product \(\rho t\), known as the <i>mass thickness</i> of the absorber, is now the significant parameter
+that determines its degree of attenuation. Units of mass thickness have historically
+been \(mg/cm^{2}\), and this convention is retained in this text. The thickness of absorbers used
+in radiation measurements is therefore often measured in mass thickness rather than physical
+thickness, because it is a more fundamental physical quantity.
+
+<p>The mass thickness is also a useful concept when discussing the energy loss of charged
+particles and fast electrons. For absorber materials with similar \(neutron/proton\) ratios, a
+particle will encounter about the same number of electrons passing through absorbers of
+equal mass thickness. Therefore, the stopping power and range, when expressed in units of
+\(\rho t\), are roughly the same for materials that do not differ greatly in \(Z\).</p>
+
+<h4>3. BUILDUP</h4>
+The gamma-ray attenuation experiment of Fig. 2.21, in which the gamma rays are collimated
+to a narrow beam before striking the absorber, is sometimes characterized as a "narrow
+beam" or "good geometry" measurement. The essential characteristic is that only
+gamma rays from the source that escape interaction in the absorber can be counted by the
+detector. Real measurements are often carried out under different circumstances (as
+sketched below) in which the severe collimation of the gamma rays is absent.
+
+<p><img src="noname2.5.png" width="308" height="142" alt=""></p>
+
+<p>Now the detector can respond either to gamma rays directly from the source, to
+gamma rays that reach the detector after having scattered in the absorber, or to other types
+of secondary photon radiation. Many types of detectors will be unable to distinguish
+between these possibilities, so that the measured detector signal will be larger than that
+recorded under equivalent "good geometry" conditions. The conditions that lead to the
+simple exponential attenuation of Eq. (2.20) are therefore violated in this "broad beam" or
+"bad geometry" measurement because of the additional contribution of the secondary
+gamma rays. This situation is usually handled by replacing Eq. (2.20) by the following:</p>
+\[
+\frac{I}{I_{0}} = B(t, E_{\gamma})e^{-\mu t} \tag{2.25}
+\]
+
+<p>where the factor \(B(t, E_{\gamma})\) is called the <i>buildup factor</i>. The exponential term is retained to
+describe the major variation of the gamma-ray counting rate with absorber thickness, and
+the buildup factor is introduced as a simple multiplicative correction. The magnitude of the
+buildup factor depends on the type of gamma-ray detector used, because this will affect the
+relative weight given to the direct and secondary gamma rays. (With a detector that
+responds only to the direct gamma rays, the buildup factor is unity.) The buildup also
+depends on the specific geometry of the experiment. As a rough rule of thumb, the buildup
+factor for thick slab absorbers tends to be about equal to the thickness of the absorber
+measured in units of mean free path of the incident gamma rays, provided the detector
+responds to a broad range of gamma-ray energies.</p>
+
+<h2>IV. INTERACTION OF NEUTRONS</h2>
 
 
 
