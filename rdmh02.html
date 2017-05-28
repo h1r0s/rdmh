@@ -486,7 +486,172 @@ electron emission process will be detailed in Chapter 9, where a typical electro
 a photomultiplier tube is accelerated to a few hundred eV before striking a solid surface,
 causing the emission of 5-10 secondaries in a charge multiplication process.</p>
 
-<h2>11. INTERACTION OF FAST ELECTRONS</h2>
+<h2>II. INTERACTION OF FAST ELECTRONS</h2>
+When compared with heavy charged particles, fast electrons lose their energy at a lower
+rate and follow a much more tortuous path through absorbing materials. A series of tracks
+from a source of monoenergetic electrons might appear as in the sketch below:
+
+<p><img src="noname2.3.png" width="310" height="127" alt=""></p>
+
+Large deviations in the electron path are now possible because its mass is equal to that of
+the orbital electrons with which it is interacting, and a much larger fraction of its energy
+can be lost in a single encounter. In addition, electron-nuclear interactions, which can
+abruptly change the electron direction, sometimes occur.
+
+<h3>A. Specific Energy Loss</h3>
+An expression similar to that of Eq. (2.2) has also been derived by Bethe to describe the specific
+energy loss due to ionization and excitation (the " collisional losses") for fast electrons:
+\[
+-\left(\frac{dE}{dx}\right)_{c}
+ = \frac{2\pi e^{4}NZ}{m_{0}v^{2}}
+ 	\left(
+ 		\ln\frac{m_{0}v^{2}E}{2I^{2}(1 - \beta^{2})}
+ 			- (\ln 2)\left(2\sqrt{1 - \beta^{2}} - 1 + \beta^{2}\right)
+ 			+ (1 - \beta^{2})
+ 			+ \frac{1}{8}\left(1 - \sqrt{1 - \beta^{2}}\right)^{2}
+ 	\right) \tag{2.10}
+\]
+
+where the symbols have the same meaning as in Eq. (2.2) and \(\beta = v/c\).
+
+<p>Electrons also differ from heavy charged particles in that energy may be lost by radiative
+processes as well as by coulomb interactions. These radiative losses take the form of
+bremsstrahlung or electromagnetic radiation, which can emanate from any position along
+the electron track. From classical theory, any charge must radiate energy when accelerated,
+and the deflections of the electron in its interactions with the absorber correspond to such
+acceleration. The linear specific energy loss through this radiative process is
+\[
+-\left(\frac{dE}{dx}\right)_{r}
+	= \frac{NEZ(Z + 1)e^{4}}{137m_{0}^{2}c^{4}}\left(4\ln\frac{2E}{m_{0}c^{4}} - \frac{4}{3}\right) \tag{2.11}
+\]
+</p>
+
+<p>For the particle types and energy ranges of interest in this text, only fast electrons can
+have a significant yield of bremsstrahlung. The yield from heavy charged particles is negligible
+as indicated by the presence of the \(m_{0}^{2}\) factor in the denominator of the multiplicative
+term in Eq. (2.11). The factors of \(E\) and \(Z^{2}\) in the numerator of Eq. (2.11) show that radiative
+losses are most important for high electron energies and for absorber materials of
+large atomic number. For typical electron energies, the average bremsstrahlung photon
+energy is quite low (see Fig. 1.6) and is therefore normally reabsorbed fairly close to its
+point of origin. In some cases, however, the escape of bremsstrahlung can influence the
+response of small detectors.</p>
+
+<p>The total linear stopping power for electrons is the sum of the collisional and radiative
+losses:
+\[
+\frac{dE}{dx} = \left(\frac{dE}{dx}\right)_{c} + \left(\frac{dE}{dx}\right)_{r} \tag{2.12}
+\]
+
+The ratio of the specific energy losses is given approximately by
+\[
+\frac{(dE/dx)_{r}}{(dE/dx)_{c}} \cong \frac{EZ}{700} \tag{2.13}
+\]
+
+where \(E\) is in units of \(MeV\). For the electrons of interest here (such as beta particles or secondary
+electrons from gamma-ray interactions), typical energies are less than a few \(MeV\).
+Therefore, radiative losses are always a small fraction of the energy losses due to ionization
+and excitation and are significant only in absorber materials of high atomic number.</p>
+
+<h3>B. Electron Range and Transmission Curves</h3>
+<h4>1. ABSORPTION OF MONOENERGETIC ELECTRONS</h4>
+An attenuation experiment of the type discussed earlier for alpha particles is sketched in
+Fig. 2.13 for a source of monoenergetic fast electrons. Even small values of the absorber
+thickness lead to the loss of some electrons from the detected beam because scattering of
+the electron effectively removes it from the flux striking the detector. A plot of the detected
+number of electrons versus absorber thickness therefore begins to drop immediately and
+gradually approaches zero for large absorber thicknesses. Those electrons that penetrate
+the greatest absorber thickness will be the ones whose initial direction has changed least in
+their path through the absorber.
+
+<p><img src="fig2.13.png" width="588" height="193" alt=""></p>
+
+<p>The concept of range is less definite for fast electrons than for heavy charged particles,
+because the electron total path length is considerably greater than the distance of penetration
+along the initial velocity vector. Normally, the electron range is taken from a transmission
+plot, such as that given in Fig. 2.13, by extrapolation of the linear portion of the
+curve to zero and represents the absorber thickness required to ensure that almost no electrons
+can penetrate the entire thickness.</p>
+
+<p><img src="fig2.14.png" width="591" height="662" alt=""></p>
+
+<p>For equivalent energy, the specific energy loss of electrons is much lower than that of
+heavy charged particles, so their path length in typical absorbers is hundreds of times
+greater. As a very crude estimate, electron ranges tend to be about \(2 mm\) per \(MeV\) in low-density
+materials, or about \(1 mm\) per \(MeV\) in materials of moderate density</p>
+
+<p>Tabular data are given in Refs. 22 and 23 for the stopping power and range of electrons
+and positrons in elements and compounds, covering a large region of energy. To a fair
+degree of approximation, the product of the range times the density of the absorber is a
+constant for different materials for electrons of equal initial energy. Plots of the range of
+electrons in two common detector materials are given in Fig. 2.14.</p>
+
+<h4>2. ABSORPTION OF BETA PARTICLES</h4>
+<p><img src="fig2.15.png" width="392" height="357" alt=""></p>
+
+The transmission curve for beta particles emitted by a radioisotope source, because of the
+continuous distribution in their energy, differs significantly from that sketched in Fig. 2.13
+for monoenergetic electrons. The "soft" or low-energy beta particles are rapidly absorbed
+even in small thicknesses of the absorber, so that the initial slope on the attenuation curve
+is much greater. For the majority of beta spectra, the curve happens to have a near-exponential
+shape and is therefore nearly linear on the semilog plot of the type shown in
+Fig. 2.15. This exponential behavior is only an empirical approximation and does not have
+a fundamental basis as does the exponential attenuation of gamma rays [see Eq. (2.20)]. An
+<i>absorption coefficient</i> \(n\) is sometimes defined by
+\[
+\frac{I}{I_{0}} = e^{-nt} \tag{2.14}
+\]
+where
+\begin{eqnarray}
+I_{0} &=& {\rm counting \, rate \, without \, absorber} \\
+I     &=& {\rm counting \, rate \, with \, absorber} \\
+t     &=& {\rm absorber \, thickness \, in \,} g/cm^{2}
+\end{eqnarray}
+
+<p>The coefficient \(n\) correlates well with the endpoint energy of the beta emitter for a specific
+absorbing material. This dependence is shown in Fig. 2.16 for aluminum. Through the
+use of such data, attenuation measurements can be used to identify indirectly endpoint
+energies of unknown beta emitters, although direct energy measurements are more
+common.</p>
+
+<p><img src="fig2.16.png" width="491" height="389" alt=""></p>
+
+<h4>3. BACKSCATTERING</h4>
+The fact that electrons often undergo large-angle deflections along their tracks leads to the
+phenomenon of <i>backscattering</i>. An electron entering one surface of an absorber may
+undergo sufficient deflection so that it re-emerges from the surface through which it
+entered. These backscattered electrons do not deposit all their energy in the absorbing
+medium and therefore can have a significant effect on the response of detectors designed
+to measure the energy of externally incident electrons. Electrons that backscatter in the
+detector "entrance window" or dead layer will escape detection entirely.
+
+<p>Backscattering is most pronounced for electrons with low incident energy and
+absorbers with high atomic number. Figure 2.17 shows the fraction of monoenergetic electrons
+that are backscattered when normally incident on the surface of various absorbers.
+Additional data for materials commonly used as electron detectors are given in Table 10.1.</p>
+
+<p><img src="fig2.17.png" width="472" height="627" alt=""></p>
+
+<p>Backscattering can also influence the apparent yield from radioisotope sources of beta
+particles or conversion electrons. If the source is deposited on a thick backing, electrons
+that are emitted initially into this backing may backscatter and re-emerge from the surface
+of the source.</p>
+
+<h3>C. Positron Interactions</h3>
+The coulomb forces that constitute the major mechanism of energy loss for both electrons and
+heavy charged particles are present for either positive or negative charge on the particle.
+Whether the interaction involves a repulsive or attractive force between the incident particle
+and orbital electron, the impulse and energy transfer for particles of equal mass are about the
+same. Therefore, the tracks of positrons in an absorber are similar to those of normal negative
+electrons, and their specific energy loss and range are about the same for equal initial energies.
+
+<p>Positrons differ significantly, however, in that the annihilation radiation described in
+Chapter 1 is generated at the end of the positron track. Because these \(0.511\) MeV photons
+are very penetrating compared with the range of the positron, they can lead to the deposition
+of energy far from the original positron track.</p>
+
+<h2>III. INTERACTION OF GAMMA RAYS</h2>
+
+
 
 
 
