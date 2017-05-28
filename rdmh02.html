@@ -917,6 +917,141 @@ measured in units of mean free path of the incident gamma rays, provided the det
 responds to a broad range of gamma-ray energies.</p>
 
 <h2>IV. INTERACTION OF NEUTRONS</h2>
+<h3>A. General Properties</h3>
+In common with gamma rays, neutrons carry no charge and therefore cannot interact in
+matter by means of the coulomb force, which dominates the energy loss mechanisms for
+charged particles and electrons. Neutrons can also travel through many centimeters of matter
+without any type of interaction and thus can be totally invisible to a detector of common
+size. When a neutron does undergo interaction, it is with a nucleus of the absorbing
+material. As a result of the interaction, the neutron may either totally disappear and be
+replaced by one or more secondary radiations, or else the energy or direction of the neutron
+is changed significantly.
+
+<p>In contrast to gamma rays, the secondary radiations resulting from neutron interactions
+are almost always heavy charged particles. These particles may be produced either as
+a result of neutron-induced nuclear reactions or they may be the nuclei of the absorbing
+material itself, which have gained energy as a result of neutron collisions. Most neutron
+detectors utilize some type of conversion of the incident neutron into secondary charged
+particles, which can then be detected directly. Specific examples of the most useful conversion
+processes are detailed in Chapters 14 and 15.</p>
+
+<p>The relative probabilities of the various types of neutron interactions change dramatically
+with neutron energy. In somewhat of an oversimplification, we will divide neutrons
+into two categories on the basis of their energy, either "fast neutrons" or "slow neutrons,"
+and discuss their interaction properties separately. The dividing line will be at about \(0.5 eV\),
+or about the energy of the abrupt drop in absorption cross section in cadmium (the
+<i>cadmium cutoff energy</i>).</p>
+
+<h3>B. Slow Neutron Interactions</h3>
+For slow neutrons, the significant interactions include elastic scattering with absorber nuclei
+and a large set of neutron-induced nuclear reactions. Because of the small kinetic energy of
+slow neutrons, very little energy can be transferred to the nucleus in elastic scattering.
+Consequently, this is not an interaction on which detectors of slow neutrons can be based.
+Elastic collisions tend to be very probable, however, and often serve to bring the slow neutron
+into thermal equilibrium with the absorber medium before a different type of interaction takes
+place. Much of the population in the slow neutron energy range will therefore be found among
+these thermal neutrons, which, at room temperature, have an average energy of about \(0.025 eV\).
+
+<p>The slow neutron interactions of real importance are neutron-induced reactions that
+can create secondary radiations of sufficient energy to be detected directly. Because the
+incoming neutron energy is so low, all such reactions must have a positive \(Q\)-value to be
+energetically possible. In most materials, the radiative capture reaction [or \((n, \gamma)\) reaction]
+is the most probable and plays an important part in the attenuation or shielding of neutrons.
+Radiative capture reactions can be useful in the indirect detection of neutrons using
+activation foils as described in Chapter 19, but they are not widely applied in active neutron
+detectors because the secondary radiation takes the form of gamma rays, which are
+also difficult to detect. Instead, reactions such as \((n, \alpha)\), \((n, p)\), and \((n, fission)\) are much
+more attractive because the secondary radiations are charged particles. A number of specific
+reactions of this type are detailed in Chapter 14.</p>
+
+<h3>C. Fast Neutron Interactions</h3>
+The probability of most neutron-induced reactions potentially useful in detectors drops off
+rapidly with increasing neutron energy. The importance of scattering becomes greater, however,
+because the neutron can transfer an appreciable amount of energy in one collision. The secondary
+radiations in this case are recoil nuclei, which have picked up a detectable amount of
+energy from neutron collisions. At each scattering site, the neutron loses energy and is thereby
+moderated or slowed to lower energy. The most efficient moderator is hydrogen because the
+neutron can lose up to all its energy in a single collision with a hydrogen nucleus. For heavier
+nuclei, only a partial energy transfer is possible [see Eq.(15.4) and the associated discussion].
+
+<p>If the energy of the fast neutron is sufficiently high, inelastic scattering with nuclei can
+take place in which the recoil nucleus is elevated to one of its excited states during the collision.
+The nucleus quickly de-excites, emitting a gamma ray, and the neutron loses a greater
+fraction of its energy than it would in an equivalent elastic collision. Inelastic scattering and
+the subsequent secondary gamma rays play an important role in the shielding of high-energy
+neutrons but are an unwanted complication in the response of most fast neutron
+detectors based on elastic scattering.</p>
+
+<h3>D. Neutron Cross Sections</h3>
+For neutrons of a fixed energy, the probability per unit path length is a constant for any one
+of the interaction mechanisms. It is conventional to express this probability in terms of the
+cross section a per nucleus for each type of interaction. The cross section has units of area
+and has traditionally been measured in units of the <i>barn</i> (\(10^{-28}m^{2}2\)). For example, each
+nuclear species will have an elastic scattering cross section, a radiative capture cross section,
+and so on, each of which will be a function of the neutron energy. Some examples of
+cross section plots are given in Figs. 14.1 and 14.2.
+
+<p>When multiplied by the number of nuclei \(N\) per unit volume, the cross section \(\sigma\) is converted
+into the macroscopic cross section \(\Sigma\)
+\[
+\Sigma = N\sigma \tag{2.26}
+\]
+
+which now has dimensions of inverse length. \(\Sigma\) has the physical interpretation of the probability
+per unit path length for the specific process described by the "microscopic" cross
+section \(\sigma\). When all processes are combined by adding together the cross sections for each
+individual interaction
+\[
+\Sigma_{tot} = \Sigma_{{\rm scatter}} + \Sigma_{{\rm rad.capture}} + ... \tag{2.27}
+\]
+
+the resulting \(\Sigma_{tot}\) is the probability per unit path length that any type of interaction will
+occur. This quantity has the same significance for neutrons as the linear absorption coefficient
+for gamma rays defined earlier. If a narrow beam attenuation experiment is carried
+out for neutrons, as sketched earlier for gamma rays, the result will be the same: The number
+of detected neutrons will fall off exponentially with absorber thickness. In this case the
+attenuation relation is written
+\[
+\frac{I}{I_{0}} = e^{-\Sigma_{tot}t} \tag{2.28}
+\]
+
+The neutron mean free path \(\lambda\) is, by analogy with the gamma-ray case, givcn by \(1/\Sigma_{tot}\). In
+solid materials, \(\lambda\) for slow neutrons may be of the order of a centimeter or less, whereas for
+fast neutrons, it is normally tens of centimeters.</p>
+
+<p>Under most circumstances, neutrons are not narrowly collimated so that typical shielding
+situations involve broad beam or "bad geometry" conditions. Just as in the case of
+gamma rays, the exponential attenuation of Eq. (2.28) is no longer an adequate description
+because of the added importance of scattered neutrons reaching the detector. A more complex
+neutron transport computation is then required to predict the number of transmitted
+neutrons and their distribution in energy</p>
+
+<p>When discussing the rate of reactions induced by neutrons, it is convenient to introduce
+the concept of neutron flux. If we first consider neutrons with a single energy or fixed
+velocity \(v\), the product \(v\Sigma\) gives the interaction frequency for the process for which \(\Sigma\) is the
+macroscopic cross section. The reaction rate density (reactions per unit time and volume)
+is then given by \(n(r)v\Sigma\), where \(n(r)\) is the neutron number density at the vector position \(r\),
+and \(n(r)v\) is defined as the <i>neutron flux</i> \(\varphi(r)\) with dimensions of \(leng^{-2} time^{-1}\). Thus, the
+reaction rate density is given by the product of the neutron flux and the macroscopic cross
+section for the reaction of interest:
+\[
+{\rm reaction \, rate \, density \,} = \varphi(r) \tag{2.29}
+\]
+
+This relation can be generalized to include an energy-dependent neutron flux \(\varphi(r, E)\) and
+cross section \(\Sigma(E)\):
+\[
+{\rm reaction \, rate \, density \,} = \int_{0}^{\infty}\varphi(r, E)\Sigma(E)dE \tag{2.30}
+\]
+</p>
+
+<h2>V. RADIATION EXPOSURE AND DOSE</h2>
+
+
+
+
+
+
 
 
 
