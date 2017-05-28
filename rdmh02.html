@@ -311,12 +311,119 @@ are generally small enough to be neglected for all but the fastest-responding ra
 detectors.</p>
 
 <h3>E. Energy Loss in Thin Absorbers</h3>
+For thin absorbers (or detectors) that are penetrated by a given charged particle, the energy
+deposited within the absorber can be calculated from
+Particle energy
+\[
+\Delta E = - \left( \frac{dE}{dx} \right)_{avg}t \tag{2.4}
+\]
 
+where \(t\) is the absorber thickness and \((-dE/dx)_{avg}\) is the linear stopping power averaged
+over the energy of the particle while in the absorber. If the energy loss is small, the stopping
+power does not change much and it can be approximated by its value at the incident
+particle energy. Tabular values for \(dE/dx\) for a number of different charged particles in a
+variety of absorbing media are given in Refs. 5-10. Some graphs for materials of interest
+are shown in Figs. 2.9 through 2.11.
 
+<p><img src="fig2.9.png" width="505" height="629" alt=""></p>
+<p><img src="fig2.10.png" width="587" height="642" alt=""></p>
+<p><img src="fig2.11.png" width="579" height="461" alt=""></p>
 
+<p>For absorber thicknesses through which the energy loss is not small, it is not simple to
+obtain a properly weighted \((-dE/dx)_{avg}\) value directly from such data. In these cases, it is
+easier to obtain the deposited energy in a way that makes use of range-energy data of the
+type plotted in Figs. 2.6 through 2.8. The basis of the method is as follows: Let \(R_{1}\) represent
+the full range of the incident particle with energy Eo in the absorber material. By subtracting
+the physical thickness of the absorber \(t\) from \(R_{1}\), a value \(R_{2}\) is obtained that represents
+the range of those alpha particles that emerge from the opposite surface of the absorber.
+By finding the energy corresponding to \(R_{2}\), the energy of the transmitted charged particles
+\(E_{t}\) is obtained. The deposited energy \(\Delta E\) is then given simply by \(E_{0} - E_{\gamma}\). These steps are
+illustrated below:</p>
 
+<p><img src="noname2.2.png" width="434" height="160" alt=""></p>
 
+The procedure is based on the assumption that the charged particle tracks are perfectly linear
+in the absorber, and the method does not apply in situations where the particle can be
+significantly deflected (such as for fast electrons).
 
+<p>The combined effects of particle range and the decrease in \(dE/dx\). with increasing energy
+are illustrated in Fig. 2.12. Here the energy loss of protons in a thin detector is plotted
+versus the incident proton energy. For low energies, the proton range is less than the detector
+thickness. Therefore, as the energy is increased, the energy deposited in the detector
+(which is just equal to the incident energy) increases linearly. At a proton energy of
+\(425 keV\), the range is exactly equal to the detector thickness. For higher energies, only a
+portion of incident energy is deposited, and the transmitted proton carries off the remainder.
+Under these conditions, the energy deposited in the detector is given by Eq. (2.4), or
+simply the product of the detector thickness and the average linear stopping power.
+Because the stopping power continuously decreases with increasing energy in this region
+(see Fig. 2.3), the deposited energy therefore decreases with further increases in the
+incident proton energy. The second curve in Fig. 2.12 plots the transmitted energy (\(E_{t}\) on
+the diagram on the preceding page) as recorded by a second thick detector.</p>
+
+<p><img src="fig2.12.png" width="497" height="341" alt=""></p>
+
+<h3>F. Scaling Laws</h3>
+Sometimes data are not available on the range or energy loss characteristics of precisely the
+same particle-absorber combination needed in a given experiment. Recourse must then be
+made to various approximations, most of which are derived based on the Bethe formula
+[Eq. (2.2)] and on the assumption that the stopping power per atom of compounds or mixtures
+is additive. This latter assumption, known as the <i>Bragg-Kleeman rule</i>, may be written
+\[
+\frac{1}{N_{c}}\left(\frac{dE}{dx}\right)_{c} = \sum_{i}W_{i}\frac{1}{N_{i}}\left(\frac{dE}{dx}\right)_{i} \tag{2.5}
+\]
+
+In this expression, \(N\) is the atomic density, \(dE/dx\) is the linear stopping power, and \(W_{i}\) represents
+the atom fraction of the \(i\)th component in the compound (subscript \(c\)). As an example
+of the application of Eq. (2.5), the linear stopping power of alpha particles in a metallic
+oxide could be obtained from separate data on the stopping power in both the pure
+metal and in oxygen. Some caution should be used in applying such results, however, since
+some measurements for compounds have indicated a stopping power differing by as
+much as 10-20% from that calculated from Eq. (2.5).
+
+<p>It can be shown that the range of a charged particle in a compound material can also
+be estimated provided its range is known in all the constituent elements. In this derivation,
+it is necessary to assume that the shape of the \(dE/dx\) curve is independent of the stopping
+medium. Under these conditions, the range in the compound is given by
+\[
+R_{c} = \frac{M_{c}}{\sum_{i}n_{i}(A_{i}/R_{i})} \tag{2.6}
+\]
+
+where \(R_{i}\) is the range in element \(i\), \(n_{i}\) is the number of atoms of element \(i\) in the molecule,
+\(A_{i}\) is the atomic weight of element \(i\), and \(M_{c}\) is the molecular weight of the compound.</p>
+
+<p>If range data are not available for all the constituent elements, estimates can be made
+based on a semiempirical formula (commonly called the Bragg-Kleeman rule as well)
+\[
+\frac{R_{1}}{R_{0}} \cong \frac{\rho_{0}\sqrt{A_{1}}}{\rho_{1}\sqrt{A_{0}}} \tag{2.7}
+\]
+
+where \(\rho\) and \(A\) represent density and atomic weight, and subscripts \(0\) and \(1\) refer to different
+absorbing materials.The accuracy of this estimate diminishes when the two materials are
+of widely different atomic weights, so it is always best to use range data from a material that
+is as close as possible in A to the absorber of interest.</p>
+
+<p>Range data can also be generalized to different charged particles within a given
+absorber material. By integration of Eq. (2.2), it can be shown that the range of a particle
+of mass \(m\)) and charge \(z\) can be represented by
+\[
+R_{v} = \frac{m}{z^{2}}F(v) \tag{2.8}
+\]
+
+where \(F(v)\) represents a unique function of the particle initial velocity \(v\). For particles of
+the same initial velocity, this factor will be identical and therefore we can write
+\[
+R_{a}(v) = \frac{m_{a}z_{b}^{2}}{m_{b}z_{a}^{2}}R_{b}(v) \tag{2.9}
+\]
+
+where the subscripts \(a\) and \(b\) refer to different charged particles. Thus, the range of a particle
+for which data are not available can be estimated by calculating its initial velocity, finding
+the range of any other particle of the same initial velocity in the same material, and
+applying Eq. (2.9). It should be emphasized that these estimates are only approximate,
+because no account is taken of the change in charge state of the particle as it nears the end
+of its path. Correction factors necessary to compensate for this effect and predict the range
+more accurately are presented by Evans.</p>
+
+<h3>G. Behavior of Fission Fragments</h3>
 
 
 
