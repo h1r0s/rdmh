@@ -1046,9 +1046,150 @@ cross section \(\Sigma(E)\):
 </p>
 
 <h2>V. RADIATION EXPOSURE AND DOSE</h2>
+Because of their importance in personnel protection at radiation-producing facilities and
+in the medical applications of radiation, the concepts of radiation exposure and dose play
+prominent roles in radiation measurements. In the following sections, we introduce the fundamental
+concepts that underlie the quantities and units of importance in this area. Precise
+definitions of quantities related to radiation protection are continually evolving, and the
+reader is referred to publications of the International Commission on Radiological Units
+and Measurements (ICRU), the International Commission on Radiological Protection
+(ICRP), and the U.S. National Commission on Radiation Protection (NCRP) for up-to-date
+information. As examples, Refs. 29 and 30 are comprehensive reviews of the units and
+detailed issues that arise in the monitoring of radiation exposures.
 
+<h3>A. Gamma-Ray Exposure</h3>
+The concept of gamma-ray exposure was introduced early in the history of radioisotope
+research. Defined only for sources of X- or gamma rays, a fixed exposure rate exists at every
+point in space surrounding a source of fixed intensity. The exposure is linear, in that doubling
+the source intensity also doubles the exposure rate everywhere around the source.
 
+<p>The basic unit of gamma-ray exposure is defined in terms of the charge \(dQ\) due to ionization
+created by the secondary electrons (negative electrons and positrons) formed within
+a volume element of air and mass \(dm\), when these secondary electrons are completely
+stopped in air. The exposure value \(X\) is then given by \(dQ/dm\). The SI unit of gamma-ray
+exposure is thus the coulomb per kilogram (\(C/kg\)), which has not been given a special
+name. The historical unit has been the roentgen (\(R\)), defined as the exposure that results in
+the generation of one electrostatic unit of charge (about \(2.08 \times 10^{9}\) ion pairs) per
+\(0.001293 g\) (\(1 cm^{3}\) at STP) of air. The two units are related by</p>
+\[
+1R = 2.58 \times 10^{-4} C/kg
+\]
 
+<p>The exposure is therefore defined in terms of the effect of a given flux of gamma rays
+on a test volume of air and is a function only of the intensity of the source, the geometry
+between the source and test volume, and any attenuation of the gamma rays that may take
+place between the two. Its measurement fundamentally requires the determination of the
+charge due to ionization produced in air under specific conditions. Inherent in the above
+definition is the obligation to track each secondary electron created by primary gamma-ray
+interactions in the test volume under consideration, and to add up the ionization charges
+formed by that secondary electron until it reaches the end of its path. This requirement is
+often difficult or impossible to achieve in actual practice, and therefore instruments that
+are designed to measure gamma-ray exposure usually employ approximations that involve
+the principle of compensation introduced in Chapter 5.</p>
+
+<p>The gamma-ray exposure, although not directly tied to physical phenomena, is often of
+interest in gamma-ray dosimetry. It is therefore often convenient to be able to calculate the
+exposure rate at a known distance from a point radioisotope source. If we assume that the
+yield per disintegration of X- and gamma rays is accurately known for the radioisotope of
+interest, the exposure per unit activity of the source at a known distance can simply be
+expressed under the following conditions:
+
+<ol type="1">
+<li>The source is sufficiently small so that spherical geometry holds (i.e., the photon
+flux diminishes as \(1/d^2\), where d is the distance to the source).</li>
+<li>No attenuation of the X- or gamma rays takes place in the air or other material
+between the source and measuring point.</li>
+<li>Only photons passing directly from the source to the measuring point contribute to
+the exposure, and any gamma rays scattered in surrounding materials may be
+neglected.</li>
+</ol>
+
+The exposure rate \(\dot{X}\) is then
+\[
+\dot{X} = \Gamma_{\delta}\frac{\alpha}{d^2} \tag{2.31}
+\]
+
+where \(\alpha\) is the activity of the source, and \(\Gamma_\delta\) defined as the exposure rate constant for the
+specific radioisotope of interest. The subscript \(\delta\) implies that the assumption has been made
+that all X- and gamma rays emitted by the source above an energy \(\delta\) contribute to the dose,
+whereas those below this energy are not sufficiently penetrating to be of practical interest.
+The value of \(\Gamma_\delta\) for a particular radioisotope can be calculated from its gamma-ray yield
+and the energy-dependent absorption properties of air. Some particular values for \(\delta = 0\)
+are listed in Table 2.1.
+</p>
+
+<img src="tab2.1.png" width="383" height="474" alt="">
+
+<h3>B. Absorbed Dose</h3>
+Two different materials, if subjected to the same gamma-ray exposure, will in general
+absorb different amounts of energy. Because many important phenomena, including
+changes in physical properties or induced chemical reactions, would be expected to scale as
+the energy absorbed per unit mass of the material, a unit that measures this quantity is of
+fundamental interest. The energy absorbed from any type of radiation per unit mass of the
+absorber is defined as the <i>absorbed dose</i>. The historical unit of absorbed dose has been the
+<i>rad</i>, defined as \(100 ergs/gram\). As with other historical radiation units, the rad is being gradually
+replaced by its SI equivalent, the <i>gray</i> (\(Gy\)) defined as \(1 joule/kilogram\). The two units
+are therefore simply related by:
+\[
+1 Gy = 100 rad
+\]
+
+<p>The absorbed dose should be a reasonable measure of the chemical or physical effects
+created by a given radiation exposure in an absorbing material. Careful measurements have
+shown that the absorbed dose in air corresponding to a gamma-ray exposure of
+\(1 coulomb/kilogram\) amounts to \(33.8 joules/kilogram\), or \(33.8 Gy\). If water is substituted for
+the air, its absorption properties per unit mass do not differ greatly because the average atomic
+number of water is much the same as that of air. For absorbing materials of greatly dissimilar
+atomic numbers, however, the interaction mechanisms have different relative importance,
+and therefore the absorbed dose per unit exposure would show greater differences.</p>
+
+<p>In order to measure absorbed dose in a fundamental manner, some type of energy
+measurement must be carried out. One possibility is a calorimetric measurement in which
+the rate of rise of the temperature in a sample of absorber is used to calculate the rate of
+energy deposition per unit mass. Because of their difficulty, these measurements are not
+commonplace for routine application since the thermal effects created even by large doses
+of radiation are very small. Instead, indirect measurements of absorbed dose are much
+more common, in which its magnitude is inferred from ionization measurements carried
+out under proper conditions (see Chapter 5).</p>
+
+<h3>C. Dose Equivalent</h3>
+When the effects of radiation on living organisms are evaluated, the absorption of equal
+amounts of energy per unit mass under different irradiation conditions does not guarantee
+the same biological effect. In fact, the extent of the effects can differ by as much as an order
+of magnitude depending on whether the energy is deposited in the form of heavy charged
+particles or electrons.
+
+<p>The biological damage created by ionizing radiation is traceable to the chemical alteration
+of the biological molecules that are influenced by the ionization or excitation caused
+by the radiation. The severity and permanence of these changes are directly related to the
+local rate of energy deposition along the particle track, known as the linear energy transfer
+\(L\). Those radiations with large values of \(L\) (such as heavy charged particles) tend to
+result in greater biological damage than those with lower \(L\) (such as electrons), even
+though the total energy deposited per unit mass is the same.</p>
+
+<p>The concept of <i>dose equivalent</i> has therefore been introduced to more adequately
+quantify the probable biological effect of the given radiation exposure. A unit of dose
+equivalent is defined as that amount of any type of radiation that, when absorbed in a biological
+system, results in the same biological effect as one unit of absorbed dose delivered
+in the form of low-\(L\) radiation. The dose equivalent His the product of the absorbed dose
+D and the quality factor \(Q\) that characterizes the specific radiation:
+\[
+H = DQ \tag{2.32}
+\]
+
+The quality factor increases with linear energy transfer \(L\) as shown in Table 2.2.</p>
+
+<img src="tab2.2.png" width="348" height="169" alt="">
+
+<p>For the fast electron radiations of interest in this text, \(L\) is sufficiently low so that \(Q\) is
+essentially unity in all applications. Therefore, the dose equivalent is numerically equal to
+the absorbed dose for beta particles or other fast electrons. The same is true for X-rays and
+gamma rays because their energy is also delivered in the form of fast secondary electrons.
+Charged particles have a much higher linear energy transfer and the dose equivalent is
+larger than the absorbed dose. For example, \(Q\) is approximately 20 for alpha particles of
+typical energies. Because neutrons deliver most of their energy in the form of heavy
+charged particles, their effective quality factor is also considerably greater than unity and
+varies significantly with the neutron energy.</p>
 
 
 
