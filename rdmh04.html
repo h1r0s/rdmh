@@ -195,14 +195,39 @@ however, this second source of variance in the signal is small in comparison wit
 the first, and the general character of the results given remains applicable.</p>
 
 <h3>B. Mean Square Voltage Mode</h3>
+An extension of this discussion of the statistical properties of the signal in current mode
+leads us to the next general mode of operation: the mean square voltage (MSV) mode.
+Suppose that we send the current signal through a circuit element that blocks the average
+current \(I\). and only passes the fluctuating component \(\sigma_i(t)\). By providing additional signal-processing
+elements, we now compute the time average of the squared amplitude of \|\sigma_i(t)\).
+(The details of these circuits are not important here; for further discussion see Ref. 2.) The
+processing steps are illustrated below:
 
+<p><img src="noname4.5.png" width="490" height="62" alt=""></p>
 
+The result corresponds to the quantity \(\overline{\sigma_I^2(t)}\) defined previously in Eq. (4.3). Combining
+Eqs. (4.2) and (4.7), we predict the magnitude of the signal derived in this way to be
+\[
+\overline{\sigma_I^2(t)} = \frac{rQ^2}{T} \tag{4.8}
+\]
 
+We see that this mean square signal is directly proportional to the event rate \(r\) and, more
+significantly, proportional to the square of the charge \(Q\) produced in each event. An analysis
+of this mode of operation was first given by Campbell and the term <i>Campbelling mode</i>
+is therefore substituted for MSV mode in some usage.
 
+<p>The MSV mode of operation is most useful when making measurements in mixed
+radiation environments when the charge produced by one type of radiation is much different
+than that from the second type. If simple current mode operation is chosen, the
+measured current will linearly reflect the charges contributed by each type. In MSV mode,
+however, the derived signal is proportional to the square of the charge per event. This operational
+mode will therefore further weight the detector response in favor of the type of
+radiation giving the larger average charge per event. As one example of the useful application
+of the MSV mode, in Chapter 14 we describe its use with neutron detectors in reactor
+instrumentation to enhance the neutron signal compared with the response due to
+smaller-amplitude gamma-ray events.</p>
 
-
-
-
+<h3>C. Pulse Mode</h3>
 
 
 
