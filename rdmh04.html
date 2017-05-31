@@ -228,6 +228,106 @@ instrumentation to enhance the neutron signal compared with the response due to
 smaller-amplitude gamma-ray events.</p>
 
 <h3>C. Pulse Mode</h3>
+In reviewing various applications of radiation detectors, we find that current mode operation
+is used with many detectors when event rates are very high. Detectors that are applied
+to radiation dosimetry are also normally operated in current mode for reasons that will be
+discussed in Chapter 5. MSV mode is useful in enhancing the relative response to large-amplitude
+events and finds widespread application in reactor instrumentation. Most applications,
+however, are better served by preserving information on the amplitude and timing
+of individual events that only pulse mode can provide. Consequently, the remainder of this
+chapter deals with various aspects of pulse mode operation.
+
+<P>The nature of the signal pulse produced from a single event depends on the input characteristics
+of the circuit to which the detector is connected (usually a preamplifier). The
+equivalent circuit can often be represented as shown below.</p>
+
+<p><img src="noname4.6.png" width="389" height="71" alt=""></p>
+
+Here \(R\) represents the input resistance of the circuit, and \(C\) represents the equivalent
+capacitance of both the detector itself and the measuring circuit. If, for example, a preamplifier
+is attached to the detector, then \(R\) is its input resistance and \(C\) is the summed capacitance
+of the detector, the cable used to connect the detector to the preamplifier, and the
+input capacitance of the preamplifier itself. In most cases, the time-dependent voltage \(V(t)\)
+across the load resistance is the fundamental signal voltage on which pulse mode operation
+is based. Two separate extremes of operation can be identified that depend on the relative
+value of the time constant of the measuring circuit. From simple circuit analysis, this time
+constant is given by the product of \(R\) and \(C\), or \(\tau) = RC\).
+
+<p><img src="fig4.1.png" width="489" height="447" alt=""></p>
+
+<h4>CASE 1. SMALL RC(\(\tau \ll t_c\))</h4>
+In this extreme the time constant of the external circuit is kept small compared with the
+charge collection time, so that the current flowing through the load resistance \(R\) is essentially
+equal to the instantaneous value of the current flowing in the detector. The signal
+voltage \(V(t)\) produced under these conditions has a shape nearly identical to the time
+dependence of the current produced within the detector as illustrated in Fig. 4.1b.
+Radiation detectors are sometimes operated under these conditions when high event rates
+or timing information is more important than accurate energy information.
+
+<h4>CASE 2. LARGE RC (\(\tau \gg t_c\))</h4>
+It is generally more common to operate detectors in the opposite extreme in which the
+time constant of the external circuit is much larger than the detector charge collection time.
+In this case, very little current will flow in the load resistance during the charge collection
+time and the detector current is momentarily integrated on the capacitance. If we assume
+that the time between pulses is sufficiently large, the capacitance will then discharge
+through the resistance, returning the voltage across the load resistance to zero. The corresponding
+signal voltage \(V(t)\) is illustrated in Fig. 4.1c.
+
+<p>Because the latter case is by far the most common means of pulse-type operation of
+detectors, it is important to draw some general conclusions. First, the time required for the
+signal pulse to reach its maximum value is determined by the charge collection time within
+the detector itself. No properties of the external or load circuit influence the rise time of the
+pulses. On the other hand, the decay time of the pulses, or the time required to restore the
+signal voltage to zero, is determined only by the time constant of the load circuit. The conclusion
+that the leading edge is detector dependent and the trailing edge circuit dependent is
+a generality that will hold for a wide variety of radiation detectors operated under the conditions
+in which \(RC \gg t_c\). Second, the amplitude of a signal pulse shown as \(V_{max}\) in Fig. 4.1c
+is determined simply by the ratio of the total charge \(Q\) created within the detector during one
+radiation interaction divided by the capacitance \(C\) of the equivalent load circuit. Because this
+capacitance is normally fixed, the amplitude of the signal pulse is directly proportional to the
+corresponding charge generated within the detector and is given by the simple expression</p>
+\[
+V_{max} = Q/C \tag{4.9}
+\]
+
+<p>Thus, the output of a detector operated in pulse mode normally consists of a sequence
+of individual signal pulses, each representing the results of the interaction of a single quantum
+of radiation within the detector. A measurement of the rate at which such pulses occur
+will give the corresponding rate of radiation interactions within the detector. Furthermore,
+the amplitude of each individual pulse reflects the amount of charge generated due to each
+individual interaction. We shall see that a very common analytical method is to record the
+distribution of these amplitudes from which some information can often be inferred about
+the incident radiation. An example is that set of conditions in which the charge \(Q\) is directly
+proportional to the energy of the incident quantum of radiation. Then, a recorded distribution
+of pulse amplitudes will reflect the corresponding distribution in energy of the
+incident radiation.</p>
+
+<p>As shown by Eq.(4.9), the proportionality between \(V_{max}\) and \(Q\) holds only if the capacitance
+\(C\) remains constant. In most detectors, the inherent capacitance is set by its size and
+shape, and the assumption of constancy is fully warranted. In other types (notably the semiconductor
+diode detector), the capacitance may change with variations in normal operating
+parameters. In such cases, voltage pulses of different amplitude may result from events
+with the same \(Q\). In order to preserve the basic information carried by the magnitude of \(Q\),
+a type of preamplifier circuit known as a charge-sensitive configuration has come into widespread
+use. As described in Chapter 17, this type of circuit uses feedback to largely eliminate
+the dependence of the output amplitude on the value of \(C\) and restores proportionality
+to the charge \(Q\) even in cases in which \(C\) may change.</p>
+
+<p>Pulse mode operation is the more common choice for most radiation detector applications
+because of several inherent advantages over current mode. First, the sensitivity that
+is achievable is often many factors greater than when using current or MSV mode because
+each individual quantum of radiation can be detected as a distinct pulse. Lower limits of
+detectability are then normally set by background radiation levels. In current mode, the
+minimum detectable current may represent an average interaction rate in the detector that
+is many times greater. The second and more important advantage is that each pulse amplitude
+carries some information that is often a useful or even necessary part of a particular
+application. In both current and MSV mode operations, this information on individual
+pulse amplitudes is lost and all interactions, regardless of amplitude, contribute to the
+average measured current. Because of these inherent advantages of pulse mode, the emphasis
+in nuclear instrumentation is largely in pulse circuits and pulse-processing techniques.</p>
+
+<h2>III. PULSE HEIGHT SPECTRA</h2>
+
 
 
 
