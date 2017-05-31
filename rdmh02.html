@@ -1206,23 +1206,89 @@ Guidelines for radiation exposure limits to personnel are quoted in units of dos
 in order to place exposures to different types and energies of radiation on a common
 basis.</p>
 
+<h3>D. Fluence-to-Dose Conversion</h3>
+For neutrons and gamma rays that are relatively penetrating radiations, it is sometimes
+convenient to be able to estimate the dose equivalent to exposed personnel that results
+from a given <i>fluence</i> of the radiation. The fluence is generally defined as \(\Phi= dN/da\) where
+\(dN\) represents the differential number of gamma-ray photons or neutrons that are incident
+on a sphere with differential cross-sectional area \(da\). In terms of the neutron flux defined
+on p. 57, the fluence is the time integral of the flux over the exposure duration. For a
+monodirectional beam, the fluence is simply the number of photons or neutrons per unit
+area, where the area is perpendicular to the direction of the beam. The number of counts
+recorded from typical radiation detectors is most easily interpreted in terms of the number
+of radiation-induced interactions in the detector, and therefore is more closely related to
+fluence than to dose. A conversion between fluence and dose can therefore be helpful in
+interpreting measurements made using specific detectors.
 
+<p>Because the attenuation of gamma rays or fast neutrons in air is negligible over small
+distances, the direct (or unscattered) fluence often can be estimated from point sources by
+assuming that \(\Phi = N/4\pi d^2\), where \(N\) is the number of photons or neutrons emitted by the
+source and \(d\) is the distance from the source. More complicated geometries require the use
+of radiation transport codes to predict the fluence and energy spectrum at a given location.</p>
 
+<p>The conversion from fluence to dose must take into account the energy-dependent
+probabilities of producing ionizing secondary particles from gamma-ray and/or neutron
+interactions, the kinetic energy that is deposited by these particles, and the quality factor \(Q\)
+that should be applied to convert deposited energy per unit mass to dose equivalent. By
+assuming a physical model for the human body, gamma-ray and neutron transport codes
+can be applied to calculate energy deposition and dose for the various tissues and organ
+systems. These calculations will be sensitive to the direction of incidence of the radiation
+because of self-shielding and attenuation effects within the body. Taking into account the
+differing radiosensitivity of various organs and tissues through the tissue-weighting factors
+recommended by the ICRP (see following section), the individual dose components can
+then be combined into an effective dose equivalent \(H_E\) (see Ref. 31) to represent an estimate
+of the overall biological effect of a uniform, whole body exposure to the assumed fluence.
+The effective dose equivalent is then written as
+\[
+H_E= h_E \Phi \tag{2.33}
+\]
 
+where \(h_E\) is the fluence-to-dose factor. Values of \(h_E\) for gamma rays and neutrons are
+plotted as a function of energy in Fig. 2.22.</p>
 
+<img src="fig2.22.png" width="427" height="611" alt="">
 
+<h3>E. ICRP Dose Units</h3>
+In its report ICRP Publication 60, the International Commission on Radiation Protection
+has introduced a somewhat different set of definitions that are also used in the radiation
+protection literature. A new quantity is named the <i>equivalent dose</i> and given the symbol
+\(H_{T,R}. It is obtained from the absorbed dose \(D_{T,R}\) averaged over a tissue or organ \(T\) due to
+radiation \(R\), multiplied by a radiation weighting factor \(w_R\) that accounts for the different
+biological effects of various radiations:
+\[
+H_{T,R} = w_R\cdot D_{T,R} \tag{2.34}
+\]
 
+<p><img src="tab2.3.png" width="571" height="296" alt=""></p>
 
+Values of \(w_R\) are shown in Table 2.3. Units for equivalent dose are sieverts when the
+absorbed dose is expressed in grays. If there is a mix of radiations, then the total equivalent
+dose \(H_T\) is given by a sum over all radiation types:
+\[
+H_T = \sum_R H_{T,R} = \sum_R w-R \cdot D_{T,R} \tag{2.35}
+\]
 
+To account for the differing radiosensitivity of various organs and tissues, a set of tissue-weighting
+factors \(w_T\) are introduced to allow calculation of what is now called the <i>effective
+dose</i> \(E\):
+\[
+E = \sum_R w_T \cdot H_T \tag{2.36}
+\]
 
+This quantity is intended to fill the same role as the effective dose equivalent \(H_E\) described
+in the previous section, in that it is an estimate of the overall effect of a given exposure to
+radiation. The tissue-weighting factors are chosen to give greater weight to those organs
+and tissues that are most sensitive to radiation.The factors are normalized in that their sum
+is unity, so that a uniform equivalent dose \(H_T\) to the whole body of one sievert will result
+in an effective dose \(E\) of one sievert. Recommended values for the tissue-weighting factors
+can be found in ICRP Publication 60.
 
-
-
-
-
-
-
-
+<p>It should be emphasized that the estimation of the effect of a given exposure to ionizing
+radiation is by its very nature an inexact science. Biological effects are not absolute
+physical quantities that can be measured with high precision.The concepts of effective dose
+or effective dose equivalent are intended only to provide guidance in approximating the
+potential effects of a given exposure to radiation and should not be regarded as highly
+accurate or exactly reproducible quantities.</p>
 
 </body>
 
