@@ -592,6 +592,162 @@ the quadrature sum of the FWHM values for each individual source of fluctuation:
 Each term on the right is the square of the FWHM that would be observed if all other
 sources of fluctuation were zero.</p>
 
+<h2>VI. DETECTION EFFICIENCY</h2>
+All radiation detectors will, in principle, give rise to an output pulse for each quantum of
+radiation that interacts within its active volume. For primary charged radiation such as
+alpha or beta particles, interaction in the form of ionization or excitation will take place
+immediately upon entry of the particle into the active volume. After traveling a small fraction
+of its range, a typical particle will form enough ion pairs along its path to ensure that
+the resulting pulse is large enough to be recorded. Thus, it is often easy to arrange a situation
+in which a detector will see every alpha or beta particle that enters its active volume.
+Under these conditions, the detector is said to have a counting efficiency of 100%.
+
+<p>On the other hand, uncharged radiations such as gamma rays or neutrons must first
+undergo a significant interaction in the detector before detection is possible. Because these
+radiations can travel large distances between interactions, detectors are often less than
+100% efficient. It then becomes necessary to have a precise figure for the detector efficiency
+in order to relate the number of pulses counted to the number of neutrons or photons
+incident on the detector.</p>
+
+<p>It is convenient to subdivide counting efficiencies into two classes: <i>absolute</i> and <i>intrinsic</i>.
+Absolute efficiencies are defined as
+\[
+\epsilon_{\rm abs} =
+ \frac
+ 	{\rm number \, of \, pulses \, recorded}
+ 	{\rm number \, of \, radiation \, quanta \, emitted \, by \, source} \tag{4.16}
+\]
+
+and are dependent not only on detector properties but also on the details of the counting
+geometry (primarily the distance from the source to the detector). The intrinsic efficiency
+is defined as
+\[
+\epsilon_{\rm int} =
+ \frac
+ 	{\rm number \, of \, pulses \, recorded}
+ 	{\rm number \, of \, radiation \, quanta \, incident \, on \, detector} \tag{4.17}
+\]
+
+and no longer includes the solid angle subtended by the detector as an implicit factor. The
+two efficiencies are simply related for isotropic sources by 
+\(\epsilon_{\rm int} = \epsilon_{\rm abs} \cdot (4\pi/\Omega)\), where \(\Omega\) is
+the solid angle of the detector seen from the actual source position. It is much more convenient
+to tabulate values of intrinsic rather than absolute efficiencies because the geometric
+dependence is much milder for the former. The intrinsic efficiency of a detector usually
+depends primarily on the detector material, the radiation energy, and the physical
+thickness of the detector in the direction of the incident radiation. A slight dependence on
+distance between the source and the detector does remain, however, because the average
+path length of the radiation through the detector will change somewhat with this spacing.</p>
+
+<p><img src="fig4.6.png" width="544" height="238" alt=""></p>
+
+<p>Counting efficiencies are also categorized by the nature of the event recorded. If we
+accept all pulses from the detector, then it is appropriate to use total efficiencies. In this case
+all interactions, no matter how low in energy, are assumed to be counted. In terms of a hypothetical
+differential pulse height distribution shown in Fig. 4.6, the entire area under the
+spectrum is a measure of the number of all pulses that are recorded, regardless of amplitude,
+and would be counted in defining the total efficiency. In practice, any measurement system
+always imposes a requirement that pulses be larger than some finite threshold level set to
+discriminate against very small pulses from electronic noise sources. Thus, one can only
+approach the theoretical total efficiency by setting this threshold level as low as possible.
+The peak efficiency, however, assumes that only those interactions that deposit the full energy
+of the incident radiation are counted. In a differential pulse height distribution, these full
+energy events are normally evidenced by a peak that appears at the highest end of the spectrum.
+Events that deposit only part of the incident radiation energy then will appear farther
+to the left in the spectrum. The number of full energy events can be obtained by simply integrating
+the total area under the peak, which is shown as the cross-hatched area in Fig. 4.6.
+The total and peak efficiencies are related by the <i>peak-to-total</i> ratio \(r\)
+\[
+r = \frac{\epsilon_{\rm peak}}{\epsilon_{\rm total}} \tag{4.18}
+\]
+
+which is sometimes tabulated separately. It is often preferable from an experimental standpoint
+to use only peak efficiencies, because the number of full energy events,is not sensitive
+to some perturbing effects such as scattering from surrounding objects or spurious
+noise. Therefore, values for the peak efficiency can be compiled and universally applied to
+a wide variety of laboratory conditions, whereas total efficiency values may be influenced
+by variable conditions.</p>
+
+<p>To be complete, a detector efficiency should be specified according to both of the
+above criteria. For example, the most common type of efficiency tabulated for gamma-ray
+detectors is the <i>intrinsic peak efficiency</i>.</p>
+
+<p>A detector with known efficiency can be used to measure the absolute activity of a
+radioactive source. In the following discussion, we assume that a detector with an intrinsic
+peak efficiency \(\epsilon_{\rm ip}\) has been used to record \(N\) events under the full energy peak in the
+detector spectrum. For simplicity, we also assume that the source emits radiation isotropically
+and that no attenuation takes place between the source and detector. From the definition
+of intrinsic peak efficiency, the number of radiation quanta \(S\) emitted by the source
+over the measurement period is then given by
+\[
+S = N\frac{4\pi}{\epsilon_{\rm ip}\Omega} \tag{4.19}
+\]
+
+where \(\Omega\) represent the solid angle (in steradians) subtended by the detector at the source
+position. The solid angle is defined by an integral over the detector surface that faces the
+source, of the form
+\[
+\Omega = \int_A \frac{\cos\alpha}{r^2}dA \tag{4.20}
+\]
+
+where \(r\) represents the distance between the source and a surface element \(dA\), and \(\alpha\) is the
+angle between the normal to the surface element and the source direction. If the volume
+of the source is not negligible, then a second integration must be carried out over all volume
+elements of the source. For the common case of a point source located along the axis
+of a right circular cylindrical detector, \(\Omega\) is given by
+\[
+\Omega = 2\pi\left(1 - \frac{d}{\sqrt{d^2 + a^2}}\right) \tag{4.21}
+\]
+
+where the source-detector distance d and detector radius a are shown in the sketch below:</p>
+
+<p><img src="noname4.7.png" width="265" height="102" alt=""></p>
+
+For \(d \gg a\), the solid angle reduces to the ratio of the detector plane frontal area \(A\) visible
+at the source to the square of the distance:
+\[
+\Omega \cong \frac{A}{d^2} = \frac{\pi a^2}{d^2} \tag{4.22}
+\]
+
+Another commonly encountered circumstance, shown in the sketch below, involves a uniform
+circular disk source emitting isotropic radiation aligned with a circular disk detector,
+both positioned perpendicular to a common axis passing through their centers:
+
+<p><img src="noname4.8.png" width="252" height="199" alt=""></p>
+
+In terms of the dimensions shown on the sketch, it can be shown that the effective solid
+angle averaged over the surface of the source is given by solving the integral
+\[
+\Omega = \frac{4\pi a}{s}\int_{0}^\infty \frac{\exp(-dk)J_1(sk)J_2(ak)}{k}dk
+\]
+
+where the \(J_1(x)\) are Bessel functions of \(x\). This integral does not have an analytic solution,
+so it can only be solved using numerical techniques. A useful approximate solution is
+\begin{eqnarray}
+\Omega &\cong& 
+	2\pi\left[
+		1 - \frac{1}{(1 + \beta)^{1/2}} - \frac{3}{8}\frac{\alpha\beta}{(1 + \beta)^{5/2}} + \alpha^2[F1] + \alpha^3[F2]
+	\right] \\
+F1 &=& \frac{5}{16}\frac{\beta}{(1 + \beta)^{7/2}} - \frac{35}{16}\frac{\beta^2}{(1 + \beta)^{9/2}} \\
+F2 &=&
+	\frac{35}{128}\frac{\beta}{(1 + \beta)^{9/2}} - 
+	\frac{315}{256}\frac{\beta^2}{(1 + \beta)^{11/2}} -
+	\frac{1155}{1024}\frac{\beta^3}{(1 + \beta)^{13/2}} 
+\end{eqnarray}
+
+where
+\[
+\alpha \equiv \left(\frac{a}{d}\right)^2 \qquad \beta \equiv \left(\frac{s}{d}\right)^2
+\]
+
+This approximation becomes inaccurate when the source or detector diameters become
+too large compared with their spacing, but it has been shown to give very accurate results
+over a wide range of dimensions.
+
+<p>Published values for \(\Omega\) can sometimes be found for more complicated geometric
+arrangements involving off-axis or volumetric sources, or detectors with more complex
+shapes. Some specific examples of data or descriptions of algorithms useful in solid angle
+computations are given in Refs. 6-15.</p>
 
 
 </body>
