@@ -452,28 +452,145 @@ point of minimum slope on this counting curve. We shall discuss these plateau me
 more specifically in Chapters 6 and 7 in connection with proportional counters and
 Geiger-Mueller detectors.</p>
 
+<h2>V. ENERGY RESOLUTION</h2>
+In many applications of radiation detectors, the object is to measure the energy distribution
+of the incident radiation. These efforts are classified under the general term radiation
+spectroscopy, and later chapters give examples of the use of specific detectors for spectroscopy
+involving alpha particles, gamma rays, and other types of nuclear radiation. At this
+point we discuss some general properties of detectors when applied to radiation spectroscopy
+and introduce some definitions that will be useful in these discussions.
 
+<p><img src="fig4.4.png" width="469" height="263" alt=""></p>
 
+<p>One important property of a detector in radiation spectroscopy can be examined by
+noting its response to a monoenergetic source of that radiation. Figure 4.4 illustrates the
+differential pulse height distribution that might be produced by a detector under these
+conditions. This distribution is called the <i>response function</i> of the detector for the energy
+used in the determination. The curve labeled "Good resolution" illustrates one possible
+distribution around an average pulse height \(H_0\). The second curve, labeled "Poor resolution,"
+illustrates the response of a detector with inferior performance. Provided the same
+number of pulses are recorded in both cases, the areas under each peak are equal.
+Although both distributions are centered at the same average value \(H_0\), the width of the
+distribution in the poor resolution case is much greater. This width reflects the fact that a
+large amount of fluctuation was recorded from pulse to pulse even though the same energy
+was deposited in the detector for each event. If the amount of these fluctuations is made
+smaller, the width of the corresponding distribution will also become smaller and the peak
+will approach a sharp spike or a mathematical delta function. The ability of a given measurement
+to resolve fine detail in the incident energy of the radiation is obviously improved
+as the width of the response function (illustrated in Fig. 4.4) becomes smaller and smaller.</p>
 
+<p><img src="fig4.5.png" width="478" height="297" alt=""></p>
 
+<p>A formal definition of detector energy resolution is shown in Fig. 4.5. The differential
+pulse height distribution for a hypothetical detector is shown under the same assumption
+that only radiation for a single energy is being recorded. The full width at half maximum
+(FWHM) is illustrated in the figure and is defined as the width of the distribution at a level
+that is just half the maximum ordinate of the peak. This definition assumes that any background
+or continuum on which the peak may be superimposed is negligible or has been
+subtracted away. The energy resolution of the detector is conventionally defined as the
+FWHM divided by the location of the peak centroid \(H_0\). The energy resolution \(R\) is thus a
+dimensionless fraction conventionally expressed as a percentage. Semiconductor diode
+detectors used in alpha spectroscopy can have an energy resolution less than 1%, whereas
+scintillation detectors used in gamma-ray spectroscopy normally show an energy resolution
+in the range of 5-10%. It should be clear that the smaller the figure for the energy resolution,
+the better the detector will be able to distinguish between two radiations whose
+energies lie near each other. An approximate rule of thumb is that one should be able to
+resolve two energies that are separated by more than one value of the detector FWHM.</p>
 
+<p>There are a number of potential sources of fluctuation in the response of a given detector
+that result in imperfect energy resolution. These include any drift of the operating characteristics
+of the detector during the course of the measurements, sources of random noise
+within the detector and instrumentation system, and statistical noise arising from the discrete
+nature of the measured signal itself. The third source is in some sense the most important
+because it represents an irreducible minimum amount of fluctuation that will always
+be present in the detector signal no matter how perfect the remainder of the system is
+made. In a wide category of detector applications, the statistical noise represents the dominant
+source of fluctuation in the signal and thus sets an important limit on detector
+performance.</p>
 
+<p>The statistical noise arises from the fact that the charge \(Q\) generated within the detector
+by a quantum of radiation is not a continuous variable but instead represents a discrete
+number of charge carriers. For example, in an ion chamber the charge carriers are the ion
+pairs produced by the passage of the charged particle through the chamber, whereas in a
+scintillation counter they are the number of electrons collected from the photocathode of
+the photomultiplier tube. In all cases the number of carriers is discrete and subject to random
+fluctuation from event to event even though exactly the same amount of energy is
+deposited in the detector.</p>
 
+<p>An estimate can be made of the amount of inherent fluctuation by assuming that the
+formation of each charge carrier is a Poisson process. Under this assumption, if a total number
+\(N\) of charge carriers is generated on the average, one would expect a standard deviation
+of \(\sqrt{N}\) to characterize the inherent statistical fluctuations in that number [see Eq.
+(3.29)]. If this were the only source of fluctuation in the signal, the response function, as
+shown in Fig. 4.5, should have a Gaussian shape, because \(N\) is typically a large number. In
+this case, the Gaussian function introduced in the previous chapter is most conveniently
+written
+\[
+G(H) = \frac{A}{\sigma\sqrt{2\pi}}\exp\left(-\frac{(H-H_0)^2}{2\sigma^2}\right) \tag{4.12}
+\]
 
+The width parameter a determines the FWHM of any Gaussian through the relation
+\(FWHM = 2.35\sigma\). (The remaining two parameters, \(H_0\) and \(A\), represent the centroid and
+area, respectively.)</p>
 
+<p>The response of many detectors is approximately linear, so that the average pulse
+amplitude \(H_0 = KN\), where \(K\) is a proportionality constant.The standard deviation a of the
+peak in the pulse height spectrum is then \(\sigma = K\sqrt{N}\) and its FWHM is \(2.35K\sqrt{N}\). We then
+would calculate a limiting resolution \(R\) due only to statistical fluctuations in the number of
+charge carriers as
+\[
+R\left|_{\rm Poisson \, limit} \equiv \frac{FWHM}{H_0} = \frac{2.35K\sqrt{N}}{KN} = \frac{2.35}{\sqrt{N}}\right. \tag{4.13}
+\]
+</p>
 
+<p>Note that this limiting value of \(R\) depends only on the number of charge carriers \(N\), and
+the resolution improves (\(R\) will decrease) as \(N\) is increased. From Eq. (4.13) we see that in
+order to achieve an energy resolution better than 1%, one must have \(N\) greater than 55,000.
+An ideal detector would have as many charge carriers generated per event as possible, so
+that this limiting resolution would be as small a percentage as possible. The great popularity
+of semiconductor detectors stems from the fact that a very large number of charge carriers
+are generated in these devices per unit energy lost by the incident radiation.</p>
 
+<p>Careful measurements of the energy resolution of some types of radiation detectors
+have shown that the achievable values for \(R\) can be lower by a factor as large as 3 or 4 than
+the minimum predicted by the statistical arguments given above. These results would indicate
+that the processes that give rise to the formation of each individual charge carrier are
+not independent, and therefore the total number of charge carriers cannot be described by
+simple Poisson statistics.The <i>Fano factor</i> has been introduced in an attempt to quantify the
+departure of the observed statistical fluctuations in the number of charge carriers from
+pure Poisson statistics and is defined as
+\[
+F \equiv \frac{{\rm observed \, variance \, in \,} N}{{\rm Poisson \, predicted \, variance \,} (= N)} \tag{4.13}
+\]
 
+Because the variance is given by \(\sigma^2\), the equivalent expression to Eq. (4.13) is now
+\[
+R\left|_{\rm Statistical \, limit} = \frac{2.35K\sqrt{N}\sqrt{F}}{KN} = 2.35\sqrt{\frac{F}{N}}\right. \tag{4.14}
+\]
 
+Although the Fano factor is substantially less than unity for semiconductor diode detectors and
+proportional counters, other types such as scintillation detectors appear to show a limiting resolution
+consistent with Poisson statistics and the Fano factor would, in these cases, be unity.
+</p>
 
+<p>Any other source of fluctuations in the signal chain will combine with the inherent statistical
+fluctuations from the detector to give the overall energy resolution of the measuring
+system. It is sometimes possible to measure the contribution to the overall FWHM due
+to a single component alone. For example, if the detector is replaced by a stable pulse generator,
+the measured response of the remainder of the system will show a fluctuation due
+primarily to electronic noise. If there are several sources of fluctuation present and each is
+symmetric and independent, statistical theory predicts that the overall response function
+will always tend toward a Gaussian shape, even if the individual sources are characterized
+by distributions of different shape. As a result, the Gaussian function given in Eq. (4.12) is
+widely used to represent the response function of detector systems in which many different
+factors may contribute to the overall energy resolution. Then the total FWHM will be
+the quadrature sum of the FWHM values for each individual source of fluctuation:
+\[
+(FWHM)_{\rm overall}^2 = (FWHM)_{\rm statistical}^2 = (FWHM)_{\rm noise}^2 + (FWHM)_{\rm drift}^2 + ...
+\]
 
-
-
-
-
-
-
-
+Each term on the right is the square of the FWHM that would be observed if all other
+sources of fluctuation were zero.</p>
 
 
 
