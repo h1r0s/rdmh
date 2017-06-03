@@ -493,6 +493,200 @@ will be separated and collected by this field, serving to partially neutralize t
 by the electret. Measurements of the electret voltage before and after the exposure can
 then be calibrated in terms of the total ionization charge produced in the chamber.</p>
 
+<h2>IV. RADIATION DOSE MEASUREMENT WITH ION CHAMBERS</h2>
+
+<h3>A. Gamma-Ray Exposure</h3>
+One of the most important applications of ion chambers is in the measurement of gamma-ray
+exposure. An air-filled ion chamber is particularly well-suited for this application
+because exposure is defined in terms of the amount of ionization charge created in air.
+Under the proper conditions a determination of the ionization charge in an air-filled ionization
+chamber can give an accurate measure of the exposure, and a measurement of the
+ionization current will indicate the exposure rate.
+
+<p>The task of measuring exposure is somewhat more complicated than it might first
+appear, because it is defined in terms of the ionization created by all the secondary electrons
+generated at the point at which the dose is to be measured. Strictly speaking, one
+would need to follow each of these secondary electrons over its entire range and measure
+all the ionization created along its track. Because the range in air of secondary electrons
+created by typical gamma-ray energies can be several meters, it is impractical to design an
+instrument that would carry out such a measurement directly. Instead, the principle of compensation
+is used.</p>
+
+<p>If the test volume of air is surrounded by an infinite sea of equivalent air that is also
+subject to the same exposure over the course of the measurement, an exact compensation
+will occur. That is, all the ionization charge created outside the test volume from secondary
+electrons that were formed within the volume is exactly balanced by charge created within
+the test volume from secondary electrons formed in the surrounding air. This situation is
+illustrated in Fig. 5.9.</p>
+
+<p><img src="fig5.9.png" width="515" height="632" alt=""></p>
+
+<p>One popular design based on this compensation is diagrammed in Fig. 5.10 and is
+called the <i>free-air ionization chamber</i>.</p>
+
+<p><img src="fig5.10.png" width="518" height="347" alt=""></p>
+
+Each end of the chamber is rendered insensitive by
+grounding the guard electrodes shown in the diagram. The parallel plate geometry creates
+electric field lines that are perpendicular to the plates in the space between them, but only
+the volume defined by the central electrode collects ionization current that is registered by
+the external circuit. The incident gamma-ray beam is collimated so that it is confined to a
+region that is far from the chamber electrodes, and secondary electrons created in the sensitive
+volume cannot reach either electrode. Compensation is therefore not required in the
+vertical dimension but will take place in the horizontal dimension, provided the intensity
+of the incident radiation beam is not appreciably reduced in its passage through the
+chamber. Free-air ionization chambers are widely used for accurate exposure measurements
+for gamma-ray energies below about \(100 keV\).
+
+<p>At higher energies, the larger range of the secondary electrons creates some difficulties.
+In order to prevent ionization loss from secondary electrons reaching the electrodes,
+the dimensions of the chamber must become impractically large. Therefore, gamma-ray
+exposure measurements at higher energies are conventionally carried out in cavity chambers
+in which a small volume of air is surrounded by a solid material (chosen because its
+properties are as similar as possible to air).</p>
+
+<p>To see how compensation can take place in such a situation, first consider the hypothetical
+arrangement sketched in Fig. 5.11 in which a small volume of air is defined by ideal
+electrodes that are transparent to both gamma rays and electrons.</p>
+
+<p><img src="fig5.11.png" width="538" height="322" alt=""></p>
+
+If this test volume is at
+the center of a large volume of air that is subject to the same exposure, the compensation
+previously described will take place. For gamma-ray energies greater than a few hundred
+\(keV\), however, the extended range of the secondary electrons makes the required surrounding
+volume of air much too large. The test volume would have to be at the center of
+a room-sized volume of air throughout which the exposure is the same as at the test volume
+itself. In practical situations uniform exposure conditions seldom exist over such large
+volumes.
+
+<p>The situation could be improved by compressing the air surrounding the test volume
+into a shell, which could then be no more than a centimeter or two in thickness. Because the
+same number of air molecules would still be present, none of the compensation properties
+would change and the test volume would still register an accurate measure of gamma-ray
+exposure. Now the demands of uniformity could be greatly relaxed to requiring only that
+the exposure be uniform over the much smaller volume defined by the shell of compressed
+air. Under these conditions, all ionization lost from the test volume will be compensated by
+ionization from secondary electrons created within the compressed air shell.</p>
+
+<p>It is now only one step further to replace the hypothetical compressed air shell with a
+more practical wall of solid material (see Fig. 5.11). The wall is said to be <i>air equivalent</i> if
+its compensation properties are similar to those of an air layer. This condition will be met
+provided the secondary electron yield and rate of electron energy loss per unit mass are
+similar to those of air. Because both these phenomena depend largely on atomic number,
+it turns out that virtually any material with atomic number close to that of air (such as aluminum
+or plastics) is reasonably air equivalent.</p>
+
+<p>If the walls are sufficiently thick compared with secondary electron ranges, a condition
+of <i>electronic equilibrium</i> is established in which the flux of secondary electrons leaving the
+inner surface of the wall becomes independent of the wall thickness. Neglecting attenuation
+of the incident gamma-ray beam in the wall, the measured ion current from a chamber
+of constant air volume will then be the same, independent of the wall thickness.
+Table 5.2 lists the minimum air-equivalent wall thickness required to establish electronic
+equilibrium. For ordinary gamma-ray energies, this thickness is \(1 cm\) or less.</p>
+
+<p><img src="tab5.2.png" width="425" height="442" alt=""></p>
+
+<p>For an air-equivalent ion chamber, the exposure rate \(R\) in \(C/kg\cdot s\) is simply given by
+the ratio of the saturated ion current \(I_s\) (in \(amperes\)) to the mass \(M\) (in \(kg\)) contained in the
+active volume:
+\[
+R = \frac{I_s}{M} \tag{5.9}
+\]
+
+The air mass \(M\) is normally calculated from a measurement of the chamber volume and the
+density at STP,
+\[
+M = 1.293\frac{kg}{m^3} \cdot V \cdot \frac{P}{P_0} \cdot \frac{T_0}{T} \tag{5.10} 
+\]
+
+where
+\begin{eqnarray}
+V &=& {\rm chamber \, volume \, (in \, m^3)} \\
+P &=& {\rm air \, pressure \, within \, the \, chamber} \\
+P_0 &=& {\rm standard \, pressure \, (760 mm Hg, \, or \, 1.013 \times 10^5 Pa)} \\
+T &=& {\rm air \, temperature \, within \, the \, chamber} \\
+T_0 &=& {\rm standard \, temperature \, (273.15 K)}
+\end{eqnarray}
+
+In routine monitoring, exposure rates of the order of \(10^{-3} roentgens/hour\) 
+(\(7.167 \times 10^{-11} C/kg\cdot s\)) are of typical interest. For an ion chamber of \(1000 cm^3\) volume, the saturated
+ion current at standard temperature and pressure calculated from Eqs. (5.9) and
+(5.10) is \(9.27 \times 10^{-14} A\). Because this signal current is very low, sensitive electrometers and
+careful chamber design are required to minimize leakage currents.</p>
+
+<p>From Eq. (5.9), the ion current \(I_s\) expected is simply proportional to the mass of the gas
+within the chamber. Therefore it can only be enhanced by increasing either the chamber
+volume or pressure. Thus ion chambers designed to measure very low exposure rates are
+routinely filled to a high pressure to raise their sensitivity. Because of the increased frequency
+of collisions in the gas at high pressures, argon is often then substituted for air to
+avoid the greater recombination rate that accompanies negative ion formation.</p>
+
+<h3>B. Absorbed Dose</h3>
+Gas-filled ionization chambers can also be applied indirectly to the measurement of
+absorbed dose (the energy absorbed per unit mass) in arbitrary materials. The technique is
+based on application of the <i>Bragg-Gray principle</i>, which states that the absorbed dose \(D_m\)
+in a given material can be deduced from the ionization produced in a small gas-filled cavity
+within that material as follows:
+\[
+D_m = WS_mP \tag{5.11}
+\]
+
+where
+\begin{eqnarray}
+W &=& {\rm average \, energy \, loss \, per \, ion \, pair \, formed \, in \, the \, gas} \\
+S_m &=& {\rm relative\,mass\,stopping\,power(energy\,loss\,per\,unit\,density)\,of\,the\,material\,to\,that\,of\,the\,gas} \\
+P &=& {\rm number \, of \, ion \, pairs \, per \, unit \, mass \, formed \, in \, the \, gas}
+\end{eqnarray}
+
+In order for the dose \(D_m\) to be measured in grays (\(J/kg\)), \(W\) must be expressed in \(J/{\rm ion\,pair}\)
+and \(P\) in \({\rm ion\,pairs}/kg\). Equation (5.11) holds to good approximation for different types of
+radiation provided several geometric conditions are met. The cavity should be small compared
+with the range of the primary or secondary charged particles associated with the
+radiation so that its presence does not greatly affect the particle flux. In the case of gamma
+rays, the solid medium should also be large compared with the range of the secondary electrons
+so that electronic equilibrium is established at the inner walls of the cavity.
+
+<p>For an ion chamber, the solid medium is the wall material and the cavity is its internal
+gas-filled volume. If the gas is air and the wall is air-equivalent material, the factor \(S_m\) in
+Eq. (5.11) is unity. These are the conditions necessary for measurement of absorbed dose
+in air, which is equivalent to measurement of the gamma-ray exposure discussed in the previous
+section. If other wall materials or gases are used, the absorbed dose in the wall can
+be calculated by inserting appropriate values for \(W\) and \(S_m\) in Eq. (5.11). The dose in biological
+tissue is of particular interest in radiation protection, so that "tissue-equivalent" ion
+chambers are widely applied in which the wall is made from a material with an elemental
+composition similar to that of tissue.</p>
+
+<p>In some applications, there is a problem in keeping the cavity small enough so that the
+Bragg-Gray principle applies. For example, if the spectrum of gamma rays under measurement
+extends to very low photon energies, the corresponding secondary electron ranges
+will be short. An ion chamber with small internal dimensions compared with these ranges
+would result in very small ion currents, which may cause measurement difficulties. In these
+applications, use can be made of the "extrapolation chamber," which consists of a pair of
+electrodes made from the material of interest mounted with variable spacing between
+them. A series of measurements can be carried out with different electrode spacings and
+the measured ion current per unit volume extrapolated to the case of zero spacing. With a
+vanishingly small cavity, the Bragg-Gray principle is once again applicable and the
+absorbed dose rate can be calculated from this extrapolated ion current.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>
