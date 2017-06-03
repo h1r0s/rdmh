@@ -46,6 +46,153 @@ descriptions of chamber design and construction are included in other books, of 
 Refs. 3-5 are representative examples.</p>
 
 <h2>I. THE IONIZATION PROCESS IN GASES</h2>
+As a fast charged particle passes through a gas, the types of interaction detailed in Chapter 2
+create both excited molecules and ionized molecules along its path. After a neutral molecule
+is ionized, the resulting positive ion and free electron are called an <i>ion pair</i>, and it serves
+as the basic constituent of the electrical signal developed by the ion chamber. Ions can be
+formed either by direct interaction with the incident particle, or through a secondary
+process in which some of the particle energy is first transferred to an energetic electron or
+"delta ray" (see Chapter 2). Regardless of the detailed mechanisms involved, the practical
+quantity of interest is the total number of ion pairs created along the track of the radiation.
+
+<h3>A. Number of Ion Pairs Formed</h3>
+At a minimum, the particle must transfer an amount of energy equal to the ionization energy
+of the gas molecule to permit the ionization process to occur. In most gases of interest for
+radiation detectors, the ionization energy for the least tightly bound electron shells is
+between 10 and 25 \(eV\). However, there are other mechanisms by which the incident particle
+may lose energy within the gas that do not create ions. Examples are excitation processes
+in which an electron may be elevated to a higher bound state in the molecule without
+being completely removed. Therefore, the average energy lost by the incident particle per
+ion pair formed (defined as the <i>W-value</i>) is always substantially greater than the ionization
+energy. The \(W\)-value is in principle a function of the species of gas involved, the type of
+radiation, and its energy. Empirical observations, however, show that it is not a strong function
+of any of these variables and is a remarkably constant parameter for many gases and
+different types of radiation. Some specific data are shown in Table 5.1, and a typical value
+is 25-35 \(eV/ion\,pair\). Therefore, an incident \(1 MeV\) particle, if it is fully stopped within the
+gas, will create about 30,000 ion pairs. Assuming that \(W\) is constant for a given type of radiation,
+the deposited energy will be proportional to the number of ion pairs formed and can
+be determined if a corresponding measurement of the number of ion pairs is carried out.
+
+<p><img src="tab5.1.png" width="531" height="341" alt=""></p>
+
+<h3>B. The Fano Factor</h3>
+In addition to the mean number of ion pairs formed by each incident particle, the fluctuation
+in their number for incident particles of identical energy is also of interest. These fluctuations
+will set a fundamental limit on the energy resolution that can be achieved in any
+detector based on collection of the ions. In the simplest model, the formation of each ion
+pair will be considered a Poisson process. The total number of ion pairs formed should
+therefore be subject to fluctuations characterized by a standard deviation equal to the
+square root of the average number formed. As discussed in Chapter 4, many radiation
+detectors show an inherent fluctuation that is less than predicted by this simplified model.
+The <i>Fano factor</i> is introduced as an empirical constant by which the predicted variance
+must be multiplied to give the experimentally observed variance [see Eq. (4.14)].
+
+<p>The Fano factor reflects to some degree the fraction of all the incident particle energy
+that is converted into information carriers within the detector. If the entire energy of the
+incident radiation were always converted into ion pairs, the number of pairs produced
+would always be precisely the same and there would be no statistical fluctuation. Under
+these conditions the Fano factor would be zero. If only a very small fraction of the incident
+radiation is converted, however, then the ion pairs would be formed far apart and with a
+relatively low probability, and there would be a good reason to expect that the distribution
+in their number should follow a Poisson distribution. In gases, the Fano factor is empirically
+observed to be less than 1 so that the fluctuations are smaller than would be predicted
+based on Poisson statistics alone.</p>
+
+<p>The Fano factor has significance only when the detector is operated in pulse mode. We
+therefore postpone further discussions of its magnitude in gases to the following chapter
+on proportional counters, where pulse mode operation and good energy resolution are
+more important considerations.</p>
+
+<h3>C. Diffusion, Charge Transfer, and Recombination</h3>
+The neutral atoms or molecules of the gas are in constant thermal motion, characterized by
+a mean free path for typical gases under standard conditions of about \(10^{-6} - 10^{-8} m\). Positive
+ions or free electrons created within the gas also take part in the random thermal motion
+and therefore have some tendency to diffuse away from regions of high density. This diffusion
+process is much more pronounced for free electrons than for ions since their average
+thermal velocity is much greater. A point-like collection of free electrons will spread about
+the original point into a Gaussian spatial distribution whose width will increase with time.
+If we let \(\sigma\) be the standard deviation of this distribution as projected onto an arbitrary
+orthogonal axis (\(x\), \(y\), or \(z\)), and \(t\) be the elapsed time, then it can be shown that
+\[
+\sigma = \sqrt{Dt} \tag{5.1}
+\]
+
+The value of the diffusion coefficient \(D\) in simple cases can be predicted from kinetic gas
+theory, but in general, a more complex transport model is required to accurately model
+experimental observation.
+
+<p>Of the many types of collisions that will normally take place between free electrons,
+ions, and neutral gas molecules, several that are important in understanding the behavior
+of gas-filled detectors are shown schematically in Fig. 5.1. </p>
+
+<p><img src="fig5.1.png" width="538" height="385" alt=""></p>
+
+<i>Charge transfer collisions</i> can occur when a positive ion 
+encounters another neutral gas molecule. In such a collision. an
+electron is transferred from the neutral molecule to the ion, thereby reversing the roles of
+each. This charge transfer is particularly significant in gas mixtures containing several different
+molecular species. There will then be a tendency to transfer the net positive charge
+to the gas with the lowest ionization energy because energy is liberated in collisions which
+leave that species as the positive ion.
+
+<p>The free electron member of the original ion pair also undergoes many collisions in its
+normal diffusion. In some species of gas, there may be a tendency to form negative ions by
+the attachment of the free electron to a neutral gas molecule. This negative ion then shares
+many properties with the original positive ion formed in the ionization process, but with
+opposite electric charge. Oxygen is an example of a gas that readily attaches electrons, so
+that free electrons diffusing in air are rapidly converted to negative ions. In contrast, nitrogen,
+hydrogen, hydrocarbon gases, and noble gases all are characterized by relatively low
+electron attachment coefficients, and therefore the electron continues to migrate in these
+gases as a free electron under normal conditions.</p>
+
+<p>Collisions between positive ions and free electrons may result in recombination in
+which the electron is captured by the positive ion and returns it to a state of charge neutrality.
+Alternatively, the positive ion may undergo a collision with a negative ion in which
+the extra electron is transferred to the positive ion and both ions are neutralized. In either
+case, the charge represented by the original pair is lost and cannot contribute further to the
+signal in detectors based on collection of the ionization charge.</p>
+
+<p>Because the collision frequency is proportional to the product of the concentrations of
+the two species involved, the recombination rate can be written
+\[
+\frac{dn^+}{dt} = \frac{dn^-}{dt} = -\alpha n^+ n^- \tag{5.2}
+\]
+
+where
+\begin{eqnarray}
+n^+ &=& {\rm number \, density \, of \, positive \, species} \\
+n^- &=& {\rm number \, density \, of \, negative \, species} \\
+\alpha &=& {\rm recombination \, coefficient}
+\end{eqnarray}
+
+The recombination coefficient is normally orders of magnitude larger between positive
+ions and negative ions compared with that between positive ions and free electrons. In
+gases that readily form negative ions through electron attachment, virtually all the recombination
+takes place between positive and negative ions.</p>
+
+<p>There are two general types of recombination loss: <i>columnar</i> recombination and <i>volume</i>
+recombination. The first type (sometimes also called <i>initial</i> recombination) arises from
+the fact that ion pairs are first formed in a column along the track of the ionizing particle.
+The local density of ion pairs is therefore high along the track until the ion pairs are caused
+to drift or diffuse away from their point of formation. Columnar recombination is most
+severe for densely ionizing particles such as alpha particles or fission fragments compared
+with fast electrons that deposit their energy over a much longer track. This loss mechanism
+is dependent only on the local conditions along individual tracks and does not depend on
+the rate at which such tracks are formed within the detector volume. In contrast, volume
+recombination is due to encounters between ions and/or electrons after they have left the
+immediate location of the track. Since many tracks are typically formed over the time it
+takes for ions to drift all the way to the collecting electrodes, it is possible for ions and/or
+electrons from independent tracks to collide and recombine. Volume recombination therefore
+increases in importance with irradiation rate. Thus charge separation and collection
+should be as rapid as possible in order to minimize recombination, and high electric fields
+are indicated for this purpose.</p>
+
+
+
+
+
+
+
 
 
 
