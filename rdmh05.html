@@ -187,17 +187,163 @@ increases in importance with irradiation rate. Thus charge separation and collec
 should be as rapid as possible in order to minimize recombination, and high electric fields
 are indicated for this purpose.</p>
 
+<h2>II. CHARGE MIGRATION AND COLLECTION</h2>
+<h3>A. Charge Mobility</h3>
+If an external electric field is applied to the region in which ions or electrons exist in the
+gas, electrostatic forces will tend to move the charges away from their point of origin. The
+net motion consists of a superposition of a random thermal velocity together with a net
+drift velocity in a given direction. The drift velocity for positive ions is in the direction of
+the conventional electric field, whereas free electrons and negative ions drift in the opposite
+direction.
 
+<p>For ions in a gas, the drift velocity can be fairly accurately predicted from the relation
+\[
+v = \frac{\mu\mathscr{E}}{p} \tag{5.3}
+\]
 
+where
+\begin{eqnarray}
+v &=& {\rm drift \, velocity} \\
+\mathscr{E} &=& {\rm electric \, field \, strength} \\
+p &=& {\rm gas \, pressure}
+\end{eqnarray}
 
+The mobility \(\mu\) tends to remain fairly constant over wide ranges of electric field and gas
+pressure and does not differ greatly for either positive or negative ions in the same gas.
+Tabulated values for the mobility of ions in various gases can be found in Ref. 2. Typical
+values are between 1 and \(1.5 \times 10^{-4} m^2 atom/V\cdot s\) for detector gases of medium atomic
+number. Therefore, at 1 atm pressure, a typical electric field of \(10^4 V/m\) will result in a drift
+velocity of the order of \(1 m/s\). Ion transit times over typical detector dimensions of a centimeter
+will therefore be approximately \(10 ms\). By most standards, this is a very long time.</p>
 
+<p>Free electrons behave quite differently. Their much lower mass allows a greater acceleration
+between encounters with neutral gas molecules, and the value of the mobility in
+Eq. (5.3) is typically 1000 times greater than that for ions. Typical collection times for electrons
+are therefore of the order of microseconds, rather than milliseconds. In some gases,
+for example, hydrocarbons and argon-hydrocarbon mixtures, there is a saturation effect in
+the electric drift velocity (see Fig. 5.2).</p>
 
+<p><img src="fig5.2.png" width="481" height="324" alt=""></p>
 
+Its value approaches a maximum for high values of
+the electric field and may even decrease slightly if the field is further increased. In many
+other gases (see Fig. 6.15), the electron drift velocity continues to increase for the largest
+\(\mathscr{E}/p\) values likely to be used in gas-filled counters.
 
+<p>As the electrons are drifting through the gas under the influence of the electric field,
+they will to first approximation follow the path of the electric field line that passes through
+their point of origin (but in the reverse direction to the electric field vector). Random diffusion
+of the electrons will still be taking place, however, causing each individual electron
+to follow a slightly different path. For strong electric field values, the increased average
+energy given the electron in the direction of the field results in different values of the diffusion
+coefficient [\(D\) in Eq. (5.1)] for the directions that are parallel to or transverse to the
+field. Over the few microseconds that are typically required for the electrons to reach a collecting
+electrode, the diffusion in either direction might be of the order of a millimeter or
+less. While in most standard detectors this charge spreading will have little practical effect,
+it does play a potential role in limiting the position resolution attainable in "position-sensitive"
+gas detectors that deduce the location of the ionizing event through the position
+of arrival of the electrons at the anode, or through measuring the electron drift time.</p>
 
+<h3>B. The Ionization Current</h3>
+In the presence of an electric field, the drift of the positive and negative charges represented
+by the ions and electrons constitutes an electric current. If a given volume of gas is
+undergoing steady-state irradiation, the rate of formation of ion pairs is constant. For any
+small test volume of the gas, this rate of formation will be exactly balanced by the rate at
+which ion pairs are lost from the volume, either through recombination or by diffusion or
+migration from the volume. Under the conditions that recombination is negligible and all
+the charges are efficiently collected, the steady-state current produced is an accurate measure
+of the rate at which ion pairs are formed within the volume. Measurement of this <i>ionization
+current</i> is the basic principle of the dc ion chamber.
 
+<p><img src="fig5.3.png" width="499" height="430" alt=""></p>
 
+<p>Figure 5.3 illustrates the basic elements of a rudimentary ion chamber. A volume of gas
+is enclosed within a region in which an electric field can be created by the application of an
+external voltage. At equilibrium, the current flowing in the external circuit will be equal to
+the ionization current collected at the electrodes, and a sensitive ammeter placed in the
+external circuit can therefore measure the ionization current.</p>
 
+<p>The current-voltage characteristics of such a chamber are also sketched in Fig. 5.3.
+Neglecting some subtle effects related to differences in diffusion characteristics between
+ions and electrons, no net current should flow in the absence of an applied voltage because
+no electric field will then exist within the gas. Ions and electrons that are created ultimately
+disappear either by recombination or by diffusion from the active volume. As the voltage is
+increased, the resulting electric field begins to separate the ion pairs more rapidly, and
+columnar recombination is diminished. The positive and negative charges are also swept
+toward the respective electrodes with increasing drift velocity, reducing the equilibrium
+concentration of ions within the gas and therefore further suppressing volume recombination
+between the point of origin and the collecting electrodes. The measured current thus
+increases with applied voltage as these effects reduce the amount of the original charge
+that is lost. At a sufficiently high applied voltage, the electric field is large enough to effectively
+suppress recombination to a negligible level, and all the original charges created
+through the ionization process contribute to the ion current. Increasing the voltage further
+cannot increase the current because all charges are already collected and their rate of formation
+is constant. This is the region of <i>ion saturation</i> in which ion chambers are conventionally
+operated. Under these conditions, the current measured in the external circuit is a
+true indication of the rate of formation of all charges due to ionization within the active
+volume of the chamber.</p>
+
+<h3>C. Factors Affecting the Saturation Current</h3>
+Several factors can detract from reaching saturation current in an ion chamber. The most
+important of these is recombination, which is minimized by ensuring that a large value of
+the electric field exists everywhere within the ion chamber volume. Columnar recombination
+along the track of heavy charged particles (such as alpha particles or fission fragments)
+is particularly significant, so that larger values of the applied voltage are required in these
+cases to achieve saturation, compared with electron or gamma-ray irradiation. Also, the
+effects of volume recombination are more important for higher intensity of the irradiation
+(and thus higher ion currents), as illustrated in Fig. 5.4. 
+
+<p><img src="fig5.4.png" width="491" height="285" alt=""></p>
+
+Here the percentage by which the
+measured current falls short of true saturation is seen to increase as a function of the measured
+ion current. At the lower irradiation levels, the density of ions and electrons (or negative
+ions) is correspondingly low, and from Eq. (5.2), the recombination rate is less
+significant than at high rates. Thus higher voltages are required at high irradiation rates to
+approach the true saturated ion current. This dependence is evident in the current-voltage
+characteristics shown in Fig. 5.3 and also is apparent in the example of an ionization chamber
+used for neutron monitoring shown in Fig. 14.14. In chambers operated with ambient air
+as the fill gas, increases in the humidity level will also raise the volume recombination rate.
+
+<p>If the production of ion pairs is uniform throughout the volume of the ion chamber,
+the drift of positive charges toward the cathode and negative charges toward the anode will
+create some imbalance in the steady-state concentrations of the two charge carriers. The
+concentration of positive ions will be greatest near the cathode; the opposite is true for the
+negative charges. Wherever a gradient exists for a species that is free to migrate, some net
+diffusion must take place in the direction of decreasing concentration. The direction of diffusion
+is therefore opposite that of the charge carrier flow caused by the electric field, and
+the effect can be to reduce the measured ion current. From an analysis given by Rossi and
+Staub the perturbation in the measured ion current is given by
+\[
+-\frac{\Delta I}{I} = \frac{\epsilon kT}{eV} \tag{5.4}
+\]
+
+where parallel planar electrodes have been assumed. In this expression,
+\begin{eqnarray}
+\epsilon &=& {\rm ratio\,of\,the\,average\,energy\,of\,charge\,carrier\,with\,electric\,field\,present\,to\,that\,without\,the\,electric\,field}\\
+k &=& {\rm Boltzmann \, constant} \\
+T &=& {\rm absolute \, temperature} \\
+e &=& {\rm electronic \, charge} \\
+V &=& {\rm applied \, voltage \, between \, electrodes}
+\end{eqnarray}
+
+The size of this loss in the saturation current depends primarily on the applied voltage and
+the size of the quantity \(\epsilon\) defined above. At room temperature, the factor \(kT/e\) is approximately
+\(2.5 \times 10^{-2}V\). For ions, \(\epsilon\) is not much larger than unity, and Eq. (5.4) therefore predicts
+that the loss due to diffusion is negligible even for low values of the applied voltage.
+When the negative charge is carried by free electrons, however, \(\epsilon\) can be of the order of several
+hundred and a significant loss in saturation current due to electron diffusion is possible.
+Because \(\epsilon\) will tend toward a limiting saturated value as the voltage \(V\) is raised to high values,
+the loss is minimized by operating the chamber at high values of the applied voltage</p>
+
+<p>In many cases, losses due to diffusion and volume recombination can be reduced to
+insignificant levels at reasonable values of the applied voltage. Columnar recombination is
+more difficult to eliminate completely, and small losses may persist even at the highest
+available voltages. It is then helpful to make a number of measurements of the ionization
+current as a function of voltage in order to determine the true saturated current. It has
+been shown that under these conditions a plot of \(1/I\) versus \(1/V\) can be used to extrapolate
+the measurements to zero on the \(1/V\) axis (infinite electric field) to make an accurate
+prediction of the saturated value of the current.</p>
 
 
 
