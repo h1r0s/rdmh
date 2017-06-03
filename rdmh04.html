@@ -392,6 +392,91 @@ subtle differences by using the differential distribution, it has become the pre
 means of displaying pulse height distribution information.</p>
 
 <h2>IV. COUNTING CURVES AND PLATEAUS</h2>
+When radiation detectors are operated in pulse counting mode, a common situation often
+arises in which the pulses from the detector are fed to a counting device with a fixed discrimination
+level. Signal pulses must exceed a given level \(H_d\) in order to be registered by
+the counting circuit. Sometimes it is possible to vary the level \(H_d\) during the course of the
+measurement to provide information about the amplitude distribution of the pulses.
+Assuming that \(H_d\) can be varied between 0 and \(H_5\) in Fig. 4.2, a series of measurements can
+be carried out in which the number of pulses \(N\) per unit time is measured as \(H_d\) is changed
+through a sequence of values between 0 and \(H_5\). This series of measurements is just an
+experimental determination of the integral pulse height distribution, and the measured
+counts should lie directly on the curve shown in Fig. 4.2b.
+
+<p>In setting up a pulse counting measurement, it is often desirable to establish an operating
+point that will provide maximum stability over long periods of time. For example,
+small drifts in the value of \(H_d\) could be expected in any real application, and one would
+like to establish conditions under which these drifts would have minimal influence on the
+measured counts. One such stable operating point can be achieved at a discrimination
+point set at the level \(H_3\) in Fig. 4.2. Because the slope of the integral distribution is a minimum
+at that point, small changes in the discrimination level will have minimum impact on
+the total number of pulses recorded. In general, regions of minimum slope on the integral
+distribution are called <i>counting plateaus</i> and represent areas of operation in which minimum
+sensitivity to drifts in discrimination level are achieved. It should be noted that
+plateaus in the integral spectrum correspond to valleys in the differential distribution.</p>
+
+<p>Plateaus in counting data can also be observed with a different procedure. For a particular
+radiation detector it is often possible to vary the gain or amplification provided for
+the charge produced in radiation interactions. This variation could be accomplished by
+varying the amplification factor of a linear amplifier between the detector and counting
+circuit, or in many cases more directly by changing the applied voltage to the detector itself.</p>
+
+<p><img src="fig4.3.png" width="561" height="567" alt=""></p>
+
+Figure 4.3 shows the differential pulse height distribution corresponding to three different
+values of voltage gain applied to the same source of pulses. Here the value of gain can be
+defined as the ratio of the voltage amplitude for a given event in the detector to the same
+amplitude before some parameter (such as amplification or detector voltage) was changed.
+The highest voltage gain will result in the largest maximum pulse height, but in all cases the
+area under the differential distribution will be a constant. In the example shown in Fig. 4.3,
+no counts will be recorded for a gain \(G = 1\) because under those conditions all pulses will
+be smaller than \(H_d\). Pulses will begin to be recorded somewhere between a gain \(G = 1\) and
+\(G = 2\). An experiment can be carried out in which the number of pulses recorded is measured
+as a function of the gain applied, sometimes called the <i>counting curve</i>. Such a plot is
+also shown in Fig. 4.3 and in many ways resembles an integral pulse height distribution. We
+now have a mirror image of the integral distribution, however, because small values of the
+gain will record no pulses, whereas large values will result in counting nearly all the pulses.
+Again, plateaus can be anticipated in this counting curve for values of the gain in which the
+effective discrimination pulse height \(H_d\) passes through minimal in the differential pulse
+height distribution. In the example shown in Fig. 4.3, the minimum slope in the counting
+curve should correspond to a gain of about 3, in which case the discrimination point is near
+the minimum of the valley in the differential pulse height distribution.
+
+<p>In some types of radiation detectors, such as Geiger-Mueller tubes or scintillation
+counters, the gain can conveniently be varied by changing the applied voltage to the detector.
+Although the gain may not change linearly with voltage, the qualitative features of the
+counting curve can be traced by a simple measurement of the detector counting rate as a
+function of voltage. In order to select an operating point of maximum stability, plateaus are
+again sought in the counting curve that results, and the voltage is often selected to lie at a
+point of minimum slope on this counting curve. We shall discuss these plateau measurements
+more specifically in Chapters 6 and 7 in connection with proportional counters and
+Geiger-Mueller detectors.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>
