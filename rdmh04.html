@@ -749,7 +749,393 @@ arrangements involving off-axis or volumetric sources, or detectors with more co
 shapes. Some specific examples of data or descriptions of algorithms useful in solid angle
 computations are given in Refs. 6-15.</p>
 
+<h2>VII. DEAD TIME</h2>
+In nearly all detector systems, there will be a minimum amount of time that must separate
+two events in order that they be recorded as two separate pulses. In some cases the limiting
+time may be set by processes in the detector itself, and in other cases the limit may arise
+in the associated electronics. This minimum time separation is usually called the <i>dead time</i>
+of the counting system. Because of the random nature of radioactive decay, there is always
+some probability that a true event will be lost because it occurs too quickly following a preceding
+event. These "dead time losses" can become rather severe when high counting rates
+are encountered, and any accurate counting measurements made under these conditions
+must include some correction for these losses. In this section we discuss some simple models
+of dead time behavior of counting systems, together with two experimental methods of
+determining system dead time. Ref. 16 is an excellent presentation of more detailed analyses
+of related topics that are beyond the present scope.
+
+<h3>A. Models for Dead Time Behavior</h3>
+
+<p><img src="fig4.7.png" width="457" height="276" alt=""></p>
+
+Two models of dead time behavior of counting systems have come into common usage:
+<i>paralyzable</i> and <i>nonparalyzable</i> response. These models represent idealized behavior, one
+or the other of which often adequately resembles the response of a real counting system.
+The fundamental assumptions of the models are illustrated in Fig. 4.7. At the center of the
+figure, a time scale is shown on which six randomly spaced events in the detector are indicated.
+At the bottom of the figure is the corresponding dead time behavior of a detector
+assumed to be nonparalyzable. A fixed time \(\tau\) is assumed to follow each true event that
+occurs during the "live period" of the detector.True events that occur during the dead period
+are lost and assumed to have no effect whatsoever on the behavior of the detector. In
+the example shown, the nonparalyzable detector would record four counts from the six
+true interactions. In contrast, the behavior of a paralyzable detector is shown along the top
+line of Fig. 4.7. The same dead time \(\tau\) is assumed to follow each true interaction that occurs
+during the live period of the detector. True events that occur during the dead period, however,
+although still not recorded as counts, are assumed to extend the dead time by
+another period \(\tau\) following the lost event. In the example shown, only three counts are
+recorded for the six true events.
+
+<p>The two models predict the same first-order losses and differ only when true event
+rates are high. They are in some sense two extremes of idealized system behavior, and real
+counting systems will often display a behavior that is intermediate between these extremes.
+The detailed behavior of a specific counting system may depend on the physical processes
+taking place in the detector itself or on delays introduced by the pulse processing and
+recording electronics.</p>
+
+<p>In the discussion that follows, we examine the response of a detector system to a
+steady-state source of radiation, and we adopt the following definitions:
+\begin{eqnarray}
+n &=& {\rm true \, interaction \, rate} \\
+m &=& {\rm recorded \, count \, rate} \\
+\tau &=& {\rm system \, dead \, time}
+\end{eqnarray}
+
+We assume that the counting time is long so that both \(n\) and \(m\) may be regarded as average
+rates. In general, we would like to obtain an expression for the true interaction rate \(n\)
+as a function of the measured rate \(m\) and the system dead time \(\tau\), so that appropriate corrections
+can be made to measured data to account for the dead time losses.</p>
+
+<p>In the nonparalyzable case, the fraction of all time that the detector is dead is given
+simply by the product \(m\tau\). Therefore, the rate at which true events are lost is simply \(nm\tau\).
+But because \(n - m\) is another expression for the rate of losses,
+\[
+n - m = nm\tau \tag{4.23}
+\]
+
+Solving for \(n\), we obtain
+\[
+n = \frac{m}{1 - m\tau} \qquad {\rm :Nonparalyzable \, model} \tag{4.24}
+\]
+</p>
+
+<p>In the paralyzable case, dead periods are not always of fixed length, so we cannot apply
+the same argument. Instead, we note that rate m is identical to the rate of occurrences of
+time intervals between true events which exceed \(\tau\). The distribution of intervals between
+random events occurring at an average rate n was previously shown [Eq. (3.71)] to be
+\[
+P_1(T)dT = ne^{-nT}dT \tag{4.25}
+\]
+
+where \(P_1(T)dT\) is the probability of observing an interval whose length lies within \(dT\) about \(T\):
+The probability of intervals larger than \(\tau\) can be obtained by integrating this distribution
+between \(\tau\) and \(\infty\)
+\[
+P_2(\tau) = \int_0^\infty P_1(T)dt = e^{-n\tau} \tag{4.26}
+\]
+
+The rate of occurrence of such intervals is then obtained by simply multiplying the above
+expression by the true rate \(n\)
+\[
+m = ne^{-n\tau} \qquad {\rm :Paralyzable \, model} \tag{4.27}
+\]
+
+The paralyzable model leads to a more cumbersome result because we cannot solve explicitly
+for the true rate \(n\). Instead, Eq. (4.27) must be solved iteratively if \(n\) is to be calculated
+from measurements of \(m\) and knowledge of \(\tau\).</p>
+
+<p><img src="fig4.8.png" width="571" height="397" alt=""></p>
+
+<p>A plot of the observed rate \(m\) versus the true rate \(n\) is given in Fig. 4.8 for both models.
+When the rates are low the two models give virtually the same result, but the behavior at
+high rates is markedly different. A nonparalyzable system will approach an asymptotic value
+for the observed rate of \(1/\tau\), which represents the situation in which the counter barely has
+time to finish one dead period before starting another. For paralyzable behavior, the
+observed rate is seen to go through a maximum. Very high true interaction rates result in a
+multiple extension of the dead period following an initial recorded count, and very few true
+events can be recorded. One must always be careful when using a counting system that may
+be paralyzable to ensure that ostensibly low observed rates actually correspond to low interaction
+rates rather than very high rates on the opposite side of the maximum. Mistakes in
+the interpretation of nuclear counting data from paralyzable systems have occurred in the
+past by overlooking the fact that there are always two possible true interaction rates corresponding
+to a given observed rate. As shown in Fig. 4.8, the observed rate \(m_1\) can correspond
+to either true rates \(n_1\) or \(n_2\). The ambiguity can be resolved only by changing the true rate in
+a known direction while observing whether the observed rate increases or decreases.</p>
+
+<p>For low rates (\(n \ll 1/\tau\)) the following approximations can be written :
+\[
+Nonparalyzable \qquad m = \frac{n}{1 + n\tau} \cong n(1 - n\tau) \tag{4.28}
+\]
+\[
+Paralyzable \qquad m = ne^{-n\tau} \cong n(1 - n\tau) \tag{4.29}
+\]
+
+Thus, the two models lead to identical results in the limit of small dead time losses.</p>
+
+<p>If possible, one should avoid measurement conditions under which dead time losses are
+high because of the errors that inevitably occur in making corrections for the losses. The
+value of \(\tau\) may be uncertain or subject to variation, and the system behavior may not follow
+exactly either of the models described above. When losses are greater than 30 or 40%. the
+calculated true rate becomes very sensitive to small changes in the measured rate and the
+assumed system behavior. Instead, the user should seek to reduce the losses by changing the
+conditions of the measurement or by choosing a counting system with smaller dead time.</p>
+
+<h3>B. Methods of Dead Time Measurement</h3>
+In order to make dead time corrections using either model, prior knowledge of the dead
+time \(\tau\) is required. Sometimes this dead time can be associated with a known limiting property
+of the counting system (e.g., a fixed resolving time of an electronic circuit). More often,
+the dead time will not be known or may vary with operating conditions and must therefore
+be measured directly. Common measurement techniques are based on the fact that the
+observed rate varies nonlinearly with the true rate. Therefore, by assuming that one of the
+specific models is applicable, and by measuring the observed rate for at least two different
+true rates that differ by a known ratio, the dead time can be calculated.
+
+<p>The common example is the <i>two-source method</i>. The method is based on observing the
+counting rate from two sources individually and in combination. Because the counting losses
+are nonlinear, the observed rate due to the combined sources will be less than the sum
+of the rates due to the two sources counted individually, and the dead time can be calculated
+from the discrepancy.</p>
+
+<p>To illustrate the method, let \(n_1\), \(n_2\), and \(n_12\) be the true counting rates (sample plus
+background) with source 1, source 2, and the combined sources, respectively, in place. Let
+\(m_1\), \(m_2\), and \(m_{12}\) represent the corresponding observed rates. Also, let \(n_b\) and \(m_b\) be the true
+and measured background rates with both sources removed. Then
+\begin{eqnarray}
+n_{12} - n_b &=& (n_1 - n_b) + (n_2 - n_b) \\
+n_{12} + n_b &=& n_1 + n_2 \tag{4.30}
+\end{eqnarray}
+
+Now assuming the nonparalyzable model [Eq. (4.24)] and substituting, we obtain
+\[
+\frac{m_{12}}{1 - m_{12}\tau} + \frac{m_b}{1 - m_b\tau} = \frac{m_1}{1 - m_1\tau} + \frac{m_2}{1 - m_2\tau} \tag{4.31}
+\]
+
+Solving this equation explicitly for \(\tau\) gives the following result:
+\[
+\tau = \frac{X(1 - \sqrt{1 - Z})}{Y} \tag{4.32}
+\]
+
+where
+\begin{eqnarray}
+X &\equiv& m_1 m_2 -m_b m_{12} \\
+Y &\equiv& m_1 m_2 (m_{12} + m_b) - m_b m_{12} (m_1 + m_2) \\
+Z &\equiv& \frac{Y(m_1 + m_2 -m_{12} -m_b)}{X^2}
+\end{eqnarray}
+</p>
+
+<p>A number of approximations to this general solution are often recommended in textbooks.
+For example, in the case of zero background (\(m_b = 0\))
+\[
+\tau = \frac{m_1 m_2 - [m_1 m_2(m_{12} - m_1)(m_{12} - m_2)]^{1/2}}{m_1 m_2 m_{12}} \tag{4.33}
+\]
+
+Other simplifications of Eq. (4.32) have appeared that are based on various mathematical
+approximations. However, the use of any type of approximation should be discouraged
+because significant errors can be introduced under typical experimental conditions. Because
+the two-source method involves a substantial amount of experimental time and effort, it is difficult
+to justify the use of any expression other than Eq. (4.32) in analyzing the results.</p>
+
+<p>Because the method is essentially based on observing the difference between two
+nearly equal large numbers, careful measurements are required in order to get reliable values
+for the dead time. The measurement is usually carried out by counting source 1, placing
+source 2 nearby and measuring the combined rate, and then removing source 1 to measure
+the rate caused by source 2 alone. During this operation, care must be exercised not to
+move the source already in place, and consideration must be given to the possibility that
+the presence of a second source will scatter radiation into the detector that would not ordinarily
+be counted from the first source alone. In order to keep the scattering unchanged, a
+dummy second source without activity is normally put in place when the sources are
+counted individually. Best results are obtained by using sources active enough to result in
+a fractional dead time \(m_{12}\tau\) of at least 20%.</p>
+
+<p>A second method can be carried out if a short-lived radioisotope source is available.
+In this case the departure of the observed counting rate from the known exponential decay
+of the source can be used to calculate the dead time. The technique, known as the <i>decaying
+source method</i>, is based on the known behavior of the true rate \(n\):
+\[
+n = n_0 e^{-\lambda t} + n_b \tag{4.34}
+\]
+
+where \(n_0\) is the true rate at the beginning of the measurement and \(\lambda\) is the decay constant
+of the particular isotope used for the measurement.</p>
+
+<p>In the limit of negligible background, a simple graphical procedure can be applied to
+analyze the resulting data. Then Eq. (4.34) becomes
+\[
+n \cong n_0 e^{-\lambda t} \tag{4.35}
+\]
+
+By inserting Eq. (4.35) into Eq. (4.24) and carrying out some algebra, we get the following
+relation for the nonparalyzable model:
+\[
+me^{-\lambda t} = -n_0 \tau m + n_0 \tag{4.36}
+\]
+
+If we identify, as in Fig. 4.9a, the abscissa as \(m\) and the ordinate as the product \(me^{-\lambda t}\), then
+Eq. (4.36) is that of a straight line. The experimental procedure consists of measuring the
+observed rate \(m\) as a function of time \(t\), and thus defining points that should lie on this line
+starting from the right and moving left as the source decays. By fitting the best straight line
+to the data, the intercept will give \(n_0\), the true rate at the beginning of the measurement,
+and the negative slope will give the product of \(n_0 \tau\). The dead time \(\tau\) then follows directly
+from the ratio of the slope to the intercept.</p>
+
+<p><img src="fig4.9.png" width="532" height="266" alt=""></p>
+
+<p>For the paralyzable model, inserting Eq. (4.35) into Eq. (4.27) gives the following
+result:
+\[
+\lambda t + \ln m = -n_0 \tau e^{-\lambda t} + \ln n_0 \tag{4.37}
+\]
+
+Again by choosing the abscissa and ordinate as shown in Fig. 4.9b, the equation of a straight
+line results. In this case the intercept gives the value \(\ln n_0\), whereas the slope again gives
+the negative of the product \(n_0\tau\). The dead time can simply be derived from these two values.
+The decaying source method offers the advantage of not only being able to measure
+the value of the dead time but also being able to test the validity of the assumed models. If
+a nonparalyzable model best describes the counting system, the data will most closely fit a
+straight line for the format shown in Fig. 4.9a. On the other hand, if a paralyzable model is
+more appropriate, the format shown in Fig. 4.9b will result in a more nearly linear plot of
+the data. In order to be effective, the measurements should be carried out for a time period
+at least equal to the half-life of the decaying radioisotope, and the initial loss fraction
+\(m\tau\) should be at least 20%.</p>
+
+<p>If the background is more than a few percent of the smallest measured rate, the graphical
+procedure can lead to significant errors. Although some improvement will result from
+subtracting the observed background rate from all the measured m values, this correction
+is not rigorous and an exact analysis can only be made by reverting back to Eq. (4.34). It
+then becomes necessary to use numerical computation techniques to derive values for \(n_0\)
+and \(\tau\) which, when inserted in an assumed model of the dead time behavior, result in a best
+fit to the measured data.</p>
+
+<p>The methods described above are applicable to determine the dead time of simple
+counting systems in which all pulses above a threshold amplitude are recorded. For spectroscopic
+systems in which the pulse height spectrum is recorded from the detector, other
+methods are available to deal with counting losses that are based on the mixture of artificial
+pulses from a pulse generator into the signal processing chain. These pulser-based techniques
+are treated later in Chapter 17.</p>
+
+<h3>C. Statistics of Dead Time Losses</h3>
+When measuring radiation from steady-state sources, we normally assume that the true
+events occurring in the detector follow Poisson statistics in which the probability of an
+event occurring per unit time is a constant. The effect of system dead time is to remove
+selectively some of the events before they are recorded as counts. Specifically, events
+occurring after short time intervals following preceding events are preferentially discarded,
+and the interval distribution [Eq. 3.71)] is modified from its normal exponential shape.
+Dead time losses therefore distort the statistics of the recorded counts away from a true
+Poisson behavior. If the losses are small ( \(n\tau\) less than 10 or 20%), however, this distortion
+has little practical effect on the validity of the statistical formulas for the prediction of statistical
+counting uncertainties developed in Chapter 3.
+
+<p>If the dead time losses are not small, the deviations from Poisson statistics become
+more significant. The discarding of events that occur after short time intervals causes the
+sequence of recorded counts to become somewhat more regular, and the variance expected
+in repeated measurements is reduced. Detailed analyses of the statistics of counts distorted
+by dead time are beyond the present scope, but can be found in Refs. 18-21.</p>
+
+<p>With either paralyzable or nonparalyzable behavior, there is some chance that more
+than one true event is lost per dead period. A recorded count therefore can correspond to
+the occurrence of any number of true events, from one to many. The relative probability
+that multiple true events are contained in a typical dead period will increase as the true
+event rate becomes higher. Because the true events still obey Poisson statistics, relatively
+simple analyses can be made to predict the probability that a typical recorded count results
+from the combination of exactly \(x\) true events. These analyses are given later in this text,
+beginning on p. 636 in connection with the closely related topic of <i>pulse pile-up</i>.</p>
+
+<h3>D. Dead Time Losses from Pulsed Sources</h3>
+The analysis of counting losses due to detector dead time in the previous sections assumed
+that the detector was irradiated by a steady-state source of constant intensity. There are many
+applications in which the source of radiation is not continuous but instead consists of short
+pulses repeated at a constant frequency. For example, electron linear accelerators used to generate
+high-energy X-rays can be operated to produce pulses of a few microsecond width with
+a repetition frequency of several kilohertz. In such cases, the results given previously may not
+be applicable to correct properly for the effects of dead time losses. Substitute analytical
+methods must now be applied that make use of some of the statistical principles introduced in
+Chapter 3.
+
+<p>We confine our analysis to a radiation source that can be represented by the timedependent
+intensity sketched below:</p>
+
+<p><img src="noname4.9.png" width="432" height="96" alt=""></p>
+
+It is assumed that the radiation intensity is constant throughout the duration \(T\) of each
+pulse, and that the pulses occur at a constant frequency \(f\) Depending on the relative value
+of the detector dead time \(\tau\), several conditions may apply:
+<ol type="1">
+<li>If \(\tau\) is much smaller than \(T\) the fact that the source is pulsed has little effect, and the
+results given earlier in this section for steady-state sources may be applied with reasonable
+accuracy</li>
+<li>If \(\tau\) is less than \(T\) but not by a large factor, only a small number of counts may be
+registered by the detector during a single pulse. This is the most complicated circumstance
+and is beyond the scope of the present discussion. Detailed analysis of
+this case may be found in Refs. 22 and 23.</li>
+<li>If \(\tau\) is larger than \(T\) but less than the "off" time between pulses (given by \(1/f - T\)),
+the following analysis applies. Note that under these conditions, we can have a maximum
+of only one detector count per source pulse. Also, the detector will be fully
+recovered at the start of each pulse.</li>
+</ol>
+
+<p>For the analysis that follows, it is no longer necessary that the radiation be constant
+over the pulse length \(T\), but it is required that each radiation pulse be of the same intensity.
+We carry through the following definitions:
+\begin{eqnarray}
+\tau &=& {\rm dead \, time \, of \, the \, detector \, system} \\
+m &=& {\rm observed \, counting \, rate} \\
+n &=& {\rm true \, counting \, rate \, (if \,} \tau {\rm \, were \, s0)} \\
+T &=& {\rm source \, pulse \, length} \\
+f &=& {\rm source \, pulse \, frequency}
+\end{eqnarray}
+</p>
+
+<p>Since there can be at most a single count per pulse, the probability of an observed
+count per source pulse is given by \(m/f\).</p>
+
+<p>The average number of true events per source pulse is by definition equal to \(n/f\). (Note
+that this average can be greater than 1.) We can apply the Poisson distribution [Eq. (3.24)]
+to predict the probability that at least one true event occurs per source pulse:
+\begin{eqnarray}
+P(>0) &=& 1 - P(0) \\
+&=& 1 - e^{-\overline{x}} \\
+&=& 1 - e^{-n/f} \tag{4.38}
+\end{eqnarray}
+
+Since the detector is "live" at the start of each pulse, a count will be recorded if at least one
+true event occurs during the pulse. Only one such count can be recorded, so the above
+expression is also the probability of recording a count per source pulse. Equating the two
+expressions for this probability, we obtain
+\[
+\frac{m}{f} = 1 - e^{-n/f}
+\]
+
+or
+\[
+m = f(1 - e^{-n/f}) \tag{4.39}
+\]
+
+A plot of this behavior is shown below:</p>
+
+<p><img src="noname4.10.png" width="356" height="158" alt=""></p>
+
+<p>Under these conditions, the maximum observable counting rate is just the pulse repetition
+frequency, since no more than a single count can be recorded per pulse. Also, neither
+the specific length of the dead time nor the detailed dead time behavior of the system
+(whether it is paralyzable or nonparalyzable) has any influence on the losses.</p>
+
+<p>Under normal circumstances, we are more interested in a correction formula to predict
+the true rate from the measured rate and the system dead time. Solving Eq. (4.39) for \(n\), we
+derive
+\[
+n = f\ln\left(\frac{f}{f - m}\right) \tag{4.40}
+\]
+
+Recall that this correction is valid only under the conditions \(T < \tau < ( 1/f - T)\).</p>
+
+<p>In this case, the dead time losses are small under the condition \(m \ll f\). Expanding the
+logarithmic term above for this limit, we find that a first-order correction is then given by
+\[
+n \cong \frac{m}{1 - m/2f} \tag{4.41}
+\]
+
+This result, because of its similarity to Eq. (4.24), can be viewed as predicting an effective
+dead time value of \(1/2f\) in this low-loss limit. Since this value is now one-half the source
+pulsing period, it can be many times larger than the actual physical dead time of the detector
+system.</p>
 
 </body>
-
 </html>
