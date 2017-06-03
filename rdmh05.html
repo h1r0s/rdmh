@@ -345,22 +345,153 @@ been shown that under these conditions a plot of \(1/I\) versus \(1/V\) can be u
 the measurements to zero on the \(1/V\) axis (infinite electric field) to make an accurate
 prediction of the saturated value of the current.</p>
 
+<h2>III. DESIGN AND OPERATION OF DC ION CHAMBERS</h2>
+
+<h3>A. General Considerations</h3>
+When an ion chamber is used in direct current mode, it is possible to collect the negative
+charges either as free electrons or as negative ions. Therefore, virtually any fill gas can be
+used for the chamber, including those that have high electron attachment coefficients.
+Although recombination is more significant when negative ions are formed, diffusion losses
+are less important. Conditions of saturation can normally be achieved over dimensions of
+a few centimeters using applied voltages that are no greater than tens or hundreds of volts.
+Air is the most common fill gas and is one in which negative ions are readily formed. Air
+is required in those chambers designed for the measurement of gamma-ray exposure (see
+p. 140). Denser gases such as argon are sometimes chosen in other applications to increase
+the ionization density within a given volume. The fill gas pressure is often 1 atmosphere,
+although higher pressures are sometimes used to increase the sensitivity.
+
+<p>The geometry chosen for an ion chamber can be varied greatly to suit the application,
+provided the electric field throughout the active volume can be maintained high enough to
+lead to saturation of the ion current. Parallel plate or planar geometry leads to a uniform
+electric field between the plates. Also common is a cylindrical geometry in which the outer
+shell of the cylinder is operated at ground potential and an axial conducting rod carries the
+applied voltage. In this case, a field that varies inversely with radius is created. Analytical
+methods that can be used to predict the current-voltage characteristics of chambers of various
+geometries are described in Ref. 11.</p>
+
+<h3>B. Insulators and Guard Rings</h3>
+With any design, some sort of supporting insulator must be provided between the two electrodes.
+Because typical ionization currents in most applications are extremely small (of the
+order of \(10^{-12}A\) or less), the leakage current through these insulators must be kept very
+small. In the simple scheme of Fig. 5.3, any leakage through the insulator will add to the
+measured ionization current and cause an unwanted component of the signal. In order to
+keep this component below 1% of an ionization current of \(10^{-12} A\) for an applied voltage
+of \(100 V\), the resistance of the insulator would need to be greater than \(10^{16} ohms\). Although
+it may be possible to find materials with bulk resistivity sufficiently high to meet this criterion,
+leakage paths across the surface of the insulator due to absorbed moisture or other
+contaminants almost always represent a lower resistance. A different design is therefore
+often used in low-current applications of ion chambers in which a <i>guard ring</i> is employed
+to reduce the effects of insulator leakage.
+
+<p><img src="fig5.5.png" width="509" height="309" alt=""></p>
+
+<p>A diagram illustrating the use of a guard ring is shown in Fig. 5.5. The insulator is now
+segmented into two parts, one part separating the conducting guard ring from the negative
+electrode and the other part separating it from the positive electrode. Most of the voltage
+drop occurs across the outer segment in which the resulting leakage current does not pass
+through the measuring instrument. The voltage drop across the inner segment is only the
+voltage difference across the ammeter terminals and can be very small. Therefore, the component
+of leakage current which is added to the signal is greatly reduced compared with
+the case without the guard ring.</p>
+
+<p>Insulators for applications that do not involve high radiation fields are normally manufactured
+from one of the high-resistivity synthetic plastics. Care is taken to keep the
+surface smooth and as free of defects as possible in order to minimize the amount of moisture
+absorption. Radiation damage in these materials in high radiation applications (such
+as in reactor instruments) can lead to rapid deterioration of the insulation properties. In
+such cases, inorganic materials such as ceramics are preferred because of their higher
+resistance to radiation damage.</p>
+
+<h3>C. Measurement of the Ion Current</h3>
+The magnitude of the ionization current under typical conditions is much too small to be
+measured using standard galvanometer techniques. Instead, some active amplification of
+the current must be carried out to allow its indirect measurement. An electrometer indirectly
+measures the current by sensing the voltage drop across a series resistance placed in
+the measuring circuit (see Fig. 5.6). 
+
+<p><img src="fig5.6.png" width="557" height="212" alt=""></p>
+
+The voltage developed across the resistor (typicallv
+with a value of \(10^9-10^{12} ohms\)) can be amplified and serves as the basis for the measured
+signal. One weakness of standard electrometer circuits is that they must be dc coupled
+throughout. Any small drift or gradual change in component values therefore results in a
+corresponding change in the measured output current. Thus, circuits of this type must frequently
+be balanced by shorting the input and resetting the scale to zero.
+
+<p>An alternative approach is to convert the signal from dc to ac at an early stage, which
+then allows a more stable amplification of the ac signal in subsequent stages. This conversion
+is accomplished in the <i>dynamic-capacitor</i> or <i>vibrating reed</i> electrometer by collecting
+the ion current across an \(RC\) circuit with long time constant, as shown in Fig. 5.7. </p>
+
+<p><img src="fig5.7.png" width="512" height="210" alt=""></p>
 
 
+At equilibrium, a constant voltage is developed across this circuit, which is given by
+\[
+V = IR \tag{5.5}
+\]
 
+where \(I\) is the steady-state ionization current. A charge \(Q\) is stored on the capacitance,
+which is given by
+\[
+Q = CV \tag{5.6}
+\]
 
+If the capacitance is now caused to change rapidly compared with the time constant of the
+circuit, a corresponding change will be induced in the voltage across \(C\) given by
+\begin{eqnarray}
+\Delta V &=& \frac{Q}{C^2}\Delta C \\
+\Delta V &=& I\frac{R}{C}\Delta C \tag{5.7}
+\end{eqnarray}
 
+If the value of the capacitance is varied sinusoidally about an average value \(C\), the amplitude
+of the ac voltage that is induced is therefore proportional to the ionization current.
 
+<p>The average ionization current can also be measured over finite periods of time by
+integration methods. If the value of \(R\) in Fig. 5.6 is made infinite, any ionization current
+from the chamber is simply integrated across the capacitance \(C\). By noting the change in
+the voltage across the capacitance over the measurement period, the total integrated ionization
+current or ionization charge can be deduced. If the amount of natural leakage
+across the capacitance can be kept small, this integration technique has the potential of
+being able to measure much smaller ionization currents than through direct dc current
+measurement.</p>
 
+<p><img src="fig5.8.png" width="556" height="194" alt=""></p>
 
+<p>To illustrate, suppose that the ion chamber of Fig. 5.8 is originally charged to a voltage
+\(V_0\). If the leakage across the chamber insulators and external capacitor is negligible, this
+voltage would be maintained at its original value indefinitely in the absence of ionizing
+radiation. If radiation is present, the ions will act to partially discharge the capacitance and
+reduce the voltage from its original value. If a charge \(\Delta Q\) (defined either as the positive
+charge of the positive ions or the negative charge of the electrons) is created by the
+radiation, then the total charge stored on the capacitance will be reduced by \(\Delta Q\). The voltage
+will therefore drop from its original value of \(V_0\) by an amount \(\Delta V\) given by
+\[
+\Delta V = \frac{\Delta Q}{C} \tag{5.8}
+\]
 
+A measurement of \(\Delta V\) thus gives the total ionization charge or the integrated ionization
+current over the period of the measurement.</p>
 
+<h3>D. The Electret</h3>
+The previous section described the measurement of ionization current integrated over a
+period of time by noting the drop in voltage measured across the chamber capacitance
+after an initial charging to a known voltage. A similar measurement can be carried out by
+noting the drop in surface voltage on an element known as an <i>electret</i> that is placed
+inside an ion chamber. An electret is a sample of dielectric material (commonly Teflon)
+that carries a quasi-permanent electrical charge. A disk of the material of approximately
+\(1cm\) diameter and \(1mm\) thickness is fabricated by heating in the presence of an electric
+field and then cooling to "freeze" electric dipoles in place. A voltage of up to \(1000 V\) may
+then appear between the opposite surfaces of the electret. With proper encapsulation, this
+stored charge may be stable over periods of a year or more, even in the presence of high
+humidity.
 
-
-
-
-
-
+<p>An electret placed with one of its surfaces in contact with the conducting walls of an ion
+chamber will create an electric field throughout the chamber volume because of the voltage
+difference on its opposite surface. Any ion pairs created by radiation within the chamber
+will be separated and collected by this field, serving to partially neutralize the charge carried
+by the electret. Measurements of the electret voltage before and after the exposure can
+then be calibrated in terms of the total ionization charge produced in the chamber.</p>
 
 </body>
 
